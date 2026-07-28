@@ -94,7 +94,7 @@ export function CalendarTeaser() {
                   className="flex h-full flex-col border border-border p-6 transition-colors hover:border-gold/50"
                 >
                   <p className="text-[0.65rem] uppercase tracking-[0.22em] text-gold">
-                    {formatRange(parseDay(r.start_date), parseDay(r.end_date), c)}
+                    {formatRange(r.start_date, r.end_date, lang, c)}
                   </p>
                   <h3 className="font-display mt-3 text-xl text-parchment">
                     {regattaName(r, lang)}
