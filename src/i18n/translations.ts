@@ -29,6 +29,7 @@ export const translations = {
       sail: "POL 17",
       scroll: "Przewiń",
       cta: "Poznaj zespół",
+      bgAlt: "Jacht POL 17 w akcji — widok z góry na czarne żagle i błękitną wodę",
     },
     about: {
       eyebrow: "O nas",
@@ -236,6 +237,7 @@ export const translations = {
       sail: "POL 17",
       scroll: "Scroll",
       cta: "Meet the team",
+      bgAlt: "The POL 17 yacht in action — aerial view of black sails and deep blue water",
     },
     about: {
       eyebrow: "About us",
