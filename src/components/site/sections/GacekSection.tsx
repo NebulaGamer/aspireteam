@@ -1,6 +1,7 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { Reveal } from "../Reveal";
 import { IMAGE_PORTRAIT_GACEK, SiteImage } from "../SiteImages";
+import { PortraitPlaceholder } from "../PortraitPlaceholder";
 
 export function GacekSection() {
   const { t } = useLanguage();
@@ -9,7 +10,11 @@ export function GacekSection() {
     <section id="crew" className="bg-background">
       <div className="grid lg:grid-cols-2">
         <div className="relative min-h-[60vh] overflow-hidden bg-abyss lg:min-h-screen">
-          <SiteImage src={IMAGE_PORTRAIT_GACEK} alt={t.gacek.alt} />
+          {IMAGE_PORTRAIT_GACEK ? (
+            <SiteImage src={IMAGE_PORTRAIT_GACEK} alt={t.gacek.alt} />
+          ) : (
+            <PortraitPlaceholder initials="PG" label={t.gacek.alt} />
+          )}
         </div>
 
         <div className="flex items-center px-6 py-20 md:px-16 lg:px-20 xl:px-28">
