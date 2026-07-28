@@ -16,7 +16,7 @@ export function HeroSection() {
       <div className="shell flex min-h-[100svh] flex-col justify-center py-32 md:py-40">
         <p className="hero-step hero-step-1 eyebrow">{t.hero.eyebrow}</p>
 
-        <h1 className="hero-step hero-step-2 mt-6 font-display text-[clamp(4rem,18vw,17rem)] font-semibold leading-[0.82] tracking-[0.02em] text-parchment">
+        <h1 className="hero-step hero-step-2 mt-6 font-display text-[clamp(3rem,17vw,17rem)] font-semibold leading-[0.82] tracking-[0.02em] text-parchment">
           ASPIRE
         </h1>
 
