@@ -12,7 +12,7 @@ export function HeroSection() {
     >
       {/* Real team photograph — the POL 17 boat at speed. */}
       <div aria-hidden="true" className="absolute inset-0 -z-30">
-        <SiteImage src={IMAGE_HERO_BOAT} alt={t.hero.bgAlt} priority className="hero-lift" />
+        <SiteImage src={IMAGE_HERO_BOAT} alt={t.hero.bgAlt} priority />
       </div>
 
       {/* Gradient scrim to keep the left-aligned typography legible. */}
