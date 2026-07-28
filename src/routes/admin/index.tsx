@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
 
 import { RegattaForm } from "@/components/admin/RegattaForm";
@@ -234,6 +234,7 @@ function LoginPanel() {
 
 
 function AdminArea({ session }: { session: Session }) {
+  const { lang } = useLanguage();
   const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
   const [regattas, setRegattas] = useState<Regatta[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
