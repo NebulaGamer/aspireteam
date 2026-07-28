@@ -9,9 +9,11 @@
 // TODO: update this address when the team has a dedicated partnerships inbox.
 export const PARTNERSHIP_NOTIFICATION_EMAIL = "kontakt@aspireteam.pl";
 
-// Until a domain is verified in Resend, this sandbox sender only delivers to
-// the Resend account owner. Swap for an address on the verified domain.
-const FROM_ADDRESS = "Aspire Team <onboarding@resend.dev>";
+/** Single verified sender used for every outbound email (app + auth). */
+export const NOREPLY_FROM_ADDRESS = "Aspire Team <no-reply@aspireteam.pl>";
+
+const FROM_ADDRESS = NOREPLY_FROM_ADDRESS;
+
 
 type EnquiryPayload = {
   company: string;
