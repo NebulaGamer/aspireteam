@@ -9,10 +9,10 @@ export function HeroSection() {
     <section id="top" className="section-dark relative isolate min-h-[100svh] overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="ken-burns h-full w-full">
-          <SiteImage src={IMAGE_HERO} alt={t.hero.alt} priority />
+          <SiteImage src={IMAGE_HERO} alt={t.hero.alt} className="hero-lift" priority />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-abyss/80 via-abyss/45 to-abyss" />
-        <div className="absolute inset-0 bg-gradient-to-r from-abyss/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-abyss/45 via-abyss/25 to-abyss" />
+        <div className="absolute inset-0 bg-gradient-to-r from-abyss/55 via-abyss/20 to-transparent" />
       </div>
 
       <div className="shell flex min-h-[100svh] flex-col justify-end pb-20 pt-32 md:justify-center md:pb-32">

@@ -220,6 +220,31 @@
   animation: scroll-cue 2.4s ease-in-out infinite;
 }
 
+/* Hero photograph: lift the shadows so the crew reads against the overlay. */
+@utility hero-lift {
+  filter: brightness(1.12) contrast(0.94) saturate(1.02);
+}
+
+/*
+ * Portrait placeholder panel: deep navy with a fine diagonal gold hairline
+ * weave. Used only while awaiting licensed photography of real people.
+ */
+@utility portrait-placeholder {
+  background-color: var(--abyss);
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      color-mix(in oklab, var(--gold) 14%, transparent) 0 1px,
+      transparent 1px 22px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      color-mix(in oklab, var(--gold) 7%, transparent) 0 1px,
+      transparent 1px 44px
+    ),
+    radial-gradient(120% 90% at 50% 15%, var(--ocean), var(--abyss) 70%);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
