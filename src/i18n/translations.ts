@@ -16,7 +16,6 @@ export const translations = {
       history: "Historia",
       results: "Wyniki",
       crew: "Załoga",
-      youth: "Młodzi",
       partners: "Partnerzy",
       contact: "Zostań partnerem",
       menu: "Menu",
@@ -30,7 +29,6 @@ export const translations = {
       sail: "POL 17",
       scroll: "Przewiń",
       cta: "Poznaj zespół",
-      alt: "Jacht klasy 5.5 Metre mocno przechylony na kursie ostrym, w bryzie i pyle wodnym",
     },
     about: {
       eyebrow: "O nas",
@@ -45,7 +43,6 @@ export const translations = {
         { value: "1×", label: "Mistrzostwo Europy", note: "2020" },
         { value: "3×", label: "Podium mistrzostw świata", note: "2023–2025" },
       ],
-      trophyAlt: "Złote trofeum żeglarskie w dramatycznym świetle na ciemnym tle",
     },
     boats: {
       eyebrow: "Jachty",
@@ -92,7 +89,7 @@ export const translations = {
           { label: "Dyscyplina", a: "Regaty międzynarodowe", b: "Ściganie ślizgowe" },
         ],
       },
-      detailAlt: "Detal pokładu jachtu regatowego: kabestan i liny pokryte wodą",
+      detailAlt: "Załoga Aspire przy pracy na pokładzie jachtu regatowego",
     },
     history: {
       eyebrow: "Historia",
@@ -150,12 +147,11 @@ export const translations = {
     partners: {
       eyebrow: "Sponsorzy i partnerzy",
       title: "Sponsorzy",
-      leadLabel: "Sponsor główny od 2023",
-      leadName: "Grupa Pracuj",
-      leadBody:
-        "Grupa Pracuj jest sponsorem głównym projektu Aspire od 2023 roku. Partnerstwo obejmuje także rejsy team-buildingowe i sesje mentoringowe dla pracowników na pokładzie jachtu.",
-      gridLabel: "Pozostali sponsorzy",
-      placeholder: "Miejsce na logo",
+      intro:
+        "Partnerstwo z Aspire to obecność marki na regatach najwyższej rangi w Europie, dni na wodzie dla klientów i pracowników oraz wspólna praca nad kulturą zespołu prowadzona przez mistrza olimpijskiego.",
+      tierMain: "Sponsor główny · od 2023",
+      tierPartner: "Partner",
+      visit: "Odwiedź stronę",
     },
 
     contact: {
@@ -204,9 +200,6 @@ export const translations = {
         },
       },
     },
-    portrait: {
-      comingSoon: "Zdjęcie wkrótce",
-    },
     footer: {
       tagline: "Polski zespół żeglarski · POL 17",
       navLabel: "Nawigacja",
@@ -214,8 +207,6 @@ export const translations = {
       email: "kontakt@aspireteam.pl",
       social: "Media społecznościowe",
       rights: "Wszelkie prawa zastrzeżone.",
-      /* TEMPORARY — usuń tę linię po zastąpieniu zdjęć materiałem zespołu. */
-      photoCredit: "Zdjęcia poglądowe — do zastąpienia materiałem zespołu",
     },
   },
 
@@ -231,7 +222,6 @@ export const translations = {
       history: "History",
       results: "Results",
       crew: "Crew",
-      youth: "Young Sailors",
       partners: "Partners",
       contact: "Partner with us",
       menu: "Menu",
@@ -245,7 +235,6 @@ export const translations = {
       sail: "POL 17",
       scroll: "Scroll",
       cta: "Meet the team",
-      alt: "A 5.5 Metre keelboat heeled hard over upwind in strong breeze and spray",
     },
     about: {
       eyebrow: "About us",
@@ -260,7 +249,6 @@ export const translations = {
         { value: "1×", label: "European Champion", note: "2020" },
         { value: "3×", label: "Consecutive Worlds podiums", note: "2023–2025" },
       ],
-      trophyAlt: "A gold sailing trophy lit dramatically against a dark background",
     },
     boats: {
       eyebrow: "The boats",
@@ -307,7 +295,7 @@ export const translations = {
           { label: "Discipline", a: "International championship", b: "Planing one-design" },
         ],
       },
-      detailAlt: "Close detail of racing yacht deck hardware, winch and ropes covered in spray",
+      detailAlt: "The Aspire crew at work on the deck of the raceboat",
     },
     history: {
       eyebrow: "History",
@@ -365,12 +353,11 @@ export const translations = {
     partners: {
       eyebrow: "Sponsors & partners",
       title: "Sponsors",
-      leadLabel: "Main sponsor since 2023",
-      leadName: "Grupa Pracuj",
-      leadBody:
-        "Grupa Pracuj has been the main sponsor of the Aspire project since 2023. The partnership also includes team-building and mentoring sailing sessions for employees aboard the yacht.",
-      gridLabel: "Further sponsors",
-      placeholder: "Logo space",
+      intro:
+        "Partnering with Aspire means brand presence at Europe's top-level regattas, days on the water for clients and employees, and shared work on team culture led by an Olympic champion.",
+      tierMain: "Main sponsor · since 2023",
+      tierPartner: "Partner",
+      visit: "Visit website",
     },
 
     contact: {
@@ -419,9 +406,6 @@ export const translations = {
         },
       },
     },
-    portrait: {
-      comingSoon: "Photograph coming soon",
-    },
     footer: {
       tagline: "Polish sailing team · POL 17",
       navLabel: "Navigation",
@@ -429,8 +413,6 @@ export const translations = {
       email: "kontakt@aspireteam.pl",
       social: "Social media",
       rights: "All rights reserved.",
-      /* TEMPORARY — delete this line once real team photography is in place. */
-      photoCredit: "Placeholder imagery — to be replaced with team photography",
     },
   },
 } as const;
