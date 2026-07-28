@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import type { Language } from "@/i18n/translations";
@@ -23,6 +24,8 @@ export function navHref(href: string, onHome: boolean): string {
 
 export function Header() {
   const { t, lang, setLang } = useLanguage();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const onHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -51,7 +54,7 @@ export function Header() {
       }`}
     >
       <div className="shell flex h-20 items-center justify-between gap-6">
-        <a href="#top" className="group flex items-baseline gap-3">
+        <a href={onHome ? "#top" : "/"} className="group flex items-baseline gap-3">
           <span className="font-display text-xl font-semibold tracking-[0.32em] text-parchment">
             ASPIRE
           </span>
@@ -64,14 +67,14 @@ export function Header() {
           {NAV_ITEMS.map((item) => (
             <a
               key={item.id}
-              href={item.href}
+              href={navHref(item.href, onHome)}
               className="relative whitespace-nowrap text-[0.7rem] font-medium uppercase tracking-[0.18em] text-silver transition-colors hover:text-gold"
             >
               {navLabel(item.id)}
             </a>
           ))}
           <a
-            href="#contact"
+            href={navHref("#contact", onHome)}
             className="whitespace-nowrap border border-gold/60 px-5 py-2.5 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-gold transition-colors hover:bg-gold hover:text-abyss"
           >
             {t.nav.contact}
@@ -101,7 +104,7 @@ export function Header() {
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
                 <a
-                  href={item.href}
+                  href={navHref(item.href, onHome)}
                   onClick={() => setOpen(false)}
                   className="block border-b border-border/60 py-4 text-sm uppercase tracking-[0.2em] text-silver transition-colors hover:text-gold"
                 >
@@ -111,7 +114,7 @@ export function Header() {
             ))}
             <li>
               <a
-                href="#contact"
+                href={navHref("#contact", onHome)}
                 onClick={() => setOpen(false)}
                 className="mt-6 block border border-gold/60 py-3.5 text-center text-sm uppercase tracking-[0.2em] text-gold"
               >

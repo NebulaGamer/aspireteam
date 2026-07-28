@@ -1,7 +1,7 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
-import { NAV_ITEMS } from "./Header";
+import { NAV_ITEMS, navHref } from "./Header";
 
 const SOCIALS = [
   { id: "instagram", href: "https://instagram.com", Icon: Instagram, label: "Instagram" },
@@ -12,6 +12,8 @@ const SOCIALS = [
 
 export function Footer() {
   const { t } = useLanguage();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const onHome = pathname === "/";
 
   return (
     <footer className="section-dark section-abyss border-t border-border">
@@ -33,7 +35,7 @@ export function Footer() {
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
                 <a
-                  href={item.href}
+                  href={navHref(item.href, onHome)}
                   className="text-sm text-silver transition-colors hover:text-gold"
                 >
                   {t.nav[item.id]}
