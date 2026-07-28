@@ -2,7 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
 
 import { RegattaForm } from "@/components/admin/RegattaForm";
+import { LanguageProvider, useLanguage } from "@/i18n/LanguageProvider";
 import { supabase } from "@/integrations/supabase/client";
+import {
+  adminCopy,
+  markResetRequested,
+  resetRateLimitRemaining,
+  resetRedirectUrl,
+} from "@/lib/admin-copy";
 import {
   BOAT_CLASSES,
   formatDateRange,
@@ -16,7 +23,12 @@ import type { Session } from "@supabase/supabase-js";
 export const Route = createFileRoute("/admin/")({
   // The session lives in localStorage, so this back office is client-rendered only.
   ssr: false,
-  component: AdminPage,
+  component: () => (
+    <LanguageProvider>
+      <AdminPage />
+    </LanguageProvider>
+  ),
+
   head: () => ({
     meta: [
       { title: "Admin — Aspire Team" },
