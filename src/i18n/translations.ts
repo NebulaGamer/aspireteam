@@ -109,6 +109,18 @@ export const translations = {
       title: "Kalendarz regat",
       intro:
         "Dwa programy — International 5.5 Metre i Cape 31 — od jezior alpejskich po Morze Śródziemne. Terminarz aktualizowany na bieżąco przez zespół.",
+      metaTitle: "Kalendarz regat 2026–2028 — Aspire Team POL 17",
+      metaDescription:
+        "Pełny terminarz regat Aspire Team (POL 17): starty w klasach International 5.5 Metre i Cape 31 w całej Europie w latach 2026–2028.",
+      backHome: "Powrót na stronę główną",
+      teaser: {
+        eyebrow: "Kalendarz",
+        title: "Najbliżej na wodzie",
+        intro: "Nadchodzące starty z terminarza Aspire.",
+        cta: "Zobacz pełny kalendarz",
+        empty: "Terminarz kolejnego sezonu jest potwierdzany.",
+      },
+
       viewLabel: "Widok",
       views: { agenda: "Lista", month: "Miesiąc" },
       filters: {
