@@ -18,7 +18,7 @@ import kusznierewiczAsset from "@/assets/portrait-kusznierewicz.jpg.asset.json";
 
 export const IMAGE_HERO = heroSrc;
 export const IMAGE_BOAT_55_METRE = boat55Asset.url;
-export const IMAGE_BOAT_CAPE_31 = cape31Src;
+export const IMAGE_BOAT_CAPE_31 = cape31Asset.url;
 export const IMAGE_DECK_DETAIL = deckDetailSrc;
 export const IMAGE_TROPHY = trophySrc;
 /**
