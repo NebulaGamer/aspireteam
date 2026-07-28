@@ -107,7 +107,7 @@ function BoatFeature({
       </Parallax>
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ocean via-ocean/40 to-transparent" />
 
-      <div className="shell relative -mt-28 pb-8 md:-mt-40 md:pb-16">
+      <div className="shell relative z-10 -mt-40 pb-8 md:-mt-56 md:pb-16 lg:-mt-64">
         <Reveal
           className={`max-w-xl border border-border bg-ocean/85 p-8 backdrop-blur-md md:p-12 ${
             flipped ? "md:ml-auto" : ""
