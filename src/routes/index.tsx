@@ -7,6 +7,7 @@ import { AboutSection } from "@/components/site/sections/AboutSection";
 import { BoatsSection } from "@/components/site/sections/BoatsSection";
 import { HistorySection } from "@/components/site/sections/HistorySection";
 import { ResultsSection } from "@/components/site/sections/ResultsSection";
+import { CalendarSection } from "@/components/site/sections/CalendarSection";
 import { GacekSection } from "@/components/site/sections/GacekSection";
 import { KusznierewiczSection } from "@/components/site/sections/KusznierewiczSection";
 
@@ -21,6 +22,11 @@ const DESCRIPTION_EN =
   "Aspire (POL 17) — a Polish sailing team racing the International 5.5 Metre and the Cape 31. The first Polish crew to win the 5.5 Metre World Championship.";
 
 export const Route = createFileRoute("/")({
+  // Calendar filters live in the URL so a filtered view can be linked.
+  validateSearch: (search: Record<string, unknown>) => ({
+    cls: typeof search.cls === "string" ? search.cls : undefined,
+    season: typeof search.season === "string" ? search.season : undefined,
+  }),
   head: () => ({
     meta: [
       { title: TITLE_PL },
@@ -69,6 +75,7 @@ function Index() {
         <BoatsSection />
         <HistorySection />
         <ResultsSection />
+        <CalendarSection />
         <GacekSection />
         <KusznierewiczSection />
         

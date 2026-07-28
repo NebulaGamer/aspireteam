@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { NAV_ITEMS } from "./Header";
@@ -71,7 +72,21 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="shell flex flex-col gap-3 py-6 text-xs text-steel sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Aspire Team. {t.footer.rights}</p>
+          <p>
+            {/*
+              Obscurity, not security: anyone can type /admin. The real protection is
+              the RLS policies on the database plus the auth + role check in the panel.
+            */}
+            <Link
+              to="/admin"
+              aria-label="Panel"
+              rel="nofollow"
+              className="transition-colors duration-500 hover:text-steel/70"
+            >
+              ©
+            </Link>{" "}
+            {new Date().getFullYear()} Aspire Team. {t.footer.rights}
+          </p>
           <p className="tracking-[0.24em] text-gold/70">POL 17</p>
         </div>
       </div>
