@@ -12,7 +12,7 @@ import boat55Asset from "@/assets/boat-55m-pol17.jpg.asset.json";
 import cape31Asset from "@/assets/cape31-replacement.jpg.asset.json";
 import deckDetailSrc from "@/assets/deck-detail.jpg";
 import trophySrc from "@/assets/trophy.jpg";
-import youthSrc from "@/assets/youth-sailing.jpg";
+
 import gacekAsset from "@/assets/portrait-gacek.jpg.asset.json";
 import kusznierewiczAsset from "@/assets/portrait-kusznierewicz.jpg.asset.json";
 
@@ -30,7 +30,7 @@ export const IMAGE_TROPHY = trophySrc;
  */
 export const IMAGE_PORTRAIT_GACEK: string | null = gacekAsset.url;
 export const IMAGE_PORTRAIT_KUSZNIEREWICZ: string | null = kusznierewiczAsset.url;
-export const IMAGE_YOUTH = youthSrc;
+
 
 type SiteImageProps = {
   src: string;
