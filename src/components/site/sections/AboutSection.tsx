@@ -1,5 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { Reveal } from "../Reveal";
+import { IMAGE_ABOUT_ACTION, SiteImage } from "../SiteImages";
 
 export function AboutSection() {
   const { t } = useLanguage();
@@ -7,19 +8,29 @@ export function AboutSection() {
   return (
     <section id="about" className="bg-background py-24 md:py-36">
       <div className="shell">
-        <div className="max-w-3xl">
-          <Reveal>
-            <p className="eyebrow">{t.about.eyebrow}</p>
-            <h2 className="mt-6 max-w-xl font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold leading-[1.02] text-foreground">
-              {t.about.title}
-            </h2>
-            <div className="hairline mt-10 max-w-24" />
-          </Reveal>
+        <div className="grid items-start gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
+          <div className="max-w-3xl">
+            <Reveal>
+              <p className="eyebrow">{t.about.eyebrow}</p>
+              <h2 className="mt-6 max-w-xl font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold leading-[1.02] text-foreground">
+                {t.about.title}
+              </h2>
+              <div className="hairline mt-10 max-w-24" />
+            </Reveal>
 
-          <Reveal delay={120} className="mt-10 max-w-xl space-y-6">
-            <p className="text-lg leading-relaxed text-foreground/85 md:text-xl">{t.about.lead}</p>
-            <p className="leading-relaxed text-muted-foreground">{t.about.body1}</p>
-            <p className="leading-relaxed text-muted-foreground">{t.about.body2}</p>
+            <Reveal delay={120} className="mt-10 max-w-xl space-y-6">
+              <p className="text-lg leading-relaxed text-foreground/85 md:text-xl">{t.about.lead}</p>
+              <p className="leading-relaxed text-muted-foreground">{t.about.body1}</p>
+              <p className="leading-relaxed text-muted-foreground">{t.about.body2}</p>
+            </Reveal>
+          </div>
+
+          <Reveal delay={180} className="relative aspect-[4/3] overflow-hidden lg:aspect-[3/4]">
+            <SiteImage
+              src={IMAGE_ABOUT_ACTION}
+              alt={t.about.imageAlt}
+              className="absolute inset-0"
+            />
           </Reveal>
         </div>
       </div>
