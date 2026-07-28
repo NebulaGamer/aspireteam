@@ -1,6 +1,7 @@
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { IMAGE_HERO_BOAT, SiteImage } from "@/components/site/SiteImages";
+import { AspireWordmark } from "@/components/site/AspireLogo";
 
 export function HeroSection() {
   const { t } = useLanguage();

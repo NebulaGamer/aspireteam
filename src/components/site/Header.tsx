@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { AspireLockup } from "@/components/site/AspireLogo";
 import type { Language } from "@/i18n/translations";
 
 // `to` marks a real route; the rest are in-page anchors on the home page.
