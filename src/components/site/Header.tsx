@@ -9,7 +9,7 @@ export const NAV_ITEMS = [
   { id: "history", href: "#history" },
   { id: "results", href: "#results" },
   { id: "crew", href: "#crew" },
-  { id: "youth", href: "#youth" },
+  
   { id: "partners", href: "#partners" },
 ] as const;
 
