@@ -75,7 +75,7 @@ function Index() {
         <BoatsSection />
         <HistorySection />
         <ResultsSection />
-        <CalendarSection />
+        <CalendarTeaser />
         <GacekSection />
         <KusznierewiczSection />
         
