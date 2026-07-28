@@ -436,6 +436,7 @@ export const translations = {
         "December",
       ],
     },
+    gacek: {
       eyebrow: "Helmsman",
       name: "Przemysław “Przemek” Gacek",
       role: "Helmsman of Aspire · co-founder and CEO of Grupa Pracuj",
