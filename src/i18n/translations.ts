@@ -364,14 +364,15 @@ export const translations = {
     },
     partners: {
       eyebrow: "Sponsors & partners",
-      title: "Together on the water",
-      leadLabel: "Title patron since 2023",
+      title: "Sponsors",
+      leadLabel: "Main sponsor since 2023",
       leadName: "Grupa Pracuj",
       leadBody:
-        "Grupa Pracuj has been title patron of the Aspire project since 2023. The partnership also includes team-building and mentoring sailing sessions for employees aboard the yacht.",
-      gridLabel: "Further partners",
+        "Grupa Pracuj has been the main sponsor of the Aspire project since 2023. The partnership also includes team-building and mentoring sailing sessions for employees aboard the yacht.",
+      gridLabel: "Further sponsors",
       placeholder: "Logo space",
     },
+
     contact: {
       eyebrow: "Partner with us",
       title: "Partnering with Aspire",
