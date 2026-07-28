@@ -27,7 +27,10 @@ export function CalendarSection() {
 
   const setFilter = (key: "cls" | "season", value: string) =>
     navigate({
-      search: (prev) => ({ ...prev, [key]: value === "all" ? undefined : value }),
+      search: (prev: Record<string, string | undefined>) => ({
+        ...prev,
+        [key]: value === "all" ? undefined : value,
+      }),
       hash: "calendar",
       replace: true,
       resetScroll: false,
