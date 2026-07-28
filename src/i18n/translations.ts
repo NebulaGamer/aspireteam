@@ -126,7 +126,7 @@ export const translations = {
       quote:
         "Nigdy nie przypuszczałem, że zostanę sportowcem, a tym bardziej że stanę na podium i usłyszę hymn Polski.",
       quoteNote: "",
-      alt: "Sternik przy kole sterowym jachtu regatowego w chłodnym, pochmurnym świetle",
+      alt: "Panel z inicjałami PG — zdjęcie Przemysława Gacka zostanie dodane wkrótce",
     },
     kusz: {
       eyebrow: "Taktyk i mentor",
@@ -145,7 +145,7 @@ export const translations = {
         { title: "Zwycięzca Bacardi Cup", note: "Klasa Star" },
         { title: "Olimpijczyk", note: "Londyn 2012" },
       ],
-      alt: "Żeglarz w ciemnej kurtce sztormowej patrzący na morze o zmierzchu",
+      alt: "Panel z inicjałami MK — zdjęcie Mateusza Kusznierewicza zostanie dodane wkrótce",
     },
     youth: {
       eyebrow: "Wspieramy młodych",
@@ -228,6 +228,9 @@ export const translations = {
         },
       },
     },
+    portrait: {
+      comingSoon: "Zdjęcie wkrótce",
+    },
     footer: {
       tagline: "Polski zespół żeglarski · POL 17",
       navLabel: "Nawigacja",
@@ -235,6 +238,8 @@ export const translations = {
       email: "kontakt@aspireteam.pl",
       social: "Media społecznościowe",
       rights: "Wszelkie prawa zastrzeżone.",
+      /* TEMPORARY — usuń tę linię po zastąpieniu zdjęć materiałem zespołu. */
+      photoCredit: "Zdjęcia poglądowe — do zastąpienia materiałem zespołu",
     },
   },
 
@@ -360,7 +365,7 @@ export const translations = {
       quote:
         "I never imagined I would become an athlete — let alone stand on a podium and hear the Polish anthem played.",
       quoteNote: "Nigdy nie przypuszczałem, że zostanę sportowcem, a tym bardziej że stanę na podium i usłyszę hymn Polski.",
-      alt: "A helmsman at the wheel of a racing yacht in cold overcast light",
+      alt: "Panel showing the initials PG — a photograph of Przemysław Gacek is coming soon",
     },
     kusz: {
       eyebrow: "Tactician and mentor",
@@ -379,7 +384,7 @@ export const translations = {
         { title: "Bacardi Cup winner", note: "Star class" },
         { title: "Olympian", note: "London 2012" },
       ],
-      alt: "A sailor in a dark offshore jacket looking out to sea at dusk",
+      alt: "Panel showing the initials MK — a photograph of Mateusz Kusznierewicz is coming soon",
     },
     youth: {
       eyebrow: "Supporting young people",
