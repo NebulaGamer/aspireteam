@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { LanguageProvider, useLanguage } from "@/i18n/LanguageProvider";
 import { supabase } from "@/integrations/supabase/client";
 import { adminCopy } from "@/lib/admin-copy";
+import { enquiryCopy } from "@/lib/enquiries-copy";
 import {
   getAdminTeam,
   inviteAdmin,
@@ -109,12 +110,20 @@ function TeamPage() {
           <h1 className="font-display mt-1 text-3xl">{c.teamTitle}</h1>
           <p className="mt-2 max-w-lg text-sm text-parchment/60">{c.teamIntro}</p>
         </div>
-        <Link
-          to="/admin"
-          className="rounded-sm border border-parchment/25 px-4 py-2 text-sm text-parchment/80"
-        >
-          {c.backToCalendar}
-        </Link>
+        <div className="flex gap-3">
+          <Link
+            to="/admin/enquiries"
+            className="rounded-sm border border-parchment/25 px-4 py-2 text-sm text-parchment/80"
+          >
+            {enquiryCopy[lang === "en" ? "en" : "pl"].nav}
+          </Link>
+          <Link
+            to="/admin"
+            className="rounded-sm border border-parchment/25 px-4 py-2 text-sm text-parchment/80"
+          >
+            {c.backToCalendar}
+          </Link>
+        </div>
       </header>
 
       {message ? (

@@ -18,6 +18,8 @@ import {
   type Regatta,
   type RegattaFormValues,
 } from "@/lib/regattas";
+import { enquiryCopy } from "@/lib/enquiries-copy";
+import { countNewEnquiries } from "@/lib/enquiries.functions";
 import type { Session } from "@supabase/supabase-js";
 
 export const Route = createFileRoute("/admin/")({
@@ -242,6 +244,8 @@ function AdminArea({ session }: { session: Session }) {
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [pendingDelete, setPendingDelete] = useState<Regatta | null>(null);
+  // Unread signal for the enquiries screen; zero means no badge at all.
+  const [newEnquiries, setNewEnquiries] = useState(0);
 
   const signOut = async () => {
     await supabase.auth.signOut();
@@ -268,6 +272,13 @@ function AdminArea({ session }: { session: Session }) {
   useEffect(() => {
     if (isAdmin) void load();
   }, [isAdmin, load]);
+
+  useEffect(() => {
+    if (!isAdmin) return;
+    countNewEnquiries()
+      .then(setNewEnquiries)
+      .catch(() => setNewEnquiries(0));
+  }, [isAdmin]);
 
   if (isAdmin === null) {
     return <Shell><p className="text-parchment/60">Checking access…</p></Shell>;
@@ -331,6 +342,17 @@ function AdminArea({ session }: { session: Session }) {
           >
             Add regatta
           </button>
+          <Link
+            to="/admin/enquiries"
+            className="relative rounded-sm border border-parchment/25 px-4 py-2 text-sm text-parchment/80"
+          >
+            {enquiryCopy[lang === "en" ? "en" : "pl"].nav}
+            {newEnquiries > 0 ? (
+              <span className="ml-2 inline-flex min-w-5 items-center justify-center rounded-full bg-gold px-1.5 py-0.5 text-[11px] font-medium text-abyss">
+                {newEnquiries}
+              </span>
+            ) : null}
+          </Link>
           <Link
             to="/admin/team"
             className="rounded-sm border border-parchment/25 px-4 py-2 text-sm text-parchment/80"
