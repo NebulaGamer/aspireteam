@@ -185,7 +185,7 @@ export const translations = {
     },
     gacek: {
       eyebrow: "Sternik",
-      name: "Przemysław „Przemek” Gacek",
+      name: "Przemysław Gacek",
       role: "Sternik Aspire · współzałożyciel i CEO Grupy Pracuj",
       body1:
         "Współzałożyciel i prezes Grupy Pracuj — wiodącej grupy HR-tech w Europie Środkowej (Pracuj.pl, Rabota.ua), którą kieruje od ponad dwóch dekad.",
@@ -462,7 +462,7 @@ export const translations = {
     },
     gacek: {
       eyebrow: "Helmsman",
-      name: "Przemysław “Przemek” Gacek",
+      name: "Przemysław Gacek",
       role: "Helmsman of Aspire · co-founder and CEO of Grupa Pracuj",
       body1:
         "Co-founder and CEO of Grupa Pracuj, the leading HR-tech group in Central Europe (Pracuj.pl, Rabota.ua), which he has led for over two decades.",
