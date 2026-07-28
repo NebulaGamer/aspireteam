@@ -81,17 +81,6 @@ export const translations = {
         ],
         alt: "Cape 31 ślizgający się na kursie pełnym pod dużym asymetrycznym spinakerem",
       },
-      compare: {
-        title: "Porównanie",
-        headers: ["", "5.5 Metre", "Cape 31"],
-        rows: [
-          { label: "Długość", a: "ok. 9,5 m", b: "9,4 m" },
-          { label: "Załoga", a: "3", b: "6–7" },
-          { label: "Typ klasy", a: "Rozwojowa", b: "Jednoprojektowa" },
-          { label: "Dyscyplina", a: "Regaty międzynarodowe", b: "Ściganie ślizgowe" },
-        ],
-      },
-      detailAlt: "Załoga Aspire przy pracy na pokładzie jachtu regatowego",
     },
     history: {
       eyebrow: "Historia",
@@ -289,17 +278,6 @@ export const translations = {
         ],
         alt: "A Cape 31 planing downwind under a large asymmetric spinnaker",
       },
-      compare: {
-        title: "Side by side",
-        headers: ["", "5.5 Metre", "Cape 31"],
-        rows: [
-          { label: "Length", a: "approx. 9.5 m", b: "9.4 m" },
-          { label: "Crew", a: "3", b: "6–7" },
-          { label: "Class type", a: "Development", b: "One-design" },
-          { label: "Discipline", a: "International championship", b: "Planing one-design" },
-        ],
-      },
-      detailAlt: "The Aspire crew at work on the deck of the raceboat",
     },
     history: {
       eyebrow: "History",
