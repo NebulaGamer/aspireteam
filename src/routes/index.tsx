@@ -9,7 +9,7 @@ import { HistorySection } from "@/components/site/sections/HistorySection";
 import { ResultsSection } from "@/components/site/sections/ResultsSection";
 import { GacekSection } from "@/components/site/sections/GacekSection";
 import { KusznierewiczSection } from "@/components/site/sections/KusznierewiczSection";
-import { YouthSection } from "@/components/site/sections/YouthSection";
+
 import { PartnersSection } from "@/components/site/sections/PartnersSection";
 import { ContactSection } from "@/components/site/sections/ContactSection";
 
@@ -71,7 +71,7 @@ function Index() {
         <ResultsSection />
         <GacekSection />
         <KusznierewiczSection />
-        <YouthSection />
+        
         <PartnersSection />
         <ContactSection />
       </main>
