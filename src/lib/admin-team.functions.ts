@@ -170,10 +170,7 @@ export const revokeAdmin = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((data: { userId: string }) => data)
   .handler(async ({ data, context }): Promise<TeamResult> => {
-    const { callerIsAdmin, findAuthUserByEmail, writeAudit } = await import(
-      "@/lib/admin-team.server"
-    );
-    void findAuthUserByEmail;
+    const { callerIsAdmin, writeAudit } = await import("@/lib/admin-team.server");
 
     if (!(await callerIsAdmin(context.supabase, context.userId))) {
       return { ok: false, code: "forbidden" };
