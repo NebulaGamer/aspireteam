@@ -146,3 +146,16 @@ export async function notifyAccessGranted(email: string): Promise<void> {
     console.error("[admin-team] Resend request threw:", err);
   }
 }
+
+/**
+ * Re-verifies the caller against the database on every privileged call.
+ * The caller's id comes from their validated JWT (auth middleware), never from
+ * the request body — anything the client sends about itself is untrusted.
+ */
+export async function callerIsAdmin(
+  supabase: { rpc: (fn: string, args: Record<string, unknown>) => PromiseLike<{ data: unknown; error: unknown }> },
+  userId: string,
+): Promise<boolean> {
+  const { data, error } = await supabase.rpc("has_role", { _user_id: userId, _role: "admin" });
+  return !error && data === true;
+}
