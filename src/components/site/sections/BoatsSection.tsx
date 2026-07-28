@@ -21,7 +21,7 @@ export function BoatsSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="boats" className="section-dark">
+    <section id="boats" className="scroll-mt-24 section-dark">
       <div className="shell py-24 md:py-32">
         <Reveal>
           <p className="eyebrow">{t.boats.eyebrow}</p>

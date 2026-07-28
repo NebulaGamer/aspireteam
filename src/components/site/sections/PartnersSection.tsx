@@ -10,7 +10,7 @@ export function PartnersSection() {
   const { t, lang } = useLanguage();
 
   return (
-    <section id="partners" className="bg-parchment py-28 text-foreground md:py-44">
+    <section id="partners" className="scroll-mt-24 bg-parchment py-28 text-foreground md:py-44">
       <div className="shell">
         <Reveal className="max-w-3xl">
           <p className="eyebrow text-gold-ink">{t.partners.eyebrow}</p>

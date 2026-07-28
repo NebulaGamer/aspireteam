@@ -43,7 +43,7 @@ export function CalendarTeaser() {
   }, []);
 
   return (
-    <section id="calendar" className="section-dark section-abyss py-24 md:py-32">
+    <section id="calendar" className="scroll-mt-24 section-dark section-abyss py-24 md:py-32">
       <div className="shell">
         <Reveal>
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">

@@ -6,7 +6,7 @@ export function HistorySection() {
   const { t, lang } = useLanguage();
 
   return (
-    <section id="history" className="bg-background py-24 md:py-36">
+    <section id="history" className="scroll-mt-24 bg-background py-24 md:py-36">
       <div className="shell">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">{t.history.eyebrow}</p>

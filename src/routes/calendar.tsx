@@ -5,6 +5,8 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { CalendarSection } from "@/components/site/sections/CalendarSection";
 
+const SITE_URL = "https://aspireteam.lovable.app";
+
 const TITLE_PL = "Kalendarz regat 2026–2028 — Aspire Team POL 17";
 const DESCRIPTION_PL =
   "Pełny terminarz regat Aspire Team (POL 17): starty w klasach International 5.5 Metre i Cape 31 w całej Europie w latach 2026–2028.";
@@ -27,13 +29,18 @@ export const Route = createFileRoute("/calendar")({
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pl_PL" },
       { property: "og:locale:alternate", content: "en_GB" },
-      { property: "og:url", content: "/calendar" },
+      { property: "og:url", content: `${SITE_URL}/calendar` },
       { property: "og:site_name", content: "Aspire Team" },
+      { property: "og:image", content: `${SITE_URL}/og-image.png` },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Aspire Team — POL 17" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: `${TITLE_PL} · ${TITLE_EN}` },
       { name: "twitter:description", content: `${DESCRIPTION_PL} — ${DESCRIPTION_EN}` },
+      { name: "twitter:image", content: `${SITE_URL}/og-image.png` },
     ],
-    links: [{ rel: "canonical", href: "/calendar" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/calendar` }],
   }),
   component: CalendarPage,
 });

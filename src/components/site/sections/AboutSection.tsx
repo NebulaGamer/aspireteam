@@ -6,7 +6,7 @@ export function AboutSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="bg-background py-24 md:py-36">
+    <section id="about" className="scroll-mt-24 bg-background py-24 md:py-36">
       <div className="shell">
         <div className="grid items-start gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
           <div className="max-w-3xl">
