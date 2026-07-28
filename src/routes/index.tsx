@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { IMAGE_HERO_BOAT } from "@/components/site/SiteImages";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -45,7 +46,11 @@ export const Route = createFileRoute("/")({
       { name: "twitter:description", content: `${DESCRIPTION_PL} — ${DESCRIPTION_EN}` },
       { name: "twitter:image", content: `${SITE_URL}/og-image.png` },
     ],
-    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
+    links: [
+      { rel: "canonical", href: `${SITE_URL}/` },
+      // LCP candidate: the hero photograph. Preloaded so it paints as early as possible.
+      { rel: "preload", as: "image", href: IMAGE_HERO_BOAT, fetchpriority: "high" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
