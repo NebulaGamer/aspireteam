@@ -1,7 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { Reveal } from "../Reveal";
 import { IMAGE_PORTRAIT_KUSZNIEREWICZ, SiteImage } from "../SiteImages";
-import { PortraitPlaceholder } from "../PortraitPlaceholder";
 
 export function KusznierewiczSection() {
   const { t } = useLanguage();
@@ -33,11 +32,7 @@ export function KusznierewiczSection() {
         </div>
 
         <div className="relative min-h-[60vh] overflow-hidden bg-abyss lg:min-h-screen">
-          {IMAGE_PORTRAIT_KUSZNIEREWICZ ? (
-            <SiteImage src={IMAGE_PORTRAIT_KUSZNIEREWICZ} alt={t.kusz.alt} />
-          ) : (
-            <PortraitPlaceholder initials="MK" label={t.kusz.alt} />
-          )}
+          <SiteImage src={IMAGE_PORTRAIT_KUSZNIEREWICZ} alt={t.kusz.alt} />
         </div>
       </div>
     </section>

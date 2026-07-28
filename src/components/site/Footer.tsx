@@ -72,8 +72,6 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="shell flex flex-col gap-3 py-6 text-xs text-steel sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Aspire Team. {t.footer.rights}</p>
-          {/* TEMPORARY photo credit — delete this <p> once real team photography is in place. */}
-          <p className="max-w-md text-steel/80">{t.footer.photoCredit}</p>
           <p className="tracking-[0.24em] text-gold/70">POL 17</p>
         </div>
       </div>
