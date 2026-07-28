@@ -8,7 +8,6 @@ import {
   classLabel,
   formatRange,
   locationLine,
-  parseDay,
   regattaName,
 } from "@/lib/calendar-format";
 import { Reveal } from "../Reveal";
