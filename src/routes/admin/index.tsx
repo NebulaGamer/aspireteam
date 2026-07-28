@@ -13,7 +13,7 @@ import {
 } from "@/lib/regattas";
 import type { Session } from "@supabase/supabase-js";
 
-export const Route = createFileRoute("/admin")({
+export const Route = createFileRoute("/admin/")({
   // The session lives in localStorage, so this back office is client-rendered only.
   ssr: false,
   component: AdminPage,
