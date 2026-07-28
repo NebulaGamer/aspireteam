@@ -14,6 +14,8 @@ import { KusznierewiczSection } from "@/components/site/sections/KusznierewiczSe
 import { PartnersSection } from "@/components/site/sections/PartnersSection";
 import { ContactSection } from "@/components/site/sections/ContactSection";
 
+const SITE_URL = "https://aspireteam.lovable.app";
+
 const TITLE_PL = "Aspire Team — Mistrzowie świata w klasie 5.5 Metre | POL 17";
 const DESCRIPTION_PL =
   "Aspire (POL 17) — polski zespół żeglarski startujący w klasie International 5.5 Metre i Cape 31. Pierwsza polska załoga z tytułem mistrza świata 5.5 Metre.";
@@ -32,13 +34,18 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pl_PL" },
       { property: "og:locale:alternate", content: "en_GB" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: `${SITE_URL}/` },
       { property: "og:site_name", content: "Aspire Team" },
+      { property: "og:image", content: `${SITE_URL}/og-image.png` },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Aspire Team — POL 17" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: `${TITLE_PL} · ${TITLE_EN}` },
       { name: "twitter:description", content: `${DESCRIPTION_PL} — ${DESCRIPTION_EN}` },
+      { name: "twitter:image", content: `${SITE_URL}/og-image.png` },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
     scripts: [
       {
         type: "application/ld+json",
