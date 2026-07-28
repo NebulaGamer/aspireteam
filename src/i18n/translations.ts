@@ -15,6 +15,7 @@ export const translations = {
       boats: "Jachty",
       history: "Historia",
       results: "Wyniki",
+      calendar: "Kalendarz",
       crew: "Załoga",
       partners: "Partnerzy",
       contact: "Zostań partnerem",
