@@ -49,7 +49,7 @@ export const enquiryCopy: Record<"pl" | "en", EnquiryCopy> = {
     title: "Zapytania partnerskie",
     intro: "Wiadomości z formularza „Zostań partnerem”. Zawierają dane osobowe.",
     search: "Szukaj — firma, osoba, e-mail",
-    filters: { all: "Wszystkie", new: "Nowe", contacted: "W kontakcie", archived: "Archiwum" },
+    filters: { new: "Nowe", contacted: "W kontakcie", archived: "Archiwum" },
     status: { new: "Nowe", contacted: "W kontakcie", archived: "Zarchiwizowane" },
     interest: {
       sponsorship: "Sponsoring",
@@ -93,7 +93,7 @@ export const enquiryCopy: Record<"pl" | "en", EnquiryCopy> = {
     title: "Partnership enquiries",
     intro: "Messages from the “Become a partner” form. They contain personal data.",
     search: "Search — company, person, email",
-    filters: { all: "All", new: "New", contacted: "Contacted", archived: "Archived" },
+    filters: { new: "New", contacted: "Contacted", archived: "Archived" },
     status: { new: "New", contacted: "Contacted", archived: "Archived" },
     interest: {
       sponsorship: "Sponsorship",
