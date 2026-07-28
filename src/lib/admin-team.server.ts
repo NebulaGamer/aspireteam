@@ -6,6 +6,9 @@
  * module scope — `.server.ts` is blocked from client bundles by the build.
  */
 
+import type { SupabaseClient } from "@supabase/supabase-js";
+
+import type { Database } from "@/integrations/supabase/types";
 import { NOREPLY_FROM_ADDRESS } from "./partnership-email.server";
 
 /** Where an invited admin lands to choose their own password. */
@@ -153,7 +156,7 @@ export async function notifyAccessGranted(email: string): Promise<void> {
  * the request body — anything the client sends about itself is untrusted.
  */
 export async function callerIsAdmin(
-  supabase: { rpc: (fn: string, args: Record<string, unknown>) => PromiseLike<{ data: unknown; error: unknown }> },
+  supabase: SupabaseClient<Database>,
   userId: string,
 ): Promise<boolean> {
   const { data, error } = await supabase.rpc("has_role", { _user_id: userId, _role: "admin" });
