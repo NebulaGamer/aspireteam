@@ -38,6 +38,7 @@ export const translations = {
         "Łącząc doświadczenie mistrza olimpijskiego z determinacją przedsiębiorcy, zespół startuje w regatach w całej Europie — od Zatoki Gdańskiej po Morze Śródziemne.",
       body2:
         "W 2023 roku Aspire jako pierwsza polska załoga w historii zdobyła mistrzostwo świata w klasie 5.5 Metre. Trzy kolejne podia mistrzostw świata potwierdziły, że nie był to przypadek.",
+      imageAlt: "Załoga Aspire w akcji na wodzie",
       stats: [
         { value: "1×", label: "Mistrzostwo świata", note: "2023" },
         { value: "1×", label: "Mistrzostwo Europy", note: "2020" },
@@ -244,6 +245,7 @@ export const translations = {
         "Combining an Olympic champion's experience with an entrepreneur's drive, the team races across Europe — from the Bay of Gdańsk to the Mediterranean.",
       body2:
         "In 2023 Aspire became the first Polish crew ever to win the 5.5 Metre World Championship. Three consecutive Worlds podiums since have proved it was no accident.",
+      imageAlt: "The Aspire crew in action on the water",
       stats: [
         { value: "1×", label: "World Champion", note: "2023" },
         { value: "1×", label: "European Champion", note: "2020" },

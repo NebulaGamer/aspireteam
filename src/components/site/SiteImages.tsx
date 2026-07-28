@@ -9,12 +9,16 @@
 
 import boat55Asset from "@/assets/boat-55m-pol17.jpg.asset.json";
 import cape31Asset from "@/assets/cape31-replacement.jpg.asset.json";
+import aboutActionAsset from "@/assets/about-action.jpg.asset.json";
 
 import gacekAsset from "@/assets/portrait-gacek.jpg.asset.json";
 import kusznierewiczAsset from "@/assets/portrait-kusznierewicz.jpg.asset.json";
 
 export const IMAGE_BOAT_55_METRE = boat55Asset.url;
 export const IMAGE_BOAT_CAPE_31 = cape31Asset.url;
+
+/** Action photograph shown beside the About section text. */
+export const IMAGE_ABOUT_ACTION = aboutActionAsset.url;
 
 /**
  * Deck / crew photograph shown beside the boat comparison table.
