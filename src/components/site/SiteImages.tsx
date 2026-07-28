@@ -13,6 +13,8 @@ import cape31Src from "@/assets/cape31-downwind.jpg";
 import deckDetailSrc from "@/assets/deck-detail.jpg";
 import trophySrc from "@/assets/trophy.jpg";
 import youthSrc from "@/assets/youth-sailing.jpg";
+import gacekAsset from "@/assets/portrait-gacek.jpg.asset.json";
+import kusznierewiczAsset from "@/assets/portrait-kusznierewicz.jpg.asset.json";
 
 export const IMAGE_HERO = heroSrc;
 export const IMAGE_BOAT_55_METRE = boat55Asset.url;
@@ -20,17 +22,14 @@ export const IMAGE_BOAT_CAPE_31 = cape31Src;
 export const IMAGE_DECK_DETAIL = deckDetailSrc;
 export const IMAGE_TROPHY = trophySrc;
 /**
- * PORTRAITS — INTENTIONAL PLACEHOLDERS.
- * Przemysław Gacek and Mateusz Kusznierewicz are real, named public figures,
- * so no generated likeness is used for them. While these constants are `null`
- * the crew sections render the `PortraitPlaceholder` panel (initials + a
- * "photograph coming soon" caption) instead of a face.
- *
- * MUST BE REPLACED with licensed photographs of the real people: drop the file
- * into `src/assets/`, import it, and assign it here — nothing else changes.
+ * PORTRAITS — real, licensed photographs supplied by the team.
+ * Przemysław Gacek and Mateusz Kusznierewicz are real, named public figures:
+ * only genuine photography may be used here, never a generated likeness.
+ * Setting either constant back to `null` restores the `PortraitPlaceholder`
+ * panel (initials + "photograph coming soon" caption).
  */
-export const IMAGE_PORTRAIT_GACEK: string | null = null;
-export const IMAGE_PORTRAIT_KUSZNIEREWICZ: string | null = null;
+export const IMAGE_PORTRAIT_GACEK: string | null = gacekAsset.url;
+export const IMAGE_PORTRAIT_KUSZNIEREWICZ: string | null = kusznierewiczAsset.url;
 export const IMAGE_YOUTH = youthSrc;
 
 type SiteImageProps = {

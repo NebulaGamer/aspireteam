@@ -126,7 +126,7 @@ export const translations = {
       quote:
         "Nigdy nie przypuszczałem, że zostanę sportowcem, a tym bardziej że stanę na podium i usłyszę hymn Polski.",
       quoteNote: "",
-      alt: "Panel z inicjałami PG — zdjęcie Przemysława Gacka zostanie dodane wkrótce",
+      alt: "Przemysław Gacek — portret na pokładzie jachtu",
     },
     kusz: {
       eyebrow: "Taktyk i mentor",
@@ -145,7 +145,7 @@ export const translations = {
         { title: "Zwycięzca Bacardi Cup", note: "Klasa Star" },
         { title: "Olimpijczyk", note: "Londyn 2012" },
       ],
-      alt: "Panel z inicjałami MK — zdjęcie Mateusza Kusznierewicza zostanie dodane wkrótce",
+      alt: "Mateusz Kusznierewicz — portret",
     },
     youth: {
       eyebrow: "Wspieramy młodych",
@@ -365,7 +365,7 @@ export const translations = {
       quote:
         "I never imagined I would become an athlete — let alone stand on a podium and hear the Polish anthem played.",
       quoteNote: "Nigdy nie przypuszczałem, że zostanę sportowcem, a tym bardziej że stanę na podium i usłyszę hymn Polski.",
-      alt: "Panel showing the initials PG — a photograph of Przemysław Gacek is coming soon",
+      alt: "Przemysław Gacek — portrait aboard the yacht",
     },
     kusz: {
       eyebrow: "Tactician and mentor",
@@ -384,7 +384,7 @@ export const translations = {
         { title: "Bacardi Cup winner", note: "Star class" },
         { title: "Olympian", note: "London 2012" },
       ],
-      alt: "Panel showing the initials MK — a photograph of Mateusz Kusznierewicz is coming soon",
+      alt: "Mateusz Kusznierewicz — portrait",
     },
     youth: {
       eyebrow: "Supporting young people",
