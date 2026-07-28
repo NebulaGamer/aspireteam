@@ -39,7 +39,7 @@ export function PartnersSection() {
                     src={partner.logo}
                     alt={partner.name}
                     loading="lazy"
-                    className="max-h-12 w-auto max-w-full object-contain md:max-h-14"
+                    className={`w-auto max-w-full object-contain ${partner.logoClassName}`}
                   />
                 </span>
 
