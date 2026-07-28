@@ -147,31 +147,6 @@ export const translations = {
       ],
       alt: "Mateusz Kusznierewicz — portret",
     },
-    youth: {
-      eyebrow: "Wspieramy młodych",
-      title: "To, co przekazujemy dalej",
-      lead: "Aspire wierzy, że wartość programu żeglarskiego mierzy się tym, co po sobie zostawia.",
-      body: "Wspieramy młodych polskich żeglarzy na drodze z klas młodzieżowych do rywalizacji międzynarodowej — mentoringiem, dostępem do treningów z załogą światowej klasy i udostępnianiem jachtów zespołu jako platformy do nauki.",
-      cards: [
-        {
-          title: "Mentoring",
-          body: "Indywidualne wsparcie doświadczonych zawodników dla młodych żeglarzy wchodzących do sportu wyczynowego.",
-        },
-        {
-          title: "Treningi i dostęp",
-          body: "Wspólne treningi z załogą Aspire oraz możliwość żeglowania na jachtach zespołu jako platformie edukacyjnej.",
-        },
-        {
-          title: "Programy przywództwa",
-          body: "Mateusz Kusznierewicz prowadzi programy z zakresu mentoringu, pracy zespołowej i przywództwa, przenosząc lekcje ze sportu olimpijskiego do codziennej pracy.",
-        },
-        {
-          title: "Inspiracja nowego pokolenia",
-          body: "Sprowadzenie mistrzostw świata 2025 do Sopotu pokazało żeglarstwo światowej klasy nowemu pokoleniu polskich zawodników.",
-        },
-      ],
-      alt: "Młodzi żeglarze trenujący w małych łódkach o wschodzie słońca",
-    },
     partners: {
       eyebrow: "Sponsorzy i partnerzy",
       title: "Razem na wodzie",
@@ -385,31 +360,6 @@ export const translations = {
         { title: "Olympian", note: "London 2012" },
       ],
       alt: "Mateusz Kusznierewicz — portrait",
-    },
-    youth: {
-      eyebrow: "Supporting young people",
-      title: "Measured by what we pass on",
-      lead: "Aspire believes the value of a sailing programme is measured by what it passes on.",
-      body: "The team supports young Polish sailors on the path from youth classes to international competition — mentoring, access to training with world-class crew, and using the team's boats as a learning platform.",
-      cards: [
-        {
-          title: "Mentoring",
-          body: "One-to-one support from experienced racers for young sailors stepping up into high-performance sport.",
-        },
-        {
-          title: "Training & access",
-          body: "Training alongside the Aspire crew and time on the team's boats as a genuine learning platform.",
-        },
-        {
-          title: "Leadership programmes",
-          body: "Mateusz Kusznierewicz leads mentoring, teamwork and leadership programmes that translate lessons from Olympic sport into everyday performance.",
-        },
-        {
-          title: "Inspiring the next generation",
-          body: "Bringing the 2025 World Championship to Sopot put world-class racing directly in front of a new generation of Polish sailors.",
-        },
-      ],
-      alt: "Young sailors training in small dinghies at sunrise",
     },
     partners: {
       eyebrow: "Sponsors & partners",
