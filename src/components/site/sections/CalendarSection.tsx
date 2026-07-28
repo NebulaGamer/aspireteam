@@ -84,7 +84,7 @@ export function CalendarSection() {
   const effectiveView: View = isMobile ? "agenda" : view;
 
   return (
-    <section id="calendar" className="section-dark section-abyss pb-24 pt-36 md:pb-36 md:pt-48">
+    <section id="calendar" className="scroll-mt-24 section-dark section-abyss pb-24 pt-36 md:pb-36 md:pt-48">
       <div className="shell">
         <Reveal>
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">

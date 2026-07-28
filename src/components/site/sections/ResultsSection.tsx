@@ -29,7 +29,7 @@ export function ResultsSection() {
     t.results.places[place as 1 | 2 | 3] ?? `${place}.`;
 
   return (
-    <section id="results" className="section-dark section-abyss py-24 md:py-36">
+    <section id="results" className="scroll-mt-24 section-dark section-abyss py-24 md:py-36">
       <div className="shell">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">{t.results.eyebrow}</p>
