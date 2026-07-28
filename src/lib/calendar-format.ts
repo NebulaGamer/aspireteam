@@ -80,9 +80,10 @@ export function classLabel(
   return boatClass === "cape31" ? s.cape : s.five;
 }
 
-/** Location line: "Fraglia Vela Riva, Lake Garda · ITA". */
+/** Location line: "Fraglia Vela Riva, Lake Garda · ITA" (city dropped when the venue repeats it). */
 export function locationLine(r: Regatta): string {
-  const place = [r.venue, r.city].filter(Boolean).join(", ");
+  const city = r.city && !r.venue.toLowerCase().includes(r.city.toLowerCase()) ? r.city : null;
+  const place = [r.venue, city].filter(Boolean).join(", ");
   return `${place} · ${r.country_code}`;
 }
 
