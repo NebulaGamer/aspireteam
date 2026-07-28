@@ -90,7 +90,7 @@ export function CalendarSection() {
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
               <p className="eyebrow">{c.eyebrow}</p>
-              <h2 className="font-display mt-4 text-4xl text-parchment md:text-5xl">{c.title}</h2>
+              <h1 className="font-display mt-4 text-4xl text-parchment md:text-5xl">{c.title}</h1>
               <p className="mt-5 text-base leading-relaxed text-steel">{c.intro}</p>
             </div>
 
