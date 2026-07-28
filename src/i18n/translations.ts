@@ -149,14 +149,15 @@ export const translations = {
     },
     partners: {
       eyebrow: "Sponsorzy i partnerzy",
-      title: "Razem na wodzie",
-      leadLabel: "Patron tytularny od 2023",
+      title: "Sponsorzy",
+      leadLabel: "Sponsor główny od 2023",
       leadName: "Grupa Pracuj",
       leadBody:
-        "Grupa Pracuj jest patronem tytularnym projektu Aspire od 2023 roku. Partnerstwo obejmuje także rejsy team-buildingowe i sesje mentoringowe dla pracowników na pokładzie jachtu.",
-      gridLabel: "Pozostali partnerzy",
+        "Grupa Pracuj jest sponsorem głównym projektu Aspire od 2023 roku. Partnerstwo obejmuje także rejsy team-buildingowe i sesje mentoringowe dla pracowników na pokładzie jachtu.",
+      gridLabel: "Pozostali sponsorzy",
       placeholder: "Miejsce na logo",
     },
+
     contact: {
       eyebrow: "Zostań partnerem",
       title: "Partnerstwo z Aspire",
