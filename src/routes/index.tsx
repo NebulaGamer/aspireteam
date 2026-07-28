@@ -7,6 +7,7 @@ import { AboutSection } from "@/components/site/sections/AboutSection";
 import { BoatsSection } from "@/components/site/sections/BoatsSection";
 import { HistorySection } from "@/components/site/sections/HistorySection";
 import { ResultsSection } from "@/components/site/sections/ResultsSection";
+import { CalendarSection } from "@/components/site/sections/CalendarSection";
 import { GacekSection } from "@/components/site/sections/GacekSection";
 import { KusznierewiczSection } from "@/components/site/sections/KusznierewiczSection";
 
@@ -74,6 +75,7 @@ function Index() {
         <BoatsSection />
         <HistorySection />
         <ResultsSection />
+        <CalendarSection />
         <GacekSection />
         <KusznierewiczSection />
         
