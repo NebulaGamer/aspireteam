@@ -44,6 +44,7 @@ export function SiteImage({ src, alt, className = "", priority = false }: SiteIm
       alt={alt}
       loading={priority ? "eager" : "lazy"}
       decoding={priority ? "sync" : "async"}
+      fetchPriority={priority ? "high" : "auto"}
       className={`h-full w-full object-cover ${className}`}
     />
   );

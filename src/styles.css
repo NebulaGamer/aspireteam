@@ -62,7 +62,8 @@
   --gold-soft: oklch(0.82 0.075 88);
   /* Darker companion gold (#8A6D13) — AA-safe for small text on light surfaces. */
   --gold-ink: oklch(0.523 0.098 84);
-  --steel: oklch(0.66 0.031 246);
+  /* Muted body text on dark surfaces — kept light enough for WCAG AA (>=4.5:1 on --ocean/--abyss). */
+  --steel: oklch(0.79 0.026 246);
   --silver: oklch(0.78 0.008 250);
   --bronze: oklch(0.62 0.09 55);
 
