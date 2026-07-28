@@ -280,6 +280,7 @@ export const translations = {
       boats: "The Boats",
       history: "History",
       results: "Results",
+      calendar: "Calendar",
       crew: "Crew",
       partners: "Partners",
       contact: "Partner with us",
