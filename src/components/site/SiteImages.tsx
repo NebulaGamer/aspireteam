@@ -9,7 +9,7 @@
 
 import heroSrc from "@/assets/hero-55m.jpg";
 import boat55Asset from "@/assets/boat-55m-pol17.jpg.asset.json";
-import cape31Src from "@/assets/cape31-downwind.jpg";
+import cape31Asset from "@/assets/cape31-replacement.jpg.asset.json";
 import deckDetailSrc from "@/assets/deck-detail.jpg";
 import trophySrc from "@/assets/trophy.jpg";
 import youthSrc from "@/assets/youth-sailing.jpg";
