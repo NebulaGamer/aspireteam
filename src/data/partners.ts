@@ -12,6 +12,7 @@ import comarchLogo from "@/assets/partners/comarch.png.asset.json";
  *     name: "Acme",
  *     tier: "partner",
  *     logo: acmeLogo.url,
+ *     logoClassName: "max-h-12 md:max-h-14",
  *     url: "https://acme.com",
  *     description: { pl: "…", en: "…" },
  *   }
@@ -27,6 +28,11 @@ export type Partner = {
   name: string;
   tier: PartnerTier;
   logo: string;
+  /**
+   * Optical size cap for the logo. Marks have different amounts of built-in
+   * padding, so this is tuned per logo so neither reads heavier than the other.
+   */
+  logoClassName: string;
   url: string;
   description: { pl: string; en: string };
 };
@@ -37,6 +43,7 @@ export const partners: Partner[] = [
     name: "Grupa Pracuj",
     tier: "main",
     logo: grupaPracujLogo.url,
+    logoClassName: "max-h-12 md:max-h-14",
     url: "https://grupapracuj.pl",
     description: {
       pl: "Grupa Pracuj jest sponsorem głównym projektu Aspire od 2023 roku. Partnerstwo obejmuje także rejsy team-buildingowe i sesje mentoringowe dla pracowników na pokładzie jachtu.",
@@ -52,6 +59,8 @@ export const partners: Partner[] = [
     name: "Comarch",
     tier: "partner",
     logo: comarchLogo.url,
+    // Comarch's file has ~75% vertical padding baked in, hence the larger cap.
+    logoClassName: "max-h-24 md:max-h-28",
     url: "https://www.comarch.pl",
     description: {
       pl: "Comarch wspiera zespół Aspire w startach w klasie International 5.5 Metre i Cape 31, towarzysząc projektowi w kolejnym sezonie regatowym.",
