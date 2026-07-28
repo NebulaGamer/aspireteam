@@ -60,7 +60,7 @@ export const partners: Partner[] = [
     tier: "partner",
     logo: comarchLogo.url,
     // Comarch's file has ~75% vertical padding baked in, hence the larger cap.
-    logoClassName: "max-h-28 md:max-h-32",
+    logoClassName: "max-h-24 md:max-h-28",
     url: "https://www.comarch.pl",
     description: {
       pl: "Comarch wspiera zespół Aspire w startach w klasie International 5.5 Metre i Cape 31, towarzysząc projektowi w kolejnym sezonie regatowym.",
