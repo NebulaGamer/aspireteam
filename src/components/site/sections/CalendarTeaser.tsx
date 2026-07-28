@@ -102,7 +102,7 @@ export function CalendarTeaser() {
                   <p className="mt-2 text-sm text-steel">{locationLine(r)}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     <span className="border border-gold/40 px-2.5 py-1 text-[0.6rem] uppercase tracking-[0.18em] text-gold">
-                      {classLabel(r.boat_class, c)}
+                      {classLabel(r.boat_class, c.filters)}
                     </span>
                     {i === 0 ? (
                       <span className="border border-parchment/25 px-2.5 py-1 text-[0.6rem] uppercase tracking-[0.18em] text-silver">
