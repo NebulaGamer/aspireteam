@@ -222,6 +222,9 @@ export const translations = {
           interestRequired: "Wybierz obszar zainteresowania.",
           messageRequired: "Napisz kilka słów o swoim zapytaniu.",
           messageMax: "Wiadomość może mieć maksymalnie 1000 znaków.",
+          submitFailed:
+            "Nie udało się wysłać zapytania. Spróbuj ponownie lub napisz na kontakt@aspireteam.pl.",
+          rateLimited: "Zapytanie zostało już wysłane. Odczekaj minutę przed kolejną próbą.",
         },
       },
     },
@@ -453,6 +456,9 @@ export const translations = {
           interestRequired: "Please select an area of interest.",
           messageRequired: "Please tell us a little about your enquiry.",
           messageMax: "Message must be 1000 characters or fewer.",
+          submitFailed:
+            "We couldn't send your enquiry. Please try again or email kontakt@aspireteam.pl.",
+          rateLimited: "Your enquiry was just sent. Please wait a minute before sending another.",
         },
       },
     },

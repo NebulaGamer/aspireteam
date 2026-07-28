@@ -1,10 +1,8 @@
 /**
- * Partnership enquiry submission.
+ * Partnership enquiry — shared types and client-side rate limiting.
  *
- * STUB: currently resolves after a short delay. To wire this to the database
- * and email, replace the body of `submitPartnershipEnquiry` with a call to a
- * server function — the signature and return shape stay the same, so no UI
- * changes are needed.
+ * The actual write happens server-side in `partnership.functions.ts`
+ * (validation, database insert, email notification).
  */
 
 export type PartnershipEnquiry = {
@@ -16,14 +14,22 @@ export type PartnershipEnquiry = {
   message: string;
 };
 
-export type SubmitResult = { ok: true } | { ok: false; error: string };
+export type SubmitResult = { ok: true } | { ok: false; error: "invalid" | "failed" };
 
-export async function submitPartnershipEnquiry(
-  enquiry: PartnershipEnquiry,
-): Promise<SubmitResult> {
-  await new Promise((resolve) => setTimeout(resolve, 900));
-  if (import.meta.env.DEV) {
-    console.info("[stub] partnership enquiry", { ...enquiry, email: "[redacted]" });
-  }
-  return { ok: true };
+/** Minimum delay between two submissions from the same browser. */
+export const RATE_LIMIT_MS = 60_000;
+const RATE_LIMIT_KEY = "aspire:lastEnquiryAt";
+
+/** Milliseconds left before this visitor may submit again (0 when allowed). */
+export function rateLimitRemaining(now = Date.now()): number {
+  if (typeof window === "undefined") return 0;
+  const raw = window.localStorage.getItem(RATE_LIMIT_KEY);
+  const last = raw ? Number(raw) : 0;
+  if (!Number.isFinite(last) || last <= 0) return 0;
+  return Math.max(0, RATE_LIMIT_MS - (now - last));
+}
+
+export function markSubmitted(now = Date.now()): void {
+  if (typeof window === "undefined") return;
+  window.localStorage.setItem(RATE_LIMIT_KEY, String(now));
 }

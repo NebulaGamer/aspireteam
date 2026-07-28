@@ -1,8 +1,15 @@
 import { useState, type FormEvent } from "react";
+import { useServerFn } from "@tanstack/react-start";
 import { Check } from "lucide-react";
 import { z } from "zod";
 import { useLanguage } from "@/i18n/LanguageProvider";
-import { submitPartnershipEnquiry, type PartnershipEnquiry } from "@/lib/partnership";
+import {
+  markSubmitted,
+  rateLimitRemaining,
+  type PartnershipEnquiry,
+  type SubmitResult,
+} from "@/lib/partnership";
+import { submitPartnershipEnquiry } from "@/lib/partnership.functions";
 import { Reveal } from "../Reveal";
 
 type Errors = Partial<Record<keyof PartnershipEnquiry, string>>;
@@ -17,13 +24,17 @@ const EMPTY: PartnershipEnquiry = {
 };
 
 export function ContactSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const e = t.contact.form.errors;
 
   const [values, setValues] = useState<PartnershipEnquiry>(EMPTY);
   const [errors, setErrors] = useState<Errors>({});
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
+  // Honeypot: hidden from humans, irresistible to bots.
+  const [honeypot, setHoneypot] = useState("");
+  const submit = useServerFn(submitPartnershipEnquiry);
 
   const schema = z.object({
     company: z.string().trim().min(1, e.companyRequired).max(100, e.companyMax),
@@ -50,6 +61,7 @@ export function ContactSection() {
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setFormError(null);
     const parsed = schema.safeParse(values);
     if (!parsed.success) {
       const next: Errors = {};
@@ -60,13 +72,29 @@ export function ContactSection() {
       setErrors(next);
       return;
     }
+    if (rateLimitRemaining() > 0) {
+      setFormError(e.rateLimited);
+      return;
+    }
+
     setSubmitting(true);
-    const result = await submitPartnershipEnquiry(parsed.data);
+    let result: SubmitResult;
+    try {
+      result = await submit({ data: { ...parsed.data, locale: lang, website: honeypot } });
+    } catch {
+      result = { ok: false, error: "failed" };
+    }
     setSubmitting(false);
+
     if (result.ok) {
+      markSubmitted();
       setDone(true);
       setValues(EMPTY);
+      setHoneypot("");
+      return;
     }
+    // Keep the entered values so nothing the visitor typed is lost.
+    setFormError(e.submitFailed);
   };
 
   const options = [
@@ -116,7 +144,7 @@ export function ContactSection() {
               </button>
             </div>
           ) : (
-            <form noValidate onSubmit={onSubmit} className="space-y-8">
+            <form noValidate onSubmit={onSubmit} className="relative space-y-8">
               <Field
                 id="company"
                 label={t.contact.form.company}
@@ -197,6 +225,25 @@ export function ContactSection() {
                   </p>
                 ) : null}
               </div>
+
+              <div aria-hidden="true" className="absolute -left-[9999px] top-0 h-0 w-0 overflow-hidden">
+                <label htmlFor="website">Website</label>
+                <input
+                  id="website"
+                  name="website"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={honeypot}
+                  onChange={(ev) => setHoneypot(ev.target.value)}
+                />
+              </div>
+
+              {formError ? (
+                <p role="alert" className="text-sm text-destructive">
+                  {formError}
+                </p>
+              ) : null}
 
               <button
                 type="submit"
