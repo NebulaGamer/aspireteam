@@ -14,7 +14,7 @@ import { KusznierewiczSection } from "@/components/site/sections/KusznierewiczSe
 import { PartnersSection } from "@/components/site/sections/PartnersSection";
 import { ContactSection } from "@/components/site/sections/ContactSection";
 
-const SITE_URL = "https://aspireteam.lovable.app";
+const SITE_URL = "https://aspireteam.pl";
 
 const TITLE_PL = "Aspire Team — Mistrzowie świata w klasie 5.5 Metre | POL 17";
 const DESCRIPTION_PL =

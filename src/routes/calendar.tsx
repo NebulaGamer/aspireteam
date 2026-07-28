@@ -5,7 +5,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { CalendarSection } from "@/components/site/sections/CalendarSection";
 
-const SITE_URL = "https://aspireteam.lovable.app";
+const SITE_URL = "https://aspireteam.pl";
 
 const TITLE_PL = "Kalendarz regat 2026–2028 — Aspire Team POL 17";
 const DESCRIPTION_PL =
