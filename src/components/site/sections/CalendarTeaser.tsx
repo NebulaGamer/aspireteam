@@ -57,6 +57,7 @@ export function CalendarTeaser() {
 
             <Link
               to="/calendar"
+              search={{ cls: undefined, season: undefined }}
               className="group inline-flex shrink-0 items-center gap-3 border border-gold/60 px-6 py-3 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-gold transition-colors hover:bg-gold hover:text-abyss"
             >
               {c.teaser.cta}
