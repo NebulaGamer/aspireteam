@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SITE_URL } from "@/lib/site";
 import { IMAGE_HERO_BOAT } from "@/components/site/SiteImages";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { Header } from "@/components/site/Header";
@@ -14,8 +15,6 @@ import { KusznierewiczSection } from "@/components/site/sections/KusznierewiczSe
 
 import { PartnersSection } from "@/components/site/sections/PartnersSection";
 import { ContactSection } from "@/components/site/sections/ContactSection";
-
-const SITE_URL = "https://aspireteam.pl";
 
 const TITLE_PL = "Aspire Team — Mistrzowie świata w klasie 5.5 Metre | POL 17";
 const DESCRIPTION_PL =
@@ -62,6 +61,8 @@ export const Route = createFileRoute("/")({
           alternateName: "POL 17",
           description: DESCRIPTION_EN,
           nationality: "Poland",
+          url: SITE_URL,
+          logo: `${SITE_URL}/icon-512.png`,
           member: [
             { "@type": "Person", name: "Przemysław Gacek", jobTitle: "Helmsman" },
             { "@type": "Person", name: "Mateusz Kusznierewicz", jobTitle: "Tactician" },
