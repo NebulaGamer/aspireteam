@@ -467,6 +467,9 @@ export const translations = {
         },
       },
     },
+    portrait: {
+      comingSoon: "Photograph coming soon",
+    },
     footer: {
       tagline: "Polish sailing team · POL 17",
       navLabel: "Navigation",
@@ -474,6 +477,8 @@ export const translations = {
       email: "kontakt@aspireteam.pl",
       social: "Social media",
       rights: "All rights reserved.",
+      /* TEMPORARY — delete this line once real team photography is in place. */
+      photoCredit: "Placeholder imagery — to be replaced with team photography",
     },
   },
 } as const;
