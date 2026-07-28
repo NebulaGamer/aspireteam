@@ -109,6 +109,18 @@ export const translations = {
       title: "Kalendarz regat",
       intro:
         "Dwa programy — International 5.5 Metre i Cape 31 — od jezior alpejskich po Morze Śródziemne. Terminarz aktualizowany na bieżąco przez zespół.",
+      metaTitle: "Kalendarz regat 2026–2028 — Aspire Team POL 17",
+      metaDescription:
+        "Pełny terminarz regat Aspire Team (POL 17): starty w klasach International 5.5 Metre i Cape 31 w całej Europie w latach 2026–2028.",
+      backHome: "Powrót na stronę główną",
+      teaser: {
+        eyebrow: "Kalendarz",
+        title: "Najbliżej na wodzie",
+        intro: "Nadchodzące starty z terminarza Aspire.",
+        cta: "Zobacz pełny kalendarz",
+        empty: "Terminarz kolejnego sezonu jest potwierdzany.",
+      },
+
       viewLabel: "Widok",
       views: { agenda: "Lista", month: "Miesiąc" },
       filters: {
@@ -374,6 +386,18 @@ export const translations = {
       title: "Racing Calendar",
       intro:
         "Two programmes — the International 5.5 Metre and the Cape 31 — from the Alpine lakes to the Mediterranean. Kept up to date by the team.",
+      metaTitle: "Racing Calendar 2026–2028 — Aspire Team POL 17",
+      metaDescription:
+        "The full regatta schedule of Aspire Team (POL 17): International 5.5 Metre and Cape 31 events across Europe, 2026 to 2028.",
+      backHome: "Back to the homepage",
+      teaser: {
+        eyebrow: "Calendar",
+        title: "Next on the water",
+        intro: "The closest regattas on the Aspire schedule.",
+        cta: "See the full calendar",
+        empty: "The next season's schedule is being confirmed.",
+      },
+
       viewLabel: "View",
       views: { agenda: "Agenda", month: "Month" },
       filters: {

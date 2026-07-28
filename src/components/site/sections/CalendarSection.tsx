@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { getRouteApi, useNavigate } from "@tanstack/react-router";
+import { useNavigate, useSearch } from "@tanstack/react-router";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { supabase } from "@/integrations/supabase/client";
 import type { Regatta } from "@/lib/regattas";
@@ -12,29 +12,29 @@ import { MonthView } from "../calendar/MonthView";
 const VIEW_STORAGE_KEY = "aspire.calendar.view";
 type View = "agenda" | "month";
 
-const routeApi = getRouteApi("/");
-
 export function CalendarSection() {
   const { t } = useLanguage();
   const c = t.calendar;
   const isMobile = useIsMobile();
 
-  const search = routeApi.useSearch();
-  const navigate = useNavigate({ from: "/" });
+  // Route-agnostic: the section lives on /calendar but keeps its filters in the URL.
+  const search = useSearch({ strict: false }) as { cls?: string; season?: string };
+  const navigate = useNavigate();
 
   const classFilter = search.cls ?? "all";
   const seasonFilter = search.season ?? "all";
 
   const setFilter = (key: "cls" | "season", value: string) =>
     navigate({
+      to: ".",
       search: (prev: Record<string, string | undefined>) => ({
         ...prev,
         [key]: value === "all" ? undefined : value,
       }),
-      hash: "calendar",
       replace: true,
       resetScroll: false,
     });
+
 
   const [view, setView] = useState<View>("agenda");
   const [rows, setRows] = useState<Regatta[] | null>(null);
@@ -84,13 +84,13 @@ export function CalendarSection() {
   const effectiveView: View = isMobile ? "agenda" : view;
 
   return (
-    <section id="calendar" className="section-dark section-abyss py-24 md:py-36">
+    <section id="calendar" className="section-dark section-abyss pb-24 pt-36 md:pb-36 md:pt-48">
       <div className="shell">
         <Reveal>
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
               <p className="eyebrow">{c.eyebrow}</p>
-              <h2 className="font-display mt-4 text-4xl text-parchment md:text-5xl">{c.title}</h2>
+              <h1 className="font-display mt-4 text-4xl text-parchment md:text-5xl">{c.title}</h1>
               <p className="mt-5 text-base leading-relaxed text-steel">{c.intro}</p>
             </div>
 
