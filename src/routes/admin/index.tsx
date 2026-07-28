@@ -2,7 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
 
 import { RegattaForm } from "@/components/admin/RegattaForm";
+import { LanguageProvider, useLanguage } from "@/i18n/LanguageProvider";
 import { supabase } from "@/integrations/supabase/client";
+import {
+  adminCopy,
+  markResetRequested,
+  resetRateLimitRemaining,
+  resetRedirectUrl,
+} from "@/lib/admin-copy";
 import {
   BOAT_CLASSES,
   formatDateRange,
@@ -13,10 +20,15 @@ import {
 } from "@/lib/regattas";
 import type { Session } from "@supabase/supabase-js";
 
-export const Route = createFileRoute("/admin")({
+export const Route = createFileRoute("/admin/")({
   // The session lives in localStorage, so this back office is client-rendered only.
   ssr: false,
-  component: AdminPage,
+  component: () => (
+    <LanguageProvider>
+      <AdminPage />
+    </LanguageProvider>
+  ),
+
   head: () => ({
     meta: [
       { title: "Admin — Aspire Team" },
@@ -61,69 +73,165 @@ function Shell({ children }: { children: React.ReactNode }) {
   );
 }
 
+const fieldClass =
+  "w-full rounded-sm border border-parchment/20 bg-abyss/60 px-3 py-2 text-sm outline-none focus:border-gold";
+
 function LoginPanel() {
+  const { lang } = useLanguage();
+  const c = adminCopy[lang === "en" ? "en" : "pl"];
+
+  const [mode, setMode] = useState<"signIn" | "reset">(() =>
+    typeof window !== "undefined" && new URLSearchParams(window.location.search).has("reset")
+      ? "reset"
+      : "signIn",
+  );
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+
+  const requestReset = async () => {
+    setError(null);
+    const waitMs = resetRateLimitRemaining();
+    if (waitMs > 0) {
+      setError(c.resetThrottled(Math.ceil(waitMs / 1000)));
+      return;
+    }
+    setBusy(true);
+    // Result is deliberately ignored: the confirmation must be identical whether
+    // or not the address is registered (no account enumeration).
+    await supabase.auth.resetPasswordForEmail(email.trim(), {
+      redirectTo: resetRedirectUrl(),
+    });
+    markResetRequested();
+    setBusy(false);
+    setNotice(c.resetSent);
+  };
 
   return (
     <Shell>
       <div className="mx-auto max-w-sm">
-        <p className="text-[11px] uppercase tracking-[0.28em] text-gold">Aspire Team</p>
-        <h1 className="font-display mt-2 text-3xl">Back office</h1>
-        <form
-          className="mt-8 space-y-4"
-          onSubmit={async (e) => {
-            e.preventDefault();
-            setBusy(true);
-            setError(null);
-            const { error: signInError } = await supabase.auth.signInWithPassword({
-              email: email.trim(),
-              password,
-            });
-            if (signInError) setError("Sign-in failed. Check your email and password.");
-            setBusy(false);
-          }}
-        >
-          <label className="block space-y-1.5">
-            <span className="block text-[11px] uppercase tracking-[0.18em] text-parchment/60">Email</span>
-            <input
-              type="email"
-              autoComplete="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full rounded-sm border border-parchment/20 bg-abyss/60 px-3 py-2 text-sm outline-none focus:border-gold"
-            />
-          </label>
-          <label className="block space-y-1.5">
-            <span className="block text-[11px] uppercase tracking-[0.18em] text-parchment/60">Password</span>
-            <input
-              type="password"
-              autoComplete="current-password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full rounded-sm border border-parchment/20 bg-abyss/60 px-3 py-2 text-sm outline-none focus:border-gold"
-            />
-          </label>
-          {error ? <p className="text-sm text-red-400">{error}</p> : null}
-          <button
-            type="submit"
-            disabled={busy}
-            className="w-full rounded-sm bg-gold px-5 py-2 text-sm font-medium text-abyss disabled:opacity-60"
-          >
-            {busy ? "Signing in…" : "Sign in"}
-          </button>
-        </form>
-        <p className="mt-6 text-xs text-parchment/45">
-          Access is granted by the team. Accounts cannot be created here.
-        </p>
+        <p className="text-[11px] uppercase tracking-[0.28em] text-gold">{c.eyebrow}</p>
+        <h1 className="font-display mt-2 text-3xl">
+          {mode === "signIn" ? c.backOffice : c.resetTitle}
+        </h1>
+
+        {mode === "reset" ? (
+          <>
+            <p className="mt-3 text-sm text-parchment/65">{c.resetIntro}</p>
+            <form
+              className="mt-6 space-y-4"
+              onSubmit={(e) => {
+                e.preventDefault();
+                void requestReset();
+              }}
+            >
+              <label className="block space-y-1.5">
+                <span className="block text-[11px] uppercase tracking-[0.18em] text-parchment/60">
+                  {c.email}
+                </span>
+                <input
+                  type="email"
+                  autoComplete="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className={fieldClass}
+                />
+              </label>
+              {error ? <p className="text-sm text-red-400">{error}</p> : null}
+              {notice ? <p className="text-sm text-parchment/80">{notice}</p> : null}
+              <button
+                type="submit"
+                disabled={busy}
+                className="w-full rounded-sm bg-gold px-5 py-2 text-sm font-medium text-abyss disabled:opacity-60"
+              >
+                {busy ? c.sending : c.sendLink}
+              </button>
+            </form>
+            <button
+              type="button"
+              onClick={() => {
+                setMode("signIn");
+                setError(null);
+                setNotice(null);
+              }}
+              className="mt-5 text-xs text-parchment/55 underline-offset-4 hover:text-gold hover:underline"
+            >
+              {c.backToSignIn}
+            </button>
+          </>
+        ) : (
+          <>
+            <form
+              className="mt-8 space-y-4"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                setBusy(true);
+                setError(null);
+                const { error: signInError } = await supabase.auth.signInWithPassword({
+                  email: email.trim(),
+                  password,
+                });
+                if (signInError) setError(c.signInError);
+                setBusy(false);
+              }}
+            >
+              <label className="block space-y-1.5">
+                <span className="block text-[11px] uppercase tracking-[0.18em] text-parchment/60">
+                  {c.email}
+                </span>
+                <input
+                  type="email"
+                  autoComplete="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className={fieldClass}
+                />
+              </label>
+              <label className="block space-y-1.5">
+                <span className="block text-[11px] uppercase tracking-[0.18em] text-parchment/60">
+                  {c.password}
+                </span>
+                <input
+                  type="password"
+                  autoComplete="current-password"
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className={fieldClass}
+                />
+              </label>
+              {error ? <p className="text-sm text-red-400">{error}</p> : null}
+              <button
+                type="submit"
+                disabled={busy}
+                className="w-full rounded-sm bg-gold px-5 py-2 text-sm font-medium text-abyss disabled:opacity-60"
+              >
+                {busy ? c.signingIn : c.signIn}
+              </button>
+            </form>
+            <button
+              type="button"
+              onClick={() => {
+                setMode("reset");
+                setError(null);
+                setNotice(null);
+              }}
+              className="mt-4 text-xs text-parchment/55 underline-offset-4 hover:text-gold hover:underline"
+            >
+              {c.forgot}
+            </button>
+            <p className="mt-6 text-xs text-parchment/45">{c.accessNote}</p>
+          </>
+        )}
       </div>
     </Shell>
   );
 }
+
 
 function AdminArea({ session }: { session: Session }) {
   const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
