@@ -9,7 +9,7 @@
 
 import heroSrc from "@/assets/hero-55m.jpg";
 import boat55Asset from "@/assets/boat-55m-pol17.jpg.asset.json";
-import cape31Src from "@/assets/cape31-downwind.jpg";
+import cape31Asset from "@/assets/cape31-replacement.jpg.asset.json";
 import deckDetailSrc from "@/assets/deck-detail.jpg";
 import trophySrc from "@/assets/trophy.jpg";
 import youthSrc from "@/assets/youth-sailing.jpg";
@@ -18,7 +18,7 @@ import kusznierewiczAsset from "@/assets/portrait-kusznierewicz.jpg.asset.json";
 
 export const IMAGE_HERO = heroSrc;
 export const IMAGE_BOAT_55_METRE = boat55Asset.url;
-export const IMAGE_BOAT_CAPE_31 = cape31Src;
+export const IMAGE_BOAT_CAPE_31 = cape31Asset.url;
 export const IMAGE_DECK_DETAIL = deckDetailSrc;
 export const IMAGE_TROPHY = trophySrc;
 /**
