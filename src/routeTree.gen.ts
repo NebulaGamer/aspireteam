@@ -13,6 +13,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as CalendarRouteImport } from './routes/calendar'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AdminIndexRouteImport } from './routes/admin/index'
+import { Route as AdminResetRouteImport } from './routes/admin/reset'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -34,17 +35,24 @@ const AdminIndexRoute = AdminIndexRouteImport.update({
   path: '/admin/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminResetRoute = AdminResetRouteImport.update({
+  id: '/admin/reset',
+  path: '/admin/reset',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/calendar': typeof CalendarRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/admin/reset': typeof AdminResetRoute
   '/admin/': typeof AdminIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/calendar': typeof CalendarRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/admin/reset': typeof AdminResetRoute
   '/admin': typeof AdminIndexRoute
 }
 export interface FileRoutesById {
@@ -52,20 +60,28 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/calendar': typeof CalendarRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/admin/reset': typeof AdminResetRoute
   '/admin/': typeof AdminIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/calendar' | '/sitemap.xml' | '/admin/'
+  fullPaths: '/' | '/calendar' | '/sitemap.xml' | '/admin/reset' | '/admin/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/calendar' | '/sitemap.xml' | '/admin'
-  id: '__root__' | '/' | '/calendar' | '/sitemap.xml' | '/admin/'
+  to: '/' | '/calendar' | '/sitemap.xml' | '/admin/reset' | '/admin'
+  id:
+    | '__root__'
+    | '/'
+    | '/calendar'
+    | '/sitemap.xml'
+    | '/admin/reset'
+    | '/admin/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CalendarRoute: typeof CalendarRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  AdminResetRoute: typeof AdminResetRoute
   AdminIndexRoute: typeof AdminIndexRoute
 }
 
@@ -99,6 +115,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/reset': {
+      id: '/admin/reset'
+      path: '/admin/reset'
+      fullPath: '/admin/reset'
+      preLoaderRoute: typeof AdminResetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -106,6 +129,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CalendarRoute: CalendarRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  AdminResetRoute: AdminResetRoute,
   AdminIndexRoute: AdminIndexRoute,
 }
 export const routeTree = rootRouteImport
