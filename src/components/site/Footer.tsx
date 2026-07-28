@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { NAV_ITEMS } from "./Header";
