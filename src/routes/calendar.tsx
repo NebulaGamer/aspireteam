@@ -4,8 +4,7 @@ import { LanguageProvider, useLanguage } from "@/i18n/LanguageProvider";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { CalendarSection } from "@/components/site/sections/CalendarSection";
-
-const SITE_URL = "https://aspireteam.pl";
+import { SITE_URL } from "@/lib/site";
 
 const TITLE_PL = "Kalendarz regat 2026–2028 — Aspire Team POL 17";
 const DESCRIPTION_PL =
