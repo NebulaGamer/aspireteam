@@ -71,7 +71,7 @@ export async function writeAudit(
     actor_user_id: string;
     action: "invite_sent" | "role_granted" | "role_revoked";
     target_email: string;
-    details?: Record<string, unknown>;
+    details?: Record<string, string | number | boolean | null>;
   },
 ): Promise<void> {
   const { error } = await admin.from("admin_audit_log").insert({
