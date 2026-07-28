@@ -8,7 +8,7 @@
  */
 
 import heroSrc from "@/assets/hero-55m.jpg";
-import boat55Src from "@/assets/boat-55m-feature.jpg";
+import boat55Asset from "@/assets/boat-55m-pol17.jpg.asset.json";
 import cape31Src from "@/assets/cape31-downwind.jpg";
 import deckDetailSrc from "@/assets/deck-detail.jpg";
 import trophySrc from "@/assets/trophy.jpg";
@@ -17,7 +17,7 @@ import portraitTacticianSrc from "@/assets/portrait-tactician.jpg";
 import youthSrc from "@/assets/youth-sailing.jpg";
 
 export const IMAGE_HERO = heroSrc;
-export const IMAGE_BOAT_55_METRE = boat55Src;
+export const IMAGE_BOAT_55_METRE = boat55Asset.url;
 export const IMAGE_BOAT_CAPE_31 = cape31Src;
 export const IMAGE_DECK_DETAIL = deckDetailSrc;
 export const IMAGE_TROPHY = trophySrc;
