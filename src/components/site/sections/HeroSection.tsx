@@ -1,6 +1,7 @@
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { IMAGE_HERO_BOAT, SiteImage } from "@/components/site/SiteImages";
+import { AspireWordmark } from "@/components/site/AspireLogo";
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -33,8 +34,9 @@ export function HeroSection() {
       <div className="shell flex min-h-[100svh] flex-col justify-center py-32 md:py-40">
         <p className="hero-step hero-step-1 eyebrow">{t.hero.eyebrow}</p>
 
-        <h1 className="hero-step hero-step-2 mt-6 font-display text-[clamp(3rem,17vw,17rem)] font-semibold leading-[0.82] tracking-[0.02em] text-parchment">
-          ASPIRE
+        <h1 className="hero-step hero-step-2 mt-6">
+          <span className="sr-only">ASPIRE</span>
+          <AspireWordmark className="h-auto w-full max-w-[min(100%,80rem)] text-parchment" />
         </h1>
 
         <div className="hero-step hero-step-3 hero-rule mt-10" />
