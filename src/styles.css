@@ -191,19 +191,6 @@
   transform: none;
 }
 
-@keyframes ken-burns {
-  from {
-    transform: scale(1.04) translate3d(0, 0, 0);
-  }
-  to {
-    transform: scale(1.16) translate3d(0, -1.5%, 0);
-  }
-}
-
-@utility ken-burns {
-  animation: ken-burns 26s ease-out forwards;
-}
-
 @keyframes scroll-cue {
   0%,
   100% {
@@ -220,29 +207,102 @@
   animation: scroll-cue 2.4s ease-in-out infinite;
 }
 
-/* Hero photograph: lift the shadows so the crew reads against the overlay. */
-@utility hero-lift {
-  filter: brightness(1.12) contrast(0.94) saturate(1.02);
+/* ── HERO: typographic composition ─────────────────────────────── */
+
+@keyframes hero-drift {
+  0% {
+    background-position: 24% 34%;
+  }
+  50% {
+    background-position: 62% 58%;
+  }
+  100% {
+    background-position: 24% 34%;
+  }
 }
 
-/*
- * Portrait placeholder panel: deep navy with a fine diagonal gold hairline
- * weave. Used only while awaiting licensed photography of real people.
- */
-@utility portrait-placeholder {
-  background-color: var(--abyss);
+/* Soft radial wash of --ocean drifting almost imperceptibly, like light on water. */
+@utility hero-wash {
+  background-image: radial-gradient(
+    closest-side,
+    color-mix(in oklab, var(--ocean) 92%, transparent),
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 150% 110%;
+  background-position: 24% 34%;
+  animation: hero-drift 64s ease-in-out infinite;
+}
+
+/* Fine gold hairline grid, fading out toward the bottom. */
+@utility hero-grid {
   background-image:
     repeating-linear-gradient(
-      45deg,
-      color-mix(in oklab, var(--gold) 14%, transparent) 0 1px,
-      transparent 1px 22px
+      90deg,
+      color-mix(in oklab, var(--gold) 8%, transparent) 0 1px,
+      transparent 1px 12rem
     ),
     repeating-linear-gradient(
-      -45deg,
-      color-mix(in oklab, var(--gold) 7%, transparent) 0 1px,
-      transparent 1px 44px
-    ),
-    radial-gradient(120% 90% at 50% 15%, var(--ocean), var(--abyss) 70%);
+      0deg,
+      color-mix(in oklab, var(--gold) 5%, transparent) 0 1px,
+      transparent 1px 12rem
+    );
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+@keyframes hero-rule-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Long horizontal gold rule that draws itself in on load. */
+@utility hero-rule {
+  height: 1px;
+  width: 100%;
+  transform-origin: left center;
+  background: linear-gradient(
+    90deg,
+    var(--gold),
+    color-mix(in oklab, var(--gold) 30%, transparent) 65%,
+    transparent
+  );
+  animation: hero-rule-draw 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both;
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Staggered entrance for the hero stack. */
+@utility hero-step {
+  animation: hero-rise 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@utility hero-step-1 {
+  animation-delay: 0.1s;
+}
+@utility hero-step-2 {
+  animation-delay: 0.3s;
+}
+@utility hero-step-3 {
+  animation-delay: 0.7s;
+}
+@utility hero-step-4 {
+  animation-delay: 0.95s;
+}
+@utility hero-step-5 {
+  animation-delay: 1.2s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -254,8 +314,17 @@
     transform: none;
     transition: none;
   }
-  .ken-burns,
-  .scroll-cue {
+  .scroll-cue,
+  .hero-wash,
+  .hero-rule,
+  .hero-step {
     animation: none;
+  }
+  .hero-step {
+    opacity: 1;
+    transform: none;
+  }
+  .hero-rule {
+    transform: none;
   }
 }

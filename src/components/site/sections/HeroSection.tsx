@@ -1,46 +1,48 @@
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
-import { IMAGE_HERO, SiteImage } from "../SiteImages";
 
 export function HeroSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="top" className="section-dark relative isolate min-h-[100svh] overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="ken-burns h-full w-full">
-          <SiteImage src={IMAGE_HERO} alt={t.hero.alt} className="hero-lift" priority />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-abyss/45 via-abyss/25 to-abyss" />
-        <div className="absolute inset-0 bg-gradient-to-r from-abyss/55 via-abyss/20 to-transparent" />
-      </div>
+    <section
+      id="top"
+      className="section-dark section-abyss relative isolate flex min-h-[100svh] flex-col overflow-hidden"
+    >
+      {/* Slow radial wash of ocean light drifting beneath the type. */}
+      <div aria-hidden="true" className="hero-wash absolute inset-0 -z-10" />
+      <div aria-hidden="true" className="hero-grid absolute inset-0 -z-10" />
 
-      <div className="shell flex min-h-[100svh] flex-col justify-end pb-20 pt-32 md:justify-center md:pb-32">
-        <p className="eyebrow animate-fade-in">{t.hero.eyebrow}</p>
+      <div className="shell flex min-h-[100svh] flex-col justify-center py-32 md:py-40">
+        <p className="hero-step hero-step-1 eyebrow">{t.hero.eyebrow}</p>
 
-        <h1 className="mt-6 font-display text-[clamp(3.5rem,16vw,13rem)] font-semibold leading-[0.85] tracking-[0.04em] text-parchment">
+        <h1 className="hero-step hero-step-2 mt-6 font-display text-[clamp(3rem,17vw,17rem)] font-semibold leading-[0.82] tracking-[0.02em] text-parchment">
           ASPIRE
         </h1>
 
-        <div className="mt-8 flex max-w-3xl items-start gap-6">
-          <span className="mt-3 hidden h-px w-16 shrink-0 bg-gold sm:block" />
-          <div>
-            <p className="font-display text-xl leading-snug text-parchment sm:text-2xl md:text-3xl">
-              {t.hero.tagline}
-            </p>
-            <p className="mt-4 text-sm text-steel sm:text-base">{t.hero.sub}</p>
-          </div>
+        <div className="hero-step hero-step-3 hero-rule mt-10" />
+
+        <div className="hero-step hero-step-4 mt-10 max-w-3xl">
+          <p className="font-display text-xl leading-snug text-parchment sm:text-2xl md:text-3xl">
+            {t.hero.tagline}
+          </p>
+          <p className="mt-4 text-sm text-steel sm:text-base">{t.hero.sub}</p>
         </div>
 
-        <div className="mt-14 flex flex-wrap items-center gap-8">
+        <div className="hero-step hero-step-5 mt-14 flex flex-wrap items-center gap-10">
           <a
             href="#about"
             className="border border-gold/60 px-7 py-3.5 text-[0.7rem] font-medium uppercase tracking-[0.22em] text-gold transition-colors hover:bg-gold hover:text-abyss"
           >
             {t.hero.cta}
           </a>
-          <span className="text-[0.7rem] font-medium uppercase tracking-[0.35em] text-gold">
-            {t.hero.sail}
+
+          <span className="inline-flex flex-col gap-2">
+            <span className="h-px w-full bg-gold/40" />
+            <span className="px-1 text-[0.7rem] font-medium uppercase tracking-[0.5em] text-gold">
+              {t.hero.sail}
+            </span>
+            <span className="h-px w-full bg-gold/40" />
           </span>
         </div>
       </div>
