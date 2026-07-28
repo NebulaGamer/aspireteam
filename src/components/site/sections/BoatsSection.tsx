@@ -4,9 +4,9 @@ import { Reveal } from "../Reveal";
 import {
   IMAGE_BOAT_55_METRE,
   IMAGE_BOAT_CAPE_31,
-  IMAGE_DECK_CREW,
   SiteImage,
 } from "../SiteImages";
+
 
 type BoatCopy = {
   kicker: string;
@@ -35,57 +35,6 @@ export function BoatsSection() {
       <BoatFeature copy={t.boats.five} image={IMAGE_BOAT_55_METRE} />
       <BoatFeature copy={t.boats.cape} image={IMAGE_BOAT_CAPE_31} flipped />
 
-      <div
-        className={`shell py-24 md:py-32 ${
-          IMAGE_DECK_CREW ? "grid gap-16 md:grid-cols-[1fr_0.8fr]" : ""
-        }`}
-      >
-        <Reveal>
-          <h3 className="eyebrow">{t.boats.compare.title}</h3>
-          <div className="hairline mt-6" />
-          <dl className="mt-2">
-            <div className="grid grid-cols-3 gap-3 border-b border-gold/40 sm:gap-4 py-5 text-[0.65rem] uppercase tracking-[0.2em] text-gold">
-              {t.boats.compare.headers.map((h, i) => (
-                <span key={i} className={i === 0 ? "" : "text-right md:text-left"}>
-                  {h}
-                </span>
-              ))}
-            </div>
-            {t.boats.compare.rows.map((row) => (
-              <div
-                key={row.label}
-                className={`grid grid-cols-3 items-baseline gap-3 border-b border-border sm:gap-4 ${
-                  IMAGE_DECK_CREW ? "py-5 text-sm" : "py-7 md:py-9"
-                }`}
-              >
-                <dt className="hyphens-auto break-words text-sm text-steel">{row.label}</dt>
-                <dd
-                  className={`hyphens-auto break-words text-right text-parchment md:text-left ${
-                    IMAGE_DECK_CREW ? "text-sm" : "font-display text-base sm:text-lg md:text-xl"
-                  }`}
-                >
-                  {row.a}
-                </dd>
-                <dd
-                  className={`hyphens-auto break-words text-right text-parchment md:text-left ${
-                    IMAGE_DECK_CREW ? "text-sm" : "font-display text-base sm:text-lg md:text-xl"
-                  }`}
-                >
-                  {row.b}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </Reveal>
-
-        {IMAGE_DECK_CREW ? (
-          <Reveal delay={140} className="relative min-h-64 overflow-hidden">
-            <div className="absolute inset-0">
-              <SiteImage src={IMAGE_DECK_CREW} alt={t.boats.detailAlt} />
-            </div>
-          </Reveal>
-        ) : null}
-      </div>
 
     </section>
   );
