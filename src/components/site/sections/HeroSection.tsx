@@ -1,5 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { IMAGE_HERO_BOAT, SiteImage } from "@/components/site/SiteImages";
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -9,9 +10,25 @@ export function HeroSection() {
       id="top"
       className="section-dark section-abyss relative isolate flex min-h-[100svh] flex-col overflow-hidden"
     >
+      {/* Real team photograph — the POL 17 boat at speed. */}
+      <div aria-hidden="true" className="absolute inset-0 -z-30">
+        <SiteImage src={IMAGE_HERO_BOAT} alt={t.hero.bgAlt} priority className="hero-lift" />
+      </div>
+
+      {/* Gradient scrim to keep the left-aligned typography legible. */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-20 bg-gradient-to-r from-abyss/90 via-abyss/60 to-abyss/30"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-20 bg-gradient-to-t from-abyss via-abyss/40 to-transparent"
+      />
+
       {/* Slow radial wash of ocean light drifting beneath the type. */}
       <div aria-hidden="true" className="hero-wash absolute inset-0 -z-10" />
       <div aria-hidden="true" className="hero-grid absolute inset-0 -z-10" />
+
 
       <div className="shell flex min-h-[100svh] flex-col justify-center py-32 md:py-40">
         <p className="hero-step hero-step-1 eyebrow">{t.hero.eyebrow}</p>
