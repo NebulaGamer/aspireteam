@@ -1,12 +1,14 @@
+import grupaPracujLogo from "@/assets/partners/grupa-pracuj.webp.asset.json";
+import comarchLogo from "@/assets/partners/comarch.png.asset.json";
+
 /**
- * Partner wall.
+ * Sponsor wall.
  *
- * To add a partner, append an entry below. Leave `logo` undefined to render the
- * neutral placeholder tile, or set it to an imported image path once a real
- * logo file is available:
+ * To add a sponsor, append an entry below. Leave `logo` undefined to render the
+ * neutral placeholder tile, or upload a logo asset and import its pointer:
  *
- *   import acmeLogo from "@/assets/partners/acme.svg";
- *   { id: "acme", name: "Acme", logo: acmeLogo, url: "https://acme.com" }
+ *   import acmeLogo from "@/assets/partners/acme.png.asset.json";
+ *   { id: "acme", name: "Acme", logo: acmeLogo.url, url: "https://acme.com" }
  */
 
 export type Partner = {
@@ -16,11 +18,19 @@ export type Partner = {
   url?: string;
 };
 
+/** Main sponsor — rendered large at the top of the section. */
+export const mainPartner: Partner = {
+  id: "grupa-pracuj",
+  name: "Grupa Pracuj",
+  logo: grupaPracujLogo.url,
+  url: "https://grupapracuj.pl",
+};
+
 export const partners: Partner[] = [
-  { id: "partner-1", name: "Partner 1" },
-  { id: "partner-2", name: "Partner 2" },
-  { id: "partner-3", name: "Partner 3" },
-  { id: "partner-4", name: "Partner 4" },
-  { id: "partner-5", name: "Partner 5" },
-  { id: "partner-6", name: "Partner 6" },
+  {
+    id: "comarch",
+    name: "Comarch",
+    logo: comarchLogo.url,
+    url: "https://www.comarch.pl",
+  },
 ];

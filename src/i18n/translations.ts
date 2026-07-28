@@ -149,14 +149,15 @@ export const translations = {
     },
     partners: {
       eyebrow: "Sponsorzy i partnerzy",
-      title: "Razem na wodzie",
-      leadLabel: "Patron tytularny od 2023",
+      title: "Sponsorzy",
+      leadLabel: "Sponsor główny od 2023",
       leadName: "Grupa Pracuj",
       leadBody:
-        "Grupa Pracuj jest patronem tytularnym projektu Aspire od 2023 roku. Partnerstwo obejmuje także rejsy team-buildingowe i sesje mentoringowe dla pracowników na pokładzie jachtu.",
-      gridLabel: "Pozostali partnerzy",
+        "Grupa Pracuj jest sponsorem głównym projektu Aspire od 2023 roku. Partnerstwo obejmuje także rejsy team-buildingowe i sesje mentoringowe dla pracowników na pokładzie jachtu.",
+      gridLabel: "Pozostali sponsorzy",
       placeholder: "Miejsce na logo",
     },
+
     contact: {
       eyebrow: "Zostań partnerem",
       title: "Partnerstwo z Aspire",
@@ -363,14 +364,15 @@ export const translations = {
     },
     partners: {
       eyebrow: "Sponsors & partners",
-      title: "Together on the water",
-      leadLabel: "Title patron since 2023",
+      title: "Sponsors",
+      leadLabel: "Main sponsor since 2023",
       leadName: "Grupa Pracuj",
       leadBody:
-        "Grupa Pracuj has been title patron of the Aspire project since 2023. The partnership also includes team-building and mentoring sailing sessions for employees aboard the yacht.",
-      gridLabel: "Further partners",
+        "Grupa Pracuj has been the main sponsor of the Aspire project since 2023. The partnership also includes team-building and mentoring sailing sessions for employees aboard the yacht.",
+      gridLabel: "Further sponsors",
       placeholder: "Logo space",
     },
+
     contact: {
       eyebrow: "Partner with us",
       title: "Partnering with Aspire",
