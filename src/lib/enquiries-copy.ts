@@ -3,7 +3,47 @@
  * Kept alongside `admin-copy.ts` rather than the marketing dictionary.
  */
 
-export const enquiryCopy = {
+type StatusKey = "new" | "contacted" | "archived";
+
+export type EnquiryCopy = {
+  nav: string;
+  title: string;
+  intro: string;
+  search: string;
+  filters: Record<StatusKey, string>;
+  status: Record<StatusKey, string>;
+  interest: Record<string, string>;
+  loading: string;
+  loadMore: string;
+  emptyTitle: string;
+  emptyBody: string;
+  emptyFiltered: string;
+  forbidden: string;
+  error: string;
+  fieldCompany: string;
+  fieldPerson: string;
+  fieldEmail: string;
+  fieldPhone: string;
+  fieldInterest: string;
+  fieldMessage: string;
+  fieldReceived: string;
+  fieldLocale: string;
+  markContacted: string;
+  archive: string;
+  reopen: string;
+  remove: string;
+  open: string;
+  close: string;
+  deleteTitle: string;
+  deleteBody: (company: string) => string;
+  confirmDelete: string;
+  cancel: string;
+  back: string;
+  /** Subject line for the reply, in the language the enquiry was sent in. */
+  replySubject: string;
+};
+
+export const enquiryCopy: Record<"pl" | "en", EnquiryCopy> = {
   pl: {
     nav: "Zapytania",
     title: "Zapytania partnerskie",
@@ -17,7 +57,7 @@ export const enquiryCopy = {
       teambuilding: "Team building",
       media: "Media",
       other: "Inne",
-    } as Record<string, string>,
+    },
     loading: "Wczytywanie…",
     loadMore: "Pokaż więcej",
     emptyTitle: "Brak zapytań",
@@ -61,7 +101,7 @@ export const enquiryCopy = {
       teambuilding: "Team building",
       media: "Media",
       other: "Other",
-    } as Record<string, string>,
+    },
     loading: "Loading…",
     loadMore: "Load more",
     emptyTitle: "No enquiries",
@@ -91,6 +131,4 @@ export const enquiryCopy = {
     back: "Panel",
     replySubject: "Aspire Team — re: your partnership enquiry",
   },
-} as const;
-
-export type EnquiryCopy = (typeof enquiryCopy)["pl"];
+};

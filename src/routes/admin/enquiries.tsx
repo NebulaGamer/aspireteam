@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { LanguageProvider, useLanguage } from "@/i18n/LanguageProvider";
 import { supabase } from "@/integrations/supabase/client";
 import { adminCopy } from "@/lib/admin-copy";
-import { enquiryCopy } from "@/lib/enquiries-copy";
+import { enquiryCopy, type EnquiryCopy } from "@/lib/enquiries-copy";
 import {
   deleteEnquiry,
   listEnquiries,
@@ -314,7 +314,7 @@ function EnquiryCard({
   onDelete,
 }: {
   row: Enquiry;
-  copy: (typeof enquiryCopy)["pl"];
+  copy: EnquiryCopy;
   locale: string;
   open: boolean;
   busy: boolean;
