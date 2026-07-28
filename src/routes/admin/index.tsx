@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
 
 import { RegattaForm } from "@/components/admin/RegattaForm";
@@ -234,6 +234,7 @@ function LoginPanel() {
 
 
 function AdminArea({ session }: { session: Session }) {
+  const { lang } = useLanguage();
   const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
   const [regattas, setRegattas] = useState<Regatta[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -330,6 +331,13 @@ function AdminArea({ session }: { session: Session }) {
           >
             Add regatta
           </button>
+          <Link
+            to="/admin/team"
+            className="rounded-sm border border-parchment/25 px-4 py-2 text-sm text-parchment/80"
+          >
+            {adminCopy[lang === "en" ? "en" : "pl"].team}
+          </Link>
+
           <button
             onClick={signOut}
             className="rounded-sm border border-parchment/25 px-4 py-2 text-sm text-parchment/80"
