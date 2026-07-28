@@ -6,8 +6,8 @@ export function AboutSection() {
 
   return (
     <section id="about" className="bg-background py-24 md:py-36">
-      <div className="shell grid gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-24">
-        <div>
+      <div className="shell">
+        <div className="max-w-3xl">
           <Reveal>
             <p className="eyebrow">{t.about.eyebrow}</p>
             <h2 className="mt-6 max-w-xl font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold leading-[1.02] text-foreground">
@@ -22,12 +22,6 @@ export function AboutSection() {
             <p className="leading-relaxed text-muted-foreground">{t.about.body2}</p>
           </Reveal>
         </div>
-
-        <Reveal delay={200} className="relative min-h-72 lg:min-h-full">
-          <div className="absolute inset-0 overflow-hidden bg-abyss">
-            <SiteImage src={IMAGE_TROPHY} alt={t.about.trophyAlt} className="opacity-90" />
-          </div>
-        </Reveal>
       </div>
 
       <div className="shell mt-20 md:mt-28">
