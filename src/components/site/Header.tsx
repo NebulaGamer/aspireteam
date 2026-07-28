@@ -3,16 +3,23 @@ import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import type { Language } from "@/i18n/translations";
 
+// `to` marks a real route; the rest are in-page anchors on the home page.
 export const NAV_ITEMS = [
   { id: "about", href: "#about" },
   { id: "boats", href: "#boats" },
   { id: "history", href: "#history" },
   { id: "results", href: "#results" },
-  { id: "calendar", href: "#calendar" },
+  { id: "calendar", href: "/calendar", to: "/calendar" },
   { id: "crew", href: "#crew" },
-  
+
   { id: "partners", href: "#partners" },
 ] as const;
+
+/** On sub-pages, hash links must jump back to the home page section. */
+export function navHref(href: string, onHome: boolean): string {
+  return href.startsWith("#") && !onHome ? `/${href}` : href;
+}
+
 
 export function Header() {
   const { t, lang, setLang } = useLanguage();
