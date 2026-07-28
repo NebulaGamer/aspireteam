@@ -1,5 +1,5 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
-import { Reveal } from "../Reveal";"
+import { Reveal } from "../Reveal";
 
 export function AboutSection() {
   const { t } = useLanguage();
