@@ -191,19 +191,6 @@
   transform: none;
 }
 
-@keyframes ken-burns {
-  from {
-    transform: scale(1.04) translate3d(0, 0, 0);
-  }
-  to {
-    transform: scale(1.16) translate3d(0, -1.5%, 0);
-  }
-}
-
-@utility ken-burns {
-  animation: ken-burns 26s ease-out forwards;
-}
-
 @keyframes scroll-cue {
   0%,
   100% {
@@ -325,7 +312,6 @@
     transform: none;
     transition: none;
   }
-  .ken-burns,
   .scroll-cue,
   .hero-wash,
   .hero-rule,
