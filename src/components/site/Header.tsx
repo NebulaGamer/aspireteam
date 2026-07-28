@@ -54,10 +54,9 @@ export function Header() {
       }`}
     >
       <div className="shell flex h-20 items-center justify-between gap-6">
-        <a href={onHome ? "#top" : "/"} className="group flex items-baseline gap-3">
-          <span className="font-display text-xl font-semibold tracking-[0.32em] text-parchment">
-            ASPIRE
-          </span>
+        <a href={onHome ? "#top" : "/"} className="group flex items-center gap-3" aria-label="Aspire">
+          <AspireLockup className="h-6 w-auto text-parchment transition-opacity group-hover:opacity-80 sm:h-8" />
+          <span className="sr-only">ASPIRE</span>
           <span className="hidden whitespace-nowrap text-[0.625rem] font-medium tracking-[0.3em] text-gold sm:inline">
             POL 17
           </span>
