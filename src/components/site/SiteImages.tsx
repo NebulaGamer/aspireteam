@@ -24,13 +24,6 @@ export const IMAGE_ABOUT_ACTION = aboutActionAsset.url;
 /** Hero background photograph — the POL 17 boat under sail. */
 export const IMAGE_HERO_BOAT = heroBoatAsset.url;
 
-/**
- * Deck / crew photograph shown beside the boat comparison table.
- * Assign a real crew-on-deck photograph supplied by the team here; while it is
- * `null`, the comparison block renders as a full-width editorial table and the
- * layout adapts automatically — no other change is needed.
- */
-export const IMAGE_DECK_CREW: string | null = null;
 
 /** Portraits — real, licensed photographs supplied by the team. */
 export const IMAGE_PORTRAIT_GACEK = gacekAsset.url;
