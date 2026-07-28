@@ -330,6 +330,13 @@ function AdminArea({ session }: { session: Session }) {
           >
             Add regatta
           </button>
+          <Link
+            to="/admin/team"
+            className="rounded-sm border border-parchment/25 px-4 py-2 text-sm text-parchment/80"
+          >
+            {adminCopy[lang === "en" ? "en" : "pl"].team}
+          </Link>
+
           <button
             onClick={signOut}
             className="rounded-sm border border-parchment/25 px-4 py-2 text-sm text-parchment/80"
