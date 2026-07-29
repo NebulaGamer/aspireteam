@@ -68,8 +68,8 @@ export const translations = {
         alt: "Elegancki, wąski jacht klasy 5.5 Metre na szaroniebieskiej wodzie",
       },
       cape: {
-        kicker: "Cape 31",
-        name: "Ślizgowa kilówka jednoprojektowa",
+        kicker: "POL 17",
+        name: "Cape 31",
         body1:
           "Lekka, wyczynowa 31-stopowa kilówka ślizgowa, którą zespół nabył w 2023 roku, aby poszerzyć program i wyostrzyć obsługę jachtu.",
         body2:
@@ -346,8 +346,8 @@ export const translations = {
         alt: "An elegant narrow 5.5 Metre keelboat sailing on grey-blue water",
       },
       cape: {
-        kicker: "Cape 31",
-        name: "One-design planing keelboat",
+        kicker: "POL 17",
+        name: "Cape 31",
         body1:
           "A lightweight, high-performance 31-foot planing keelboat, acquired by the team in 2023 to broaden the programme and sharpen boat-handling.",
         body2:
