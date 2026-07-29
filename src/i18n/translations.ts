@@ -330,8 +330,9 @@ export const translations = {
       intro:
         "A development-class classic and a modern one-design planing machine. Each teaches something different.",
       five: {
-        kicker: "International 5.5 Metre",
-        name: "POL 17",
+        kicker: "POL 17",
+        name: "International 5.5 Metre",
+
         body1:
           "A Wilke hull built in Switzerland. An Olympic class from 1952 to 1968, today a modern development class where design innovation still decides the edge.",
         body2:
