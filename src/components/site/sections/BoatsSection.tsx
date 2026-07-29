@@ -32,8 +32,8 @@ export function BoatsSection() {
         </Reveal>
       </div>
 
-      <BoatFeature copy={t.boats.five} image={IMAGE_BOAT_55_METRE} />
-      <BoatFeature copy={t.boats.cape} image={IMAGE_BOAT_CAPE_31} flipped />
+      <BoatFeature copy={t.boats.cape} image={IMAGE_BOAT_CAPE_31} />
+      <BoatFeature copy={t.boats.five} image={IMAGE_BOAT_55_METRE} flipped />
 
 
     </section>
