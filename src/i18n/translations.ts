@@ -53,8 +53,8 @@ export const translations = {
       intro:
         "Klasyk klasy rozwojowej i nowoczesny ślizg jednoprojektowy. Każdy uczy czegoś innego.",
       five: {
-        kicker: "International 5.5 Metre",
-        name: "POL 17",
+        kicker: "POL 17",
+        name: "International 5.5 Metre",
         body1:
           "Kadłub zbudowany w szwajcarskiej stoczni Wilke. Klasa olimpijska w latach 1952–1968, dziś nowoczesna klasa rozwojowa, w której projekt i innowacja wciąż decydują o przewadze.",
         body2:
