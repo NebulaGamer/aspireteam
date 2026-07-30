@@ -1,11 +1,8 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { Reveal } from "../Reveal";
-import {
-  IMAGE_CREW_CAPE31,
-  IMAGE_CREW_55_A,
-  IMAGE_CREW_55_B,
-  SiteImage,
-} from "../SiteImages";
+import { PhotoFrame } from "../PhotoFrame";
+import { IMAGE_CREW_CAPE31, IMAGE_CREW_55_A, IMAGE_CREW_55_B } from "../SiteImages";
+
 
 type Member = { name: string; role: string };
 
@@ -68,23 +65,32 @@ function CrewBlock({
   photos: readonly (string | null)[];
   pendingLabel: string;
 }) {
-  // A lone photograph runs wide; a pair runs taller so both blocks read at the same scale.
-  const frame = photos.length > 1 ? "aspect-[4/3]" : "aspect-[21/9]";
+  // Crew photography is never cropped: every person must remain visible, so
+  // each photograph renders at its natural aspect ratio under a height cap.
+  const maxHeight = photos.length > 1 ? "max-h-[52vh]" : "max-h-[70vh]";
+  // Placeholders have no source image, so they keep a deliberate fixed plate.
+  const placeholderFrame = photos.length > 1 ? "aspect-[4/3]" : "aspect-[16/9]";
   return (
     <div className="mt-16 md:mt-20">
       <Reveal>
-        <div className={`grid gap-6 ${photos.length > 1 ? "sm:grid-cols-2" : ""}`}>
+        <div
+          className={`grid items-start gap-6 ${photos.length > 1 ? "sm:grid-cols-2" : ""}`}
+        >
           {photos.map((photo, i) =>
             photo ? (
-              <div key={i} className={`relative ${frame} overflow-hidden bg-abyss`}>
-                <SiteImage src={photo} alt={title} className="absolute inset-0" />
-              </div>
+              <PhotoFrame key={i} src={photo} alt={title} maxHeight={maxHeight} />
             ) : (
-              <PhotoPlaceholder key={i} label={pendingLabel} kicker={kicker} frame={frame} />
+              <PhotoPlaceholder
+                key={i}
+                label={pendingLabel}
+                kicker={kicker}
+                frame={placeholderFrame}
+              />
             ),
           )}
         </div>
       </Reveal>
+
 
       <Reveal delay={100} className="mt-10">
         <p className="eyebrow">{kicker}</p>

@@ -3,7 +3,8 @@ import { useLanguage } from "@/i18n/LanguageProvider";
 import { results } from "@/data/results";
 import { resultPhoto } from "@/data/eventPhotos";
 import { Reveal } from "../Reveal";
-import { SiteImage } from "../SiteImages";
+import { PhotoFrame } from "../PhotoFrame";
+
 
 const MEDAL_STYLES: Record<number, string> = {
   1: "border-gold text-gold",
@@ -116,21 +117,18 @@ export function ResultsSection() {
                     {photo && open ? (
                       <tr className="border-b border-border">
                         <td colSpan={5} className="pb-8" id={`result-photo-${row.id}`}>
-                          <figure className="max-w-2xl">
-                            <div className="relative aspect-[3/2] overflow-hidden border border-gold/30 bg-abyss">
-                              <SiteImage
-                                src={photo.src}
-                                alt={t.eventPhotos[photo.key].alt}
-                                className="absolute inset-0"
-                              />
-                            </div>
-                            <figcaption className="mt-3 text-sm leading-relaxed text-steel">
-                              {t.eventPhotos[photo.key].caption}
-                            </figcaption>
-                          </figure>
+                          <PhotoFrame
+                            src={photo.src}
+                            alt={t.eventPhotos[photo.key].alt}
+                            maxHeight="max-h-[60vh]"
+                            caption={t.eventPhotos[photo.key].caption}
+                            captionClassName="mt-3 text-sm leading-relaxed text-steel"
+                            className="max-w-2xl"
+                          />
                         </td>
                       </tr>
                     ) : null}
+
                   </Fragment>
                 );
               })}
@@ -165,19 +163,18 @@ export function ResultsSection() {
                         {open ? t.results.hidePhoto : t.results.showPhoto}
                       </button>
                       {open ? (
-                        <figure className="mt-4" id={`result-photo-m-${row.id}`}>
-                          <div className="relative aspect-[3/2] overflow-hidden border border-gold/30 bg-abyss">
-                            <SiteImage
-                              src={photo.src}
-                              alt={t.eventPhotos[photo.key].alt}
-                              className="absolute inset-0"
-                            />
-                          </div>
-                          <figcaption className="mt-3 text-sm leading-relaxed text-steel">
-                            {t.eventPhotos[photo.key].caption}
-                          </figcaption>
-                        </figure>
+                        <div id={`result-photo-m-${row.id}`}>
+                          <PhotoFrame
+                            src={photo.src}
+                            alt={t.eventPhotos[photo.key].alt}
+                            maxHeight="max-h-[70vh]"
+                            caption={t.eventPhotos[photo.key].caption}
+                            captionClassName="mt-3 text-sm leading-relaxed text-steel"
+                            className="mt-4"
+                          />
+                        </div>
                       ) : null}
+
                     </>
                   ) : null}
                 </li>
