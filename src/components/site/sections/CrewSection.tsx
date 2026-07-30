@@ -84,12 +84,8 @@ function CrewBlock({
       >
         {photos.map((photo, i) =>
           photo ? (
-            <div key={i} className="relative">
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute -inset-2 border border-gold/25"
-              />
-              <PhotoFrame src={photo} alt={title} maxHeight="max-h-[70vh]" className="relative" />
+            <div key={i}>
+              <PhotoFrame src={photo} alt={title} maxHeight="max-h-[70vh]" />
             </div>
           ) : (
             <PhotoPlaceholder key={i} label={pendingLabel} kicker={kicker} />
