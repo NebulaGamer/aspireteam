@@ -116,13 +116,27 @@ export const translations = {
         kicker: "Cape 31",
         title: "Załoga Cape 31",
         note: "Siedmioosobowy skład startowy.",
+        // Nazwiska Juana, Jamesa i Tymka czekają na potwierdzenie od klienta.
+        members: [
+          { name: "Przemek Gacek", role: "" },
+          { name: "Mateusz Kusznierewicz", role: "" },
+          { name: "Igor Tarasiuk", role: "" },
+          { name: "Paweł Gardasiewicz", role: "" },
+          { name: "Juan", role: "" },
+          { name: "James", role: "" },
+          { name: "Tymek", role: "" },
+        ],
       },
       five: {
         kicker: "International 5.5 Metre",
         title: "Załoga 5.5 Metre",
         note: "Trzyosobowa załoga.",
+        members: [
+          { name: "Przemek Gacek", role: "sternik" },
+          { name: "Mateusz Kusznierewicz", role: "" },
+          { name: "Kilian Weise", role: "" },
+        ],
       },
-      roles: { helm: "sternik" },
     },
 
     results: {
