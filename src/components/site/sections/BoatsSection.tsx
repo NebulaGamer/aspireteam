@@ -22,7 +22,7 @@ export function BoatsSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="boats" className="relative scroll-mt-24 section-dark py-24 md:py-36">
+    <section id="boats" className="relative scroll-mt-24 section-dark pt-16 pb-24 md:pt-24 md:pb-36">
       <SectionRule />
       <div className="shell">
         <Reveal>
