@@ -1,13 +1,16 @@
 import { useMemo, useState } from "react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { results } from "@/data/results";
+import { resultPhoto } from "@/data/eventPhotos";
 import { Reveal } from "../Reveal";
+import { SiteImage } from "../SiteImages";
 
 const MEDAL_STYLES: Record<number, string> = {
   1: "border-gold text-gold",
   2: "border-silver text-silver",
   3: "border-bronze text-bronze",
 };
+
 
 export function ResultsSection() {
   const { t, lang } = useLanguage();
