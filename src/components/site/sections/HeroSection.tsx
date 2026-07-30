@@ -30,7 +30,7 @@ export function HeroSection() {
       <div aria-hidden="true" className="hero-grid absolute inset-0 -z-10" />
 
       <div className="shell flex min-h-[100svh] flex-col justify-center py-32 md:py-40">
-        <h1 className="hero-step hero-step-2 max-w-[22ch] font-display text-[clamp(2.75rem,8vw,7rem)] font-semibold leading-[0.98] text-parchment">
+        <h1 className="hero-step hero-step-2 max-w-[22ch] font-display text-[clamp(2.5rem,7.5vw,6.25rem)] font-semibold leading-[0.98] text-parchment">
           {t.hero.headline}
         </h1>
 
