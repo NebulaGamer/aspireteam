@@ -15,6 +15,13 @@ import heroBoatAsset from "@/assets/hero-boat.jpg.asset.json";
 import gacekAsset from "@/assets/portrait-gacek.jpg.asset.json";
 import kusznierewiczAsset from "@/assets/portrait-kusznierewicz.jpg.asset.json";
 
+import crewCape31Asset from "@/assets/crew-cape31.jpg.asset.json";
+import crew55AAsset from "@/assets/crew-55-a.jpg.asset.json";
+import crew55BAsset from "@/assets/crew-55-b.jpg.asset.json";
+import eventPortoCervoAsset from "@/assets/event-porto-cervo-2023.jpg.asset.json";
+import eventBenodetAsset from "@/assets/event-benodet-2024.jpg.asset.json";
+import eventSopotAsset from "@/assets/event-sopot-2025.jpg.asset.json";
+
 export const IMAGE_BOAT_55_METRE = boat55Asset.url;
 export const IMAGE_BOAT_CAPE_31 = cape31Asset.url;
 
@@ -25,29 +32,28 @@ export const IMAGE_BOAT_CAPE_31 = cape31Asset.url;
 export const IMAGE_HISTORY_HELM = aboutActionAsset.url;
 
 /**
- * Crew photography — not supplied yet, so these stay null and the crew section
- * renders its "awaiting photography" plate instead of a broken frame.
+ * Crew photography — supplied by the team.
  */
-/** TODO: the Palma dockside team photograph goes here. */
-export const IMAGE_CREW_CAPE31: string | null = null;
-/** TODO: one of these should be the crew of three with Kilian Weise. */
-export const IMAGE_CREW_55_A: string | null = null;
-export const IMAGE_CREW_55_B: string | null = null;
+/** Palma dockside team photograph, seven crew in blue Aspire kit. */
+export const IMAGE_CREW_CAPE31: string | null = crewCape31Asset.url;
+/** The 5.5 Metre crew of three celebrating aboard POL 17. */
+export const IMAGE_CREW_55_A: string | null = crew55AAsset.url;
+/** The 5.5 Metre crew of three racing upwind. */
+export const IMAGE_CREW_55_B: string | null = crew55BAsset.url;
 
 /** Hero background photograph — the POL 17 boat under sail. */
 export const IMAGE_HERO_BOAT = heroBoatAsset.url;
 
 /**
  * Event photography from individual regattas — supplied by the client, rights held
- * by the team. Null until the files are uploaded; History and Results render
- * nothing at all while a slot is null (no placeholder, no gap).
+ * by the team. History and Results render nothing at all while a slot is null.
  */
-/** TODO: the crew with the trophy at Yacht Club Costa Smeralda, Italian ribbons — world title, gold. */
-export const IMAGE_EVENT_PORTO_CERVO_2023: string | null = null;
-/** TODO: the crew with the trophy at sunset over the marina in Bénodet. */
-export const IMAGE_EVENT_BENODET_2024: string | null = null;
-/** TODO: the crew in the venue with the "2nd place" plaque, Sopot. */
-export const IMAGE_EVENT_SOPOT_2025: string | null = null;
+/** The crew with the trophy at Yacht Club Costa Smeralda, Italian ribbons — world title, gold. */
+export const IMAGE_EVENT_PORTO_CERVO_2023: string | null = eventPortoCervoAsset.url;
+/** The crew with the trophy at sunset over the marina in Bénodet. */
+export const IMAGE_EVENT_BENODET_2024: string | null = eventBenodetAsset.url;
+/** The crew in the venue with the "2nd place" plaque, Sopot. */
+export const IMAGE_EVENT_SOPOT_2025: string | null = eventSopotAsset.url;
 
 
 
