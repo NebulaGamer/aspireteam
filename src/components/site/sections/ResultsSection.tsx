@@ -83,36 +83,106 @@ export function ResultsSection() {
               </tr>
             </thead>
             <tbody>
-              {rows.map((row) => (
-                <tr key={row.id} className="border-b border-border">
-                  <td className="py-6 pr-6 font-display text-2xl text-parchment">{row.year}</td>
-                  <td className="py-6 pr-6 text-parchment">{row.event[lang]}</td>
-                  <td className="py-6 pr-6 text-steel">{row.venue[lang]}</td>
-                  <td className="py-6 pr-6 text-steel">{row.boatClass}</td>
-                  <td className="py-6 text-right">
-                    <Medal place={row.place} label={placeLabel(row.place)} />
-                  </td>
-                </tr>
-              ))}
+              {rows.map((row) => {
+                const photo = resultPhoto(row.id);
+                const open = expanded === row.id;
+                return (
+                  <>
+                    <tr key={row.id} className="border-b border-border">
+                      <td className="py-6 pr-6 font-display text-2xl text-parchment">{row.year}</td>
+                      <td className="py-6 pr-6 text-parchment">
+                        {row.event[lang]}
+                        {/* Only regattas with an assigned photograph gain an affordance. */}
+                        {photo ? (
+                          <button
+                            type="button"
+                            onClick={() => setExpanded(open ? null : row.id)}
+                            aria-expanded={open}
+                            aria-controls={`result-photo-${row.id}`}
+                            className="mt-2 block text-[0.6rem] uppercase tracking-[0.22em] text-gold transition-opacity hover:opacity-70"
+                          >
+                            {open ? t.results.hidePhoto : t.results.showPhoto}
+                          </button>
+                        ) : null}
+                      </td>
+                      <td className="py-6 pr-6 text-steel">{row.venue[lang]}</td>
+                      <td className="py-6 pr-6 text-steel">{row.boatClass}</td>
+                      <td className="py-6 text-right">
+                        <Medal place={row.place} label={placeLabel(row.place)} />
+                      </td>
+                    </tr>
+                    {photo && open ? (
+                      <tr key={`${row.id}-photo`} className="border-b border-border">
+                        <td colSpan={5} className="pb-8" id={`result-photo-${row.id}`}>
+                          <figure className="max-w-2xl">
+                            <div className="relative aspect-[3/2] overflow-hidden border border-gold/30 bg-abyss">
+                              <SiteImage
+                                src={photo.src}
+                                alt={t.eventPhotos[photo.key].alt}
+                                className="absolute inset-0"
+                              />
+                            </div>
+                            <figcaption className="mt-3 text-sm leading-relaxed text-steel">
+                              {t.eventPhotos[photo.key].caption}
+                            </figcaption>
+                          </figure>
+                        </td>
+                      </tr>
+                    ) : null}
+                  </>
+                );
+              })}
             </tbody>
           </table>
 
           {/* Mobile cards */}
           <ul className="space-y-4 md:hidden">
-            {rows.map((row) => (
-              <li key={row.id} className="border border-border p-6">
-                <div className="flex items-start justify-between gap-4">
-                  <span className="font-display text-2xl text-parchment">{row.year}</span>
-                  <Medal place={row.place} label={placeLabel(row.place)} />
-                </div>
-                <p className="mt-4 text-parchment">{row.event[lang]}</p>
-                <p className="mt-1 text-sm text-steel">{row.venue[lang]}</p>
-                <p className="mt-3 text-[0.6rem] uppercase tracking-[0.22em] text-gold">
-                  {row.boatClass}
-                </p>
-              </li>
-            ))}
+            {rows.map((row) => {
+              const photo = resultPhoto(row.id);
+              const open = expanded === row.id;
+              return (
+                <li key={row.id} className="border border-border p-6">
+                  <div className="flex items-start justify-between gap-4">
+                    <span className="font-display text-2xl text-parchment">{row.year}</span>
+                    <Medal place={row.place} label={placeLabel(row.place)} />
+                  </div>
+                  <p className="mt-4 text-parchment">{row.event[lang]}</p>
+                  <p className="mt-1 text-sm text-steel">{row.venue[lang]}</p>
+                  <p className="mt-3 text-[0.6rem] uppercase tracking-[0.22em] text-gold">
+                    {row.boatClass}
+                  </p>
+                  {photo ? (
+                    <>
+                      <button
+                        type="button"
+                        onClick={() => setExpanded(open ? null : row.id)}
+                        aria-expanded={open}
+                        aria-controls={`result-photo-m-${row.id}`}
+                        className="mt-4 text-[0.6rem] uppercase tracking-[0.22em] text-gold transition-opacity hover:opacity-70"
+                      >
+                        {open ? t.results.hidePhoto : t.results.showPhoto}
+                      </button>
+                      {open ? (
+                        <figure className="mt-4" id={`result-photo-m-${row.id}`}>
+                          <div className="relative aspect-[3/2] overflow-hidden border border-gold/30 bg-abyss">
+                            <SiteImage
+                              src={photo.src}
+                              alt={t.eventPhotos[photo.key].alt}
+                              className="absolute inset-0"
+                            />
+                          </div>
+                          <figcaption className="mt-3 text-sm leading-relaxed text-steel">
+                            {t.eventPhotos[photo.key].caption}
+                          </figcaption>
+                        </figure>
+                      ) : null}
+                    </>
+                  ) : null}
+                </li>
+              );
+            })}
           </ul>
+
 
           {rows.length === 0 ? <p className="py-12 text-steel">{t.results.empty}</p> : null}
         </Reveal>
