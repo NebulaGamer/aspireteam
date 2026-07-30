@@ -6,16 +6,16 @@
 export const translations = {
   pl: {
     meta: {
-      title: "Aspire Team — Mistrzowie świata w klasie 5.5 Metre | POL 17",
+      title: "Aspire Team — żeglarstwo na najwyższym poziomie | Cape 31 i 5.5 Metre",
       description:
-        "Aspire (POL 17) — polski zespół żeglarski startujący w klasie International 5.5 Metre i Cape 31. Pierwsza polska załoga z tytułem mistrza świata 5.5 Metre.",
+        "Aspire — polski zespół żeglarski rywalizujący na międzynarodowym poziomie w klasach Cape 31 oraz International 5.5 Metre.",
     },
     nav: {
       about: "O nas",
       boats: "Jachty",
       history: "Historia",
       results: "Wyniki",
-      calendar: "Kalendarz",
+      
       crew: "Załoga",
       partners: "Partnerzy",
       contact: "Zostań partnerem",
@@ -24,34 +24,39 @@ export const translations = {
       langLabel: "Zmień język",
     },
     hero: {
-      eyebrow: "Polski zespół żeglarski",
-      tagline: "Mistrzowie świata w klasie 5.5 Metre",
-      sub: "International 5.5 Metre · Cape 31 · Regaty w całej Europie",
-      sail: "POL 17",
+      headline: "Żeglarstwo na najwyższym poziomie",
+      intro1:
+        "Aspire to polski zespół żeglarski rywalizujący na międzynarodowym poziomie w klasach Cape 31 oraz International 5.5 Metre.",
+      intro2:
+        "Projekt łączy doświadczenie Mateusza Kusznierewicza, mistrza olimpijskiego, z doświadczeniem Przemysława Gacka, przedsiębiorcy i założyciela jednej z największych europejskich firm technologicznych w branży HR. Budujemy zespół oparty na ambicji, ciągłym rozwoju i uczeniu się od najlepszych.",
       scroll: "Przewiń",
       cta: "Poznaj zespół",
-      bgAlt: "Jacht POL 17 w akcji — widok z góry na czarne żagle i błękitną wodę",
+      bgAlt: "Jacht Aspire w akcji — widok z góry na czarne żagle i błękitną wodę",
     },
     about: {
       eyebrow: "O nas",
       title: "Żeglarstwo na najwyższym poziomie",
-      lead: "Aspire to polski zespół żeglarski rywalizujący na najwyższym międzynarodowym poziomie w klasie International 5.5 Metre oraz Cape 31.",
+      lead: "Aspire to polski zespół żeglarski rywalizujący na najwyższym międzynarodowym poziomie w klasach Cape 31 oraz International 5.5 Metre.",
       body1:
         "Łącząc doświadczenie mistrza olimpijskiego z determinacją przedsiębiorcy, zespół startuje w regatach w całej Europie — od Zatoki Gdańskiej po Morze Śródziemne.",
       body2:
-        "W 2023 roku Aspire jako pierwsza polska załoga w historii zdobyła mistrzostwo świata w klasie 5.5 Metre. Trzy kolejne podia mistrzostw świata potwierdziły, że nie był to przypadek.",
+        "W 2023 roku Aspire jako pierwsza polska załoga w historii zdobyła mistrzostwo świata w klasie 5.5 Metre. Trzy kolejne podia mistrzostw świata: złoto (Porto Cervo 2023), brąz (Bénodet 2024) i srebro (Sopot 2025).",
       imageAlt: "Załoga Aspire w akcji na wodzie",
       stats: [
         { value: "1×", label: "Mistrzostwo świata", note: "2023" },
         { value: "1×", label: "Mistrzostwo Europy", note: "2020" },
-        { value: "3×", label: "Podium mistrzostw świata", note: "2023–2025" },
+        {
+          value: "3×",
+          label: "Podium mistrzostw świata",
+          note: "złoto, brąz, srebro · 2023–2025",
+        },
       ],
     },
     boats: {
       eyebrow: "Jachty",
       title: "Dwa programy, jedna filozofia",
       intro:
-        "Klasyk klasy rozwojowej i nowoczesny ślizg jednoprojektowy. Każdy uczy czegoś innego.",
+        "Nowoczesny ślizg jednoprojektowy i klasyk klasy rozwojowej. Dwa równorzędne programy — każdy uczy czegoś innego.",
       five: {
         kicker: "POL 17",
         name: "International 5.5 Metre",
@@ -86,7 +91,8 @@ export const translations = {
     history: {
       eyebrow: "Historia",
       title: "Droga na szczyt",
-      intro: "Od pierwszych startów w klasie 5.5 Metre do tytułu mistrzów świata.",
+      intro:
+        "Od pierwszych startów do trzech kolejnych podiów mistrzostw świata: złoto (Porto Cervo 2023), brąz (Bénodet 2024) i srebro (Sopot 2025).",
       crewLabel: "Załoga",
     },
     results: {
@@ -103,85 +109,6 @@ export const translations = {
       },
       places: { 1: "1. miejsce", 2: "2. miejsce", 3: "3. miejsce" },
       empty: "Brak wyników dla wybranych filtrów.",
-    },
-    calendar: {
-      eyebrow: "Kalendarz",
-      title: "Kalendarz regat",
-      intro:
-        "Dwa programy — International 5.5 Metre i Cape 31 — od jezior alpejskich po Morze Śródziemne. Terminarz aktualizowany na bieżąco przez zespół.",
-      metaTitle: "Kalendarz regat 2026–2028 — Aspire Team POL 17",
-      metaDescription:
-        "Pełny terminarz regat Aspire Team (POL 17): starty w klasach International 5.5 Metre i Cape 31 w całej Europie w latach 2026–2028.",
-      backHome: "Powrót na stronę główną",
-      teaser: {
-        eyebrow: "Kalendarz",
-        title: "Najbliżej na wodzie",
-        intro: "Nadchodzące starty z terminarza Aspire.",
-        cta: "Zobacz pełny kalendarz",
-        empty: "Terminarz kolejnego sezonu jest potwierdzany.",
-      },
-
-      viewLabel: "Widok",
-      views: { agenda: "Lista", month: "Miesiąc" },
-      filters: {
-        class: "Klasa",
-        season: "Sezon",
-        all: "Wszystkie",
-        five: "5.5 Metre",
-        cape: "Cape 31",
-      },
-      status: { cancelled: "Odwołane", completed: "Zakończone", scheduled: "Zaplanowane" },
-      participation: { confirmed: "Startujemy", planned: "Planowane" },
-      nextUp: "Następne",
-      place: "Miejsce",
-      today: "Dziś",
-      prevMonth: "Poprzedni miesiąc",
-      nextMonth: "Następny miesiąc",
-      close: "Zamknij",
-      detailsLabel: "Szczegóły regat",
-      loading: "Wczytywanie kalendarza…",
-      error: "Nie udało się wczytać kalendarza. Spróbuj ponownie później.",
-      empty: "Brak regat dla wybranych filtrów.",
-      monthEmpty: "Brak regat w tym miesiącu.",
-      monthOnDesktop: "Widok miesięczny dostępny na większym ekranie.",
-      weekdays: ["pon", "wt", "śr", "czw", "pt", "sob", "ndz"],
-      weekdaysLong: [
-        "poniedziałek",
-        "wtorek",
-        "środa",
-        "czwartek",
-        "piątek",
-        "sobota",
-        "niedziela",
-      ],
-      months: [
-        "styczeń",
-        "luty",
-        "marzec",
-        "kwiecień",
-        "maj",
-        "czerwiec",
-        "lipiec",
-        "sierpień",
-        "wrzesień",
-        "październik",
-        "listopad",
-        "grudzień",
-      ],
-      monthsOf: [
-        "stycznia",
-        "lutego",
-        "marca",
-        "kwietnia",
-        "maja",
-        "czerwca",
-        "lipca",
-        "sierpnia",
-        "września",
-        "października",
-        "listopada",
-        "grudnia",
-      ],
     },
     gacek: {
       eyebrow: "Sternik",
@@ -216,12 +143,26 @@ export const translations = {
       alt: "Mateusz Kusznierewicz — portret",
     },
     partners: {
-      eyebrow: "Sponsorzy i partnerzy",
-      title: "Sponsorzy",
-      intro:
-        "Partnerstwo z Aspire to obecność marki na regatach najwyższej rangi w Europie, dni na wodzie dla klientów i pracowników oraz wspólna praca nad kulturą zespołu prowadzona przez mistrza olimpijskiego.",
-      tierMain: "Sponsor główny · od 2023",
-      tierPartner: "Partner",
+      eyebrow: "Partnerzy",
+      title: "Partnerzy",
+      intro: "Co daje partnerstwo z Aspire:",
+      benefits: [
+        {
+          title: "Promocja marki",
+          body: "w otoczeniu międzynarodowego, profesjonalnego żeglarstwa.",
+        },
+        {
+          title: "Hospitality Days na wodzie",
+          body: "dla pracowników, klientów i partnerów biznesowych.",
+        },
+        {
+          title: "Spotkania z Mateuszem Kusznierewiczem",
+          body: "mistrzem olimpijskim i współtwórcą Aspire.",
+        },
+      ],
+      note: "Żeglarstwo łączy technologię, precyzję, pracę zespołową i decyzje podejmowane pod presją.",
+      tierMain: "Sponsor główny",
+      tierPartner: "Sponsor",
       visit: "Odwiedź stronę",
     },
 
@@ -272,7 +213,7 @@ export const translations = {
       },
     },
     footer: {
-      tagline: "Polski zespół żeglarski · POL 17",
+      tagline: "Polski zespół żeglarski",
       navLabel: "Nawigacja",
       contactLabel: "Kontakt",
       email: "kontakt@aspireteam.pl",
@@ -283,16 +224,16 @@ export const translations = {
 
   en: {
     meta: {
-      title: "Aspire Team — 5.5 Metre World Champions | POL 17",
+      title: "Aspire Team — sailing at the highest level | Cape 31 & 5.5 Metre",
       description:
-        "Aspire (POL 17) — a Polish sailing team racing the International 5.5 Metre and the Cape 31. The first Polish crew to win the 5.5 Metre World Championship.",
+        "Aspire — a Polish sailing team competing internationally in the Cape 31 and the International 5.5 Metre classes.",
     },
     nav: {
       about: "About",
       boats: "The Boats",
       history: "History",
       results: "Results",
-      calendar: "Calendar",
+      
       crew: "Crew",
       partners: "Partners",
       contact: "Partner with us",
@@ -301,34 +242,39 @@ export const translations = {
       langLabel: "Change language",
     },
     hero: {
-      eyebrow: "Polish sailing team",
-      tagline: "5.5 Metre World Champions",
-      sub: "International 5.5 Metre · Cape 31 · Racing across Europe",
-      sail: "POL 17",
+      headline: "Sailing at the highest level",
+      intro1:
+        "Aspire is a Polish sailing team competing at international level in the Cape 31 and the International 5.5 Metre classes.",
+      intro2:
+        "The project brings together Mateusz Kusznierewicz, an Olympic champion, and Przemysław Gacek, an entrepreneur and founder of one of Europe's largest HR technology companies. We are building a team grounded in ambition, constant progress and learning from the very best.",
       scroll: "Scroll",
       cta: "Meet the team",
-      bgAlt: "The POL 17 yacht in action — aerial view of black sails and deep blue water",
+      bgAlt: "The Aspire yacht in action — aerial view of black sails and deep blue water",
     },
     about: {
       eyebrow: "About us",
       title: "Sailing at the highest level",
-      lead: "Aspire is a Polish sailing team competing at the highest international level in the International 5.5 Metre class and the Cape 31.",
+      lead: "Aspire is a Polish sailing team competing at the highest international level in the Cape 31 and the International 5.5 Metre classes.",
       body1:
         "Combining an Olympic champion's experience with an entrepreneur's drive, the team races across Europe — from the Bay of Gdańsk to the Mediterranean.",
       body2:
-        "In 2023 Aspire became the first Polish crew ever to win the 5.5 Metre World Championship. Three consecutive Worlds podiums since have proved it was no accident.",
+        "In 2023 Aspire became the first Polish crew ever to win the 5.5 Metre World Championship. Three consecutive Worlds podiums followed: gold (Porto Cervo 2023), bronze (Bénodet 2024) and silver (Sopot 2025).",
       imageAlt: "The Aspire crew in action on the water",
       stats: [
         { value: "1×", label: "World Champion", note: "2023" },
         { value: "1×", label: "European Champion", note: "2020" },
-        { value: "3×", label: "Consecutive Worlds podiums", note: "2023–2025" },
+        {
+          value: "3×",
+          label: "Consecutive Worlds podiums",
+          note: "gold, bronze, silver · 2023–2025",
+        },
       ],
     },
     boats: {
       eyebrow: "The boats",
       title: "Two programmes, one philosophy",
       intro:
-        "A development-class classic and a modern one-design planing machine. Each teaches something different.",
+        "A modern one-design planing machine and a development-class classic. Two equal programmes — each teaches something different.",
       five: {
         kicker: "POL 17",
         name: "International 5.5 Metre",
@@ -364,7 +310,8 @@ export const translations = {
     history: {
       eyebrow: "History",
       title: "The road to the top",
-      intro: "From first races in the 5.5 Metre class to a world title.",
+      intro:
+        "From the first races to three consecutive Worlds podiums: gold (Porto Cervo 2023), bronze (Bénodet 2024) and silver (Sopot 2025).",
       crewLabel: "Crew",
     },
     results: {
@@ -381,85 +328,6 @@ export const translations = {
       },
       places: { 1: "1st place", 2: "2nd place", 3: "3rd place" },
       empty: "No results for the selected filters.",
-    },
-    calendar: {
-      eyebrow: "Calendar",
-      title: "Racing Calendar",
-      intro:
-        "Two programmes — the International 5.5 Metre and the Cape 31 — from the Alpine lakes to the Mediterranean. Kept up to date by the team.",
-      metaTitle: "Racing Calendar 2026–2028 — Aspire Team POL 17",
-      metaDescription:
-        "The full regatta schedule of Aspire Team (POL 17): International 5.5 Metre and Cape 31 events across Europe, 2026 to 2028.",
-      backHome: "Back to the homepage",
-      teaser: {
-        eyebrow: "Calendar",
-        title: "Next on the water",
-        intro: "The closest regattas on the Aspire schedule.",
-        cta: "See the full calendar",
-        empty: "The next season's schedule is being confirmed.",
-      },
-
-      viewLabel: "View",
-      views: { agenda: "Agenda", month: "Month" },
-      filters: {
-        class: "Class",
-        season: "Season",
-        all: "All",
-        five: "5.5 Metre",
-        cape: "Cape 31",
-      },
-      status: { cancelled: "Cancelled", completed: "Completed", scheduled: "Scheduled" },
-      participation: { confirmed: "Racing", planned: "Planned" },
-      nextUp: "Next up",
-      place: "Place",
-      today: "Today",
-      prevMonth: "Previous month",
-      nextMonth: "Next month",
-      close: "Close",
-      detailsLabel: "Regatta details",
-      loading: "Loading the calendar…",
-      error: "The calendar could not be loaded. Please try again later.",
-      empty: "No regattas match the selected filters.",
-      monthEmpty: "No regattas this month.",
-      monthOnDesktop: "The month grid is available on a larger screen.",
-      weekdays: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-      weekdaysLong: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-      ],
-      months: [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ],
-      monthsOf: [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ],
     },
     gacek: {
       eyebrow: "Helmsman",
@@ -494,12 +362,26 @@ export const translations = {
       alt: "Mateusz Kusznierewicz — portrait",
     },
     partners: {
-      eyebrow: "Sponsors & partners",
-      title: "Sponsors",
-      intro:
-        "Partnering with Aspire means brand presence at Europe's top-level regattas, days on the water for clients and employees, and shared work on team culture led by an Olympic champion.",
-      tierMain: "Main sponsor · since 2023",
-      tierPartner: "Partner",
+      eyebrow: "Partners",
+      title: "Partners",
+      intro: "What a partnership with Aspire offers:",
+      benefits: [
+        {
+          title: "Brand promotion",
+          body: "in the world of international, professional sailing.",
+        },
+        {
+          title: "Hospitality Days on the water",
+          body: "for employees, clients and business partners.",
+        },
+        {
+          title: "Sessions with Mateusz Kusznierewicz",
+          body: "Olympic champion and co-founder of Aspire.",
+        },
+      ],
+      note: "Sailing brings together technology, precision, teamwork and decision-making under pressure.",
+      tierMain: "Main sponsor",
+      tierPartner: "Sponsor",
       visit: "Visit website",
     },
 
@@ -550,7 +432,7 @@ export const translations = {
       },
     },
     footer: {
-      tagline: "Polish sailing team · POL 17",
+      tagline: "Polish sailing team",
       navLabel: "Navigation",
       contactLabel: "Contact",
       email: "kontakt@aspireteam.pl",
