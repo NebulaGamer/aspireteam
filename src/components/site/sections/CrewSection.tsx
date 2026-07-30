@@ -3,30 +3,34 @@ import { Reveal } from "../Reveal";
 import { PhotoFrame } from "../PhotoFrame";
 import { IMAGE_CREW_CAPE31, IMAGE_CREW_55_A, IMAGE_CREW_55_B } from "../SiteImages";
 
-
 type Member = { name: string; role: string };
 
 /**
- * Two crews, presented with identical weight: Cape 31 first, then the 5.5 Metre.
- * Photography is not supplied yet — the null image constants fall back to an
- * intentional "awaiting photography" plate rather than a broken frame.
+ * "Registry manifest" treatment: each crew is a numbered manifest — the names
+ * read as a typeset register (name left, role right in italic display type)
+ * beside the photography, with the two blocks mirrored.
+ *
+ * Photography still renders at its natural aspect ratio (PhotoFrame): the crew
+ * line-up must never be cropped.
  */
 export function CrewSection() {
   const { t } = useLanguage();
   const c = t.crewSection;
 
   return (
-    <section id="crew" className="scroll-mt-24 bg-background py-24 md:py-36">
+    <section id="crew" className="section-dark scroll-mt-24 py-24 md:py-36">
       <div className="shell">
-        <Reveal className="max-w-2xl">
+        <Reveal className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">{c.eyebrow}</p>
-          <h2 className="mt-6 font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold leading-[1.02] text-foreground">
+          <h2 className="mt-6 font-display text-[clamp(2.25rem,5vw,4rem)] font-light italic leading-[1.02] text-parchment">
             {c.title}
           </h2>
-          <p className="mt-6 leading-relaxed text-muted-foreground">{c.intro}</p>
+          <p className="mt-6 leading-relaxed text-steel">{c.intro}</p>
+          <span aria-hidden="true" className="mx-auto mt-10 block h-px w-24 bg-gold/60" />
         </Reveal>
 
         <CrewBlock
+          index="01"
           kicker={c.cape.kicker}
           title={c.cape.title}
           note={c.cape.note}
@@ -35,15 +39,15 @@ export function CrewSection() {
           pendingLabel={c.photoPending}
         />
 
-        <div className="hairline mt-20 md:mt-28" />
-
         <CrewBlock
+          index="02"
           kicker={c.five.kicker}
           title={c.five.title}
           note={c.five.note}
           members={c.five.members as readonly Member[]}
           photos={[IMAGE_CREW_55_A, IMAGE_CREW_55_B]}
           pendingLabel={c.photoPending}
+          mirrored
         />
       </div>
     </section>
@@ -51,65 +55,66 @@ export function CrewSection() {
 }
 
 function CrewBlock({
+  index,
   kicker,
   title,
   note,
   members,
   photos,
   pendingLabel,
+  mirrored = false,
 }: {
+  index: string;
   kicker: string;
   title: string;
   note: string;
   members: readonly Member[];
   photos: readonly (string | null)[];
   pendingLabel: string;
+  mirrored?: boolean;
 }) {
-  // Crew photography is never cropped: every person must remain visible, so
-  // each photograph renders at its natural aspect ratio under a height cap.
-  const maxHeight = photos.length > 1 ? "max-h-[52vh]" : "max-h-[70vh]";
-  // Placeholders have no source image, so they keep a deliberate fixed plate.
-  const placeholderFrame = photos.length > 1 ? "aspect-[4/3]" : "aspect-[16/9]";
   return (
-    <div className="mt-16 md:mt-20">
-      <Reveal>
-        <div
-          className={`grid items-start gap-6 ${photos.length > 1 ? "sm:grid-cols-2" : ""}`}
-        >
-          {photos.map((photo, i) =>
-            photo ? (
-              <PhotoFrame key={i} src={photo} alt={title} maxHeight={maxHeight} />
-            ) : (
-              <PhotoPlaceholder
-                key={i}
-                label={pendingLabel}
-                kicker={kicker}
-                frame={placeholderFrame}
+    <div className="mt-20 grid items-start gap-12 md:mt-28 lg:grid-cols-12 lg:gap-16">
+      <div
+        className={`grid gap-6 lg:col-span-7 ${mirrored ? "lg:order-2" : ""} ${
+          photos.length > 1 ? "sm:grid-cols-2" : ""
+        }`}
+      >
+        {photos.map((photo, i) =>
+          photo ? (
+            <div key={i} className="relative">
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute -inset-2 border border-gold/25"
               />
-            ),
-          )}
-        </div>
-      </Reveal>
+              <PhotoFrame src={photo} alt={title} maxHeight="max-h-[70vh]" className="relative" />
+            </div>
+          ) : (
+            <PhotoPlaceholder key={i} label={pendingLabel} kicker={kicker} />
+          ),
+        )}
+      </div>
 
-
-      <Reveal delay={100} className="mt-10">
-        <p className="eyebrow">{kicker}</p>
-        <h3 className="mt-4 font-display text-2xl font-semibold text-foreground md:text-3xl">
+      <Reveal delay={80} className={`lg:col-span-5 ${mirrored ? "lg:order-1" : ""}`}>
+        <h3 className="font-display text-3xl font-semibold leading-none text-parchment md:text-4xl">
           {title}
         </h3>
-        <p className="mt-3 text-sm text-muted-foreground">{note}</p>
+        <p className="mt-2 text-[0.65rem] uppercase tracking-[0.24em] text-gold/80">
+          {kicker} · {index}
+        </p>
+        <p className="mt-4 text-sm text-steel">{note}</p>
 
-        {/* One name per row on mobile so the seven-name Cape 31 list never wraps mid-name. */}
-        <ul className="mt-8 grid gap-px border-t border-border sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-8 border-t border-gold/30">
           {members.map((member) => (
             <li
               key={member.name}
-              className="flex items-baseline gap-3 border-b border-border py-4 sm:pr-6"
+              className="flex items-baseline justify-between gap-4 border-b border-gold/10 px-2 py-4 transition-colors duration-300 hover:bg-parchment/5"
             >
-              <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rotate-45 bg-gold" />
-              <span className="text-foreground">{member.name}</span>
+              <span className="min-w-0 font-light tracking-wide text-parchment md:text-lg">
+                {member.name}
+              </span>
               {member.role ? (
-                <span className="ml-auto shrink-0 text-[0.65rem] uppercase tracking-[0.18em] text-gold-ink">
+                <span className="shrink-0 font-display text-sm italic tracking-wide text-gold">
                   {member.role}
                 </span>
               ) : null}
@@ -121,19 +126,9 @@ function CrewBlock({
   );
 }
 
-function PhotoPlaceholder({
-  label,
-  kicker,
-  frame,
-}: {
-  label: string;
-  kicker: string;
-  frame: string;
-}) {
+function PhotoPlaceholder({ label, kicker }: { label: string; kicker: string }) {
   return (
-    <div
-      className={`relative flex ${frame} items-center justify-center overflow-hidden border border-border bg-abyss`}
-    >
+    <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden border border-border bg-abyss">
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,color-mix(in_oklab,var(--gold)_14%,transparent),transparent_65%)]"
