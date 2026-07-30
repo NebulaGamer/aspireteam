@@ -153,7 +153,33 @@ export const translations = {
       },
       places: { 1: "1. miejsce", 2: "2. miejsce", 3: "3. miejsce" },
       empty: "Brak wyników dla wybranych filtrów.",
+      showPhoto: "Pokaż zdjęcie",
+      hidePhoto: "Ukryj zdjęcie",
     },
+    /**
+     * Podpisy zdjęć z regat — zapis faktów.
+     * UWAGA: Bénodet 2024 opisujemy wyłącznie jako „Bénodet 2024" z nazwą regat.
+     * Puchar widoczny na zdjęciu należy do innej klasy, a wynik mistrzostw świata
+     * to brąz. Dokładne brzmienie czeka na potwierdzenie klienta i nie wolno go
+     * zmieniać na sugerujące zwycięstwo.
+     */
+    eventPhotos: {
+      portoCervo2023: {
+        alt: "Załoga Aspire z pucharem mistrzostw świata w Yacht Club Costa Smeralda, Porto Cervo",
+        caption:
+          "Porto Cervo 2023 — mistrzostwa świata klasy 5.5 Metre, złoto. Załoga z pucharem w Yacht Club Costa Smeralda.",
+      },
+      benodet2024: {
+        alt: "Załoga Aspire z pucharem o zachodzie słońca w marinie w Bénodet",
+        caption: "Bénodet 2024 — mistrzostwa świata klasy 5.5 Metre.",
+      },
+      sopot2025: {
+        alt: "Załoga Aspire z tablicą za drugie miejsce podczas mistrzostw świata w Sopocie",
+        caption:
+          "Sopot 2025 — mistrzostwa świata klasy 5.5 Metre, srebro. Załoga z tablicą za drugie miejsce.",
+      },
+    },
+
     gacek: {
       eyebrow: "Sternik",
       name: "Przemysław Gacek",
