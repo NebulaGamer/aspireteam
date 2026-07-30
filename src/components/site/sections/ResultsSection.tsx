@@ -16,6 +16,8 @@ export function ResultsSection() {
   const { t, lang } = useLanguage();
   const [classFilter, setClassFilter] = useState<string>("all");
   const [yearFilter, setYearFilter] = useState<string>("all");
+  const [expanded, setExpanded] = useState<string | null>(null);
+
 
   const classes = useMemo(() => [...new Set(results.map((r) => r.boatClass))], []);
   const years = useMemo(
