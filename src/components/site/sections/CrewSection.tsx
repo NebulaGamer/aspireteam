@@ -115,9 +115,19 @@ function CrewBlock({
   );
 }
 
-function PhotoPlaceholder({ label, kicker }: { label: string; kicker: string }) {
+function PhotoPlaceholder({
+  label,
+  kicker,
+  frame,
+}: {
+  label: string;
+  kicker: string;
+  frame: string;
+}) {
   return (
-    <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden border border-border bg-abyss">
+    <div
+      className={`relative flex ${frame} items-center justify-center overflow-hidden border border-border bg-abyss`}
+    >
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,color-mix(in_oklab,var(--gold)_14%,transparent),transparent_65%)]"
