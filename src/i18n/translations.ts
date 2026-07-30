@@ -215,21 +215,8 @@ export const translations = {
     partners: {
       eyebrow: "Partnerzy",
       title: "Partnerzy",
-      intro: "Co daje partnerstwo z Aspire:",
-      benefits: [
-        {
-          title: "Promocja marki",
-          body: "w otoczeniu międzynarodowego, profesjonalnego żeglarstwa.",
-        },
-        {
-          title: "Hospitality Days na wodzie",
-          body: "dla pracowników, klientów i partnerów biznesowych.",
-        },
-        {
-          title: "Spotkania z Mateuszem Kusznierewiczem",
-          body: "mistrzem olimpijskim i współtwórcą Aspire.",
-        },
-      ],
+      intro: "Aspire ściga się u boku partnerów, którzy dzielą nasze standardy.",
+
       note: "Żeglarstwo łączy technologię, precyzję, pracę zespołową i decyzje podejmowane pod presją.",
       tierMain: "Sponsor główny",
       tierPartner: "Sponsor",
