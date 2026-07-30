@@ -5,13 +5,12 @@ import { useLanguage } from "@/i18n/LanguageProvider";
 import { AspireLockup } from "@/components/site/AspireLogo";
 import type { Language } from "@/i18n/translations";
 
-// `to` marks a real route; the rest are in-page anchors on the home page.
+// All entries are in-page anchors on the home page.
 export const NAV_ITEMS = [
   { id: "about", href: "#about" },
   { id: "boats", href: "#boats" },
   { id: "history", href: "#history" },
   { id: "results", href: "#results" },
-  { id: "calendar", href: "/calendar", to: "/calendar" },
   { id: "crew", href: "#crew" },
 
   { id: "partners", href: "#partners" },
@@ -58,9 +57,6 @@ export function Header() {
         <a href={onHome ? "#top" : "/"} className="group flex items-center gap-3" aria-label="Aspire">
           <AspireLockup className="h-6 w-auto text-parchment transition-opacity group-hover:opacity-80 sm:h-8" />
           <span className="sr-only">ASPIRE</span>
-          <span className="hidden whitespace-nowrap text-[0.625rem] font-medium tracking-[0.3em] text-gold sm:inline">
-            POL 17
-          </span>
         </a>
 
         <nav aria-label={t.nav.menu} className="hidden items-center gap-6 lg:flex xl:gap-8">

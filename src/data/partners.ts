@@ -46,8 +46,8 @@ export const partners: Partner[] = [
     logoClassName: "max-h-12 md:max-h-14",
     url: "https://grupapracuj.pl",
     description: {
-      pl: "Grupa Pracuj jest sponsorem głównym projektu Aspire od 2023 roku. Partnerstwo obejmuje także rejsy team-buildingowe i sesje mentoringowe dla pracowników na pokładzie jachtu.",
-      en: "Grupa Pracuj has been the main sponsor of the Aspire project since 2023. The partnership also includes team-building and mentoring sailing sessions for employees aboard the yacht.",
+      pl: "Grupa Pracuj jest sponsorem głównym projektu Aspire. Partnerstwo obejmuje także rejsy team-buildingowe i sesje mentoringowe dla pracowników na pokładzie jachtu.",
+      en: "Grupa Pracuj is the main sponsor of the Aspire project. The partnership also includes team-building and mentoring sailing sessions for employees aboard the yacht.",
     },
   },
   {
