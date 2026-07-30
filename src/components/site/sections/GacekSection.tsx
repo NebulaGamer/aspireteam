@@ -13,12 +13,11 @@ export function GacekSection() {
       <div className="grid items-center lg:grid-cols-2">
         {/* The portrait keeps its own aspect ratio — a fixed tall frame would
             crop the subject. Replacing the file later cannot reintroduce that. */}
-        <div className="flex items-center justify-center bg-abyss px-6 py-8 md:px-12">
+        <div className="flex items-center justify-center px-6 py-8 md:px-12">
           <PhotoFrame
             src={IMAGE_PORTRAIT_GACEK}
             alt={t.gacek.alt}
             maxHeight="max-h-[520px]"
-            className="w-full"
           />
         </div>
 

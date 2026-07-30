@@ -36,12 +36,11 @@ export function KusznierewiczSection() {
         </div>
 
         {/* Landscape source: rendered at natural aspect, never cropped. */}
-        <div className="flex items-center justify-center bg-muted px-6 py-8 md:px-12">
+        <div className="flex items-center justify-center px-6 py-8 md:px-12">
           <PhotoFrame
             src={IMAGE_PORTRAIT_KUSZNIEREWICZ}
             alt={t.kusz.alt}
             maxHeight="max-h-[520px]"
-            className="w-full"
           />
         </div>
 
