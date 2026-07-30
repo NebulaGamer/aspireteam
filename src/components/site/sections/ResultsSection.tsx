@@ -3,7 +3,8 @@ import { useLanguage } from "@/i18n/LanguageProvider";
 import { results } from "@/data/results";
 import { resultPhoto } from "@/data/eventPhotos";
 import { Reveal } from "../Reveal";
-import { SiteImage } from "../SiteImages";
+import { PhotoFrame } from "../PhotoFrame";
+
 
 const MEDAL_STYLES: Record<number, string> = {
   1: "border-gold text-gold",
