@@ -2,7 +2,9 @@ import { useLanguage } from "@/i18n/LanguageProvider";
 import { timeline } from "@/data/timeline";
 import { timelinePhoto } from "@/data/eventPhotos";
 import { Reveal } from "../Reveal";
-import { IMAGE_HISTORY_HELM, SiteImage } from "../SiteImages";
+import { PhotoFrame } from "../PhotoFrame";
+import { IMAGE_HISTORY_HELM } from "../SiteImages";
+
 
 
 export function HistorySection() {
