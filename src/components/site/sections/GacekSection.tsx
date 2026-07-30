@@ -6,7 +6,7 @@ export function GacekSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="crew" className="scroll-mt-24 bg-background">
+    <section className="bg-background">
       <div className="grid lg:grid-cols-2">
         <div className="relative min-h-[60vh] overflow-hidden bg-abyss lg:min-h-screen">
           <SiteImage src={IMAGE_PORTRAIT_GACEK} alt={t.gacek.alt} />

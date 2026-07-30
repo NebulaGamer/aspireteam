@@ -18,8 +18,21 @@ import kusznierewiczAsset from "@/assets/portrait-kusznierewicz.jpg.asset.json";
 export const IMAGE_BOAT_55_METRE = boat55Asset.url;
 export const IMAGE_BOAT_CAPE_31 = cape31Asset.url;
 
-/** Action photograph shown beside the About section text. */
-export const IMAGE_ABOUT_ACTION = aboutActionAsset.url;
+/**
+ * Historic action photograph — the 5.5 Metre crew with Mateusz Kusznierewicz on
+ * the helm. Used only in the History section, tied to the 2019–2022 era.
+ */
+export const IMAGE_HISTORY_HELM = aboutActionAsset.url;
+
+/**
+ * Crew photography — not supplied yet, so these stay null and the crew section
+ * renders its "awaiting photography" plate instead of a broken frame.
+ */
+/** TODO: the Palma dockside team photograph goes here. */
+export const IMAGE_CREW_CAPE31: string | null = null;
+/** TODO: one of these should be the crew of three with Kilian Weise. */
+export const IMAGE_CREW_55_A: string | null = null;
+export const IMAGE_CREW_55_B: string | null = null;
 
 /** Hero background photograph — the POL 17 boat under sail. */
 export const IMAGE_HERO_BOAT = heroBoatAsset.url;

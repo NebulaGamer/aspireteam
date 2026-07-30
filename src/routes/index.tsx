@@ -12,6 +12,7 @@ import { ResultsSection } from "@/components/site/sections/ResultsSection";
 
 import { GacekSection } from "@/components/site/sections/GacekSection";
 import { KusznierewiczSection } from "@/components/site/sections/KusznierewiczSection";
+import { CrewSection } from "@/components/site/sections/CrewSection";
 
 import { PartnersSection } from "@/components/site/sections/PartnersSection";
 import { ContactSection } from "@/components/site/sections/ContactSection";
