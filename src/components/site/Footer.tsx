@@ -11,7 +11,7 @@ export function Footer() {
 
   return (
     <footer className="section-dark section-abyss border-t border-border">
-      <div className="shell grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr] md:py-20">
+      <div className="shell grid gap-12 py-16 md:grid-cols-[1.2fr_1.2fr_0.9fr] md:py-20">
         <div>
           <div className="flex items-center gap-4">
             <AspireLockup className="h-7 w-auto text-parchment" />
@@ -23,7 +23,7 @@ export function Footer() {
 
         <nav aria-label={t.footer.navLabel}>
           <h2 className="eyebrow">{t.footer.navLabel}</h2>
-          <ul className="mt-5 space-y-3">
+          <ul className="mt-5 grid grid-cols-2 gap-x-8 gap-y-3">
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
                 <a
