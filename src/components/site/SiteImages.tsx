@@ -15,6 +15,13 @@ import heroBoatAsset from "@/assets/hero-boat.jpg.asset.json";
 import gacekAsset from "@/assets/portrait-gacek.jpg.asset.json";
 import kusznierewiczAsset from "@/assets/portrait-kusznierewicz.jpg.asset.json";
 
+import crewCape31Asset from "@/assets/crew-cape31.jpg.asset.json";
+import crew55AAsset from "@/assets/crew-55-a.jpg.asset.json";
+import crew55BAsset from "@/assets/crew-55-b.jpg.asset.json";
+import eventPortoCervoAsset from "@/assets/event-porto-cervo-2023.jpg.asset.json";
+import eventBenodetAsset from "@/assets/event-benodet-2024.jpg.asset.json";
+import eventSopotAsset from "@/assets/event-sopot-2025.jpg.asset.json";
+
 export const IMAGE_BOAT_55_METRE = boat55Asset.url;
 export const IMAGE_BOAT_CAPE_31 = cape31Asset.url;
 
