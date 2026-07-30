@@ -23,7 +23,6 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <AspireLockup className="h-7 w-auto text-parchment" />
             <span className="sr-only">ASPIRE</span>
-            <span className="text-[0.65rem] tracking-[0.3em] text-gold">POL 17</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-steel">{t.footer.tagline}</p>
           <div className="hairline mt-8 max-w-xs" />
@@ -89,7 +88,7 @@ export function Footer() {
             </Link>{" "}
             {new Date().getFullYear()} Aspire Team. {t.footer.rights}
           </p>
-          <p className="tracking-[0.24em] text-gold/70">POL 17</p>
+          
         </div>
       </div>
     </footer>
