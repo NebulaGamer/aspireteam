@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: `${SITE_URL}/` },
       // LCP candidate: the hero photograph. Preloaded so it paints as early as possible.
-      { rel: "preload", as: "image", href: IMAGE_HERO_BOAT, fetchpriority: "high" },
+      { rel: "preload", as: "image", href: IMAGE_HERO_BOAT, fetchPriority: "high" },
     ],
     scripts: [
       {
