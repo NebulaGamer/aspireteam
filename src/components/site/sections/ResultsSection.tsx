@@ -116,21 +116,18 @@ export function ResultsSection() {
                     {photo && open ? (
                       <tr className="border-b border-border">
                         <td colSpan={5} className="pb-8" id={`result-photo-${row.id}`}>
-                          <figure className="max-w-2xl">
-                            <div className="relative aspect-[3/2] overflow-hidden border border-gold/30 bg-abyss">
-                              <SiteImage
-                                src={photo.src}
-                                alt={t.eventPhotos[photo.key].alt}
-                                className="absolute inset-0"
-                              />
-                            </div>
-                            <figcaption className="mt-3 text-sm leading-relaxed text-steel">
-                              {t.eventPhotos[photo.key].caption}
-                            </figcaption>
-                          </figure>
+                          <PhotoFrame
+                            src={photo.src}
+                            alt={t.eventPhotos[photo.key].alt}
+                            maxHeight="max-h-[60vh]"
+                            caption={t.eventPhotos[photo.key].caption}
+                            captionClassName="mt-3 text-sm leading-relaxed text-steel"
+                            className="max-w-2xl"
+                          />
                         </td>
                       </tr>
                     ) : null}
+
                   </Fragment>
                 );
               })}
