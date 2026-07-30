@@ -153,7 +153,33 @@ export const translations = {
       },
       places: { 1: "1. miejsce", 2: "2. miejsce", 3: "3. miejsce" },
       empty: "Brak wyników dla wybranych filtrów.",
+      showPhoto: "Pokaż zdjęcie",
+      hidePhoto: "Ukryj zdjęcie",
     },
+    /**
+     * Podpisy zdjęć z regat — zapis faktów.
+     * UWAGA: Bénodet 2024 opisujemy wyłącznie jako „Bénodet 2024" z nazwą regat.
+     * Puchar widoczny na zdjęciu należy do innej klasy, a wynik mistrzostw świata
+     * to brąz. Dokładne brzmienie czeka na potwierdzenie klienta i nie wolno go
+     * zmieniać na sugerujące zwycięstwo.
+     */
+    eventPhotos: {
+      portoCervo2023: {
+        alt: "Załoga Aspire z pucharem mistrzostw świata w Yacht Club Costa Smeralda, Porto Cervo",
+        caption:
+          "Porto Cervo 2023 — mistrzostwa świata klasy 5.5 Metre, złoto. Załoga z pucharem w Yacht Club Costa Smeralda.",
+      },
+      benodet2024: {
+        alt: "Załoga Aspire z pucharem o zachodzie słońca w marinie w Bénodet",
+        caption: "Bénodet 2024 — mistrzostwa świata klasy 5.5 Metre.",
+      },
+      sopot2025: {
+        alt: "Załoga Aspire z tablicą za drugie miejsce podczas mistrzostw świata w Sopocie",
+        caption:
+          "Sopot 2025 — mistrzostwa świata klasy 5.5 Metre, srebro. Załoga z tablicą za drugie miejsce.",
+      },
+    },
+
     gacek: {
       eyebrow: "Sternik",
       name: "Przemysław Gacek",
@@ -415,7 +441,33 @@ export const translations = {
       },
       places: { 1: "1st place", 2: "2nd place", 3: "3rd place" },
       empty: "No results for the selected filters.",
+      showPhoto: "Show photograph",
+      hidePhoto: "Hide photograph",
     },
+    /**
+     * Event photo captions — factual records.
+     * NOTE: Bénodet 2024 is captioned only as "Bénodet 2024" with the event name.
+     * The trophy in that photograph belongs to a separate class and the World
+     * Championship result there was bronze. Exact wording is pending confirmation
+     * from the client and must not be changed to imply victory.
+     */
+    eventPhotos: {
+      portoCervo2023: {
+        alt: "The Aspire crew with the World Championship trophy at Yacht Club Costa Smeralda, Porto Cervo",
+        caption:
+          "Porto Cervo 2023 — 5.5 Metre World Championship, gold. The crew with the trophy at Yacht Club Costa Smeralda.",
+      },
+      benodet2024: {
+        alt: "The Aspire crew with a trophy at sunset over the marina in Bénodet",
+        caption: "Bénodet 2024 — 5.5 Metre World Championship.",
+      },
+      sopot2025: {
+        alt: "The Aspire crew with the second-place plaque at the World Championship in Sopot",
+        caption:
+          "Sopot 2025 — 5.5 Metre World Championship, silver. The crew with the second-place plaque.",
+      },
+    },
+
     gacek: {
       eyebrow: "Helmsman",
       name: "Przemysław Gacek",

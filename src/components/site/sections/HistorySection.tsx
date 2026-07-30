@@ -1,7 +1,9 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { timeline } from "@/data/timeline";
+import { timelinePhoto } from "@/data/eventPhotos";
 import { Reveal } from "../Reveal";
 import { IMAGE_HISTORY_HELM, SiteImage } from "../SiteImages";
+
 
 export function HistorySection() {
   const { t, lang } = useLanguage();
@@ -42,6 +44,7 @@ export function HistorySection() {
 
           {timeline.map((entry, i) => {
             const right = i % 2 === 1;
+            const photo = timelinePhoto(entry.id);
             return (
               <li key={entry.id} className="relative pb-14 pl-10 md:pl-0">
                 <span
@@ -77,12 +80,28 @@ export function HistorySection() {
                           {entry.crew.join(" · ")}
                         </p>
                       ) : null}
+                      {/* Event photography renders only when a file has been assigned. */}
+                      {photo ? (
+                        <figure className="mt-6 max-w-md md:inline-block md:text-left">
+                          <div className="relative aspect-[3/2] overflow-hidden border border-gold/30 bg-abyss">
+                            <SiteImage
+                              src={photo.src}
+                              alt={t.eventPhotos[photo.key].alt}
+                              className="absolute inset-0"
+                            />
+                          </div>
+                          <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                            {t.eventPhotos[photo.key].caption}
+                          </figcaption>
+                        </figure>
+                      ) : null}
                     </Reveal>
                   </div>
                 </div>
               </li>
             );
           })}
+
         </ol>
       </div>
     </section>
