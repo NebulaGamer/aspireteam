@@ -2,6 +2,7 @@ import { useLanguage } from "@/i18n/LanguageProvider";
 import { timeline } from "@/data/timeline";
 import { timelinePhoto } from "@/data/eventPhotos";
 import { Reveal } from "../Reveal";
+import { SectionRule } from "../SectionRule";
 import { PhotoFrame } from "../PhotoFrame";
 import { IMAGE_HISTORY_HELM } from "../SiteImages";
 
@@ -11,7 +12,8 @@ export function HistorySection() {
   const { t, lang } = useLanguage();
 
   return (
-    <section id="history" className="scroll-mt-24 bg-background py-24 md:py-36">
+    <section id="history" className="relative scroll-mt-24 bg-background py-24 md:py-36">
+      <SectionRule />
       <div className="shell">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">{t.history.eyebrow}</p>

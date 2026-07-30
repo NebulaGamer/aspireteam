@@ -1,5 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { Reveal } from "../Reveal";
+import { SectionRule } from "../SectionRule";
 import { PhotoFrame } from "../PhotoFrame";
 import { IMAGE_CREW_CAPE31, IMAGE_CREW_55_A, IMAGE_CREW_55_B } from "../SiteImages";
 
@@ -18,7 +19,8 @@ export function CrewSection() {
   const c = t.crewSection;
 
   return (
-    <section id="crew" className="section-dark scroll-mt-24 py-24 md:py-36">
+    <section id="crew" className="relative section-dark scroll-mt-24 py-24 md:py-36">
+      <SectionRule />
       <div className="shell">
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">{c.eyebrow}</p>

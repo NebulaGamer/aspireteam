@@ -1,6 +1,7 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { partners } from "@/data/partners";
 import { Reveal } from "../Reveal";
+import { SectionRule } from "../SectionRule";
 
 /**
  * Light band between two dark sections. Both sponsor logos are transparent PNG/WebP
@@ -12,8 +13,9 @@ export function PartnersSection() {
   return (
     <section
       id="partners"
-      className="scroll-mt-24 border-t border-border bg-parchment py-28 text-foreground md:py-44"
+      className="relative scroll-mt-24 bg-parchment py-24 text-foreground md:py-36"
     >
+      <SectionRule />
       <div className="shell">
         <Reveal className="max-w-3xl">
           <p className="eyebrow text-gold-ink">{t.partners.eyebrow}</p>
