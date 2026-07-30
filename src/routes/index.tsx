@@ -10,8 +10,6 @@ import { BoatsSection } from "@/components/site/sections/BoatsSection";
 import { HistorySection } from "@/components/site/sections/HistorySection";
 import { ResultsSection } from "@/components/site/sections/ResultsSection";
 
-import { GacekSection } from "@/components/site/sections/GacekSection";
-import { KusznierewiczSection } from "@/components/site/sections/KusznierewiczSection";
 import { CrewSection } from "@/components/site/sections/CrewSection";
 
 import { PartnersSection } from "@/components/site/sections/PartnersSection";
@@ -95,9 +93,6 @@ function Index() {
         <BoatsSection />
         <HistorySection />
         <ResultsSection />
-        
-        <GacekSection />
-        <KusznierewiczSection />
         <CrewSection />
 
         

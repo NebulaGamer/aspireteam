@@ -36,10 +36,20 @@ export const IMAGE_HISTORY_HELM = aboutActionAsset.url;
  */
 /** Palma dockside team photograph, seven crew in blue Aspire kit. */
 export const IMAGE_CREW_CAPE31: string | null = crewCape31Asset.url;
-/** The 5.5 Metre crew of three celebrating aboard POL 17. */
+/**
+ * The 5.5 Metre crew of three celebrating aboard POL 17.
+ * TO BE REPLACED: the client is supplying a photograph in which Przemysław
+ * Gacek is clearly visible at the helm (he now steers the 5.5). Swap whichever
+ * of A/B currently features Mateusz Kusznierewicz as the main figure.
+ */
 export const IMAGE_CREW_55_A: string | null = crew55AAsset.url;
-/** The 5.5 Metre crew of three racing upwind. */
+/**
+ * The 5.5 Metre crew of three racing upwind.
+ * TO BE REPLACED: see the note on IMAGE_CREW_55_A — one of these two slots must
+ * end up showing Gacek at the helm once the new file arrives.
+ */
 export const IMAGE_CREW_55_B: string | null = crew55BAsset.url;
+
 
 /** Hero background photograph — the POL 17 boat under sail. */
 export const IMAGE_HERO_BOAT = heroBoatAsset.url;

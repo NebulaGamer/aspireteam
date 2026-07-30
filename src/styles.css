@@ -238,9 +238,11 @@
 
 /* Soft radial wash of --ocean drifting almost imperceptibly, like light on water. */
 @utility hero-wash {
+  /* Kept deliberately light (0.35) so the photograph — the sails especially —
+     reads through. Legibility is handled by a tight scrim behind the text. */
   background-image: radial-gradient(
     closest-side,
-    color-mix(in oklab, var(--ocean) 92%, transparent),
+    color-mix(in oklab, var(--ocean) 35%, transparent),
     transparent 100%
   );
   background-repeat: no-repeat;
@@ -248,6 +250,17 @@
   background-position: 24% 34%;
   animation: hero-drift 64s ease-in-out infinite;
 }
+
+/* Tight local scrim sized to the hero text block only. */
+@utility hero-text-scrim {
+  background-image: radial-gradient(
+    ellipse 90% 75% at 20% 50%,
+    color-mix(in oklab, var(--abyss) 72%, transparent),
+    color-mix(in oklab, var(--abyss) 40%, transparent) 55%,
+    transparent 80%
+  );
+}
+
 
 /* Fine gold hairline grid, fading out toward the bottom. */
 @utility hero-grid {

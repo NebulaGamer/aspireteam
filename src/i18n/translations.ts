@@ -112,19 +112,31 @@ export const translations = {
       intro:
         "Skład Aspire zmienia się w zależności od programu i regat. Poniżej aktualne załogi obu jachtów.",
       photoPending: "Zdjęcie zespołu w przygotowaniu",
+      foundersTitle: "Za projektem",
+      founders: [
+        {
+          name: "Przemysław Gacek",
+          line: "Sternik Aspire · CEO Grupy Pracuj",
+          alt: "Przemysław Gacek — portret na pokładzie jachtu",
+        },
+        {
+          name: "Mateusz Kusznierewicz",
+          line: "Mistrz olimpijski · Atlanta 1996",
+          alt: "Mateusz Kusznierewicz — portret",
+        },
+      ],
       cape: {
         kicker: "Cape 31",
         title: "Załoga Cape 31",
         note: "Siedmioosobowy skład startowy.",
-        // Nazwiska Juana, Jamesa i Tymka czekają na potwierdzenie od klienta.
         members: [
           { name: "Przemek Gacek", role: "" },
           { name: "Mateusz Kusznierewicz", role: "" },
           { name: "Igor Tarasiuk", role: "" },
           { name: "Paweł Gardasiewicz", role: "" },
-          { name: "Juan", role: "" },
-          { name: "James", role: "" },
-          { name: "Tymek", role: "" },
+          { name: "Juan Lallemand", role: "" },
+          { name: "James Williamson", role: "" },
+          { name: "Tymek Bendyk", role: "" },
         ],
       },
       five: {
@@ -180,38 +192,6 @@ export const translations = {
       },
     },
 
-    gacek: {
-      eyebrow: "Sternik",
-      name: "Przemysław Gacek",
-      role: "Sternik Aspire · współzałożyciel i CEO Grupy Pracuj",
-      body1:
-        "Współzałożyciel i prezes Grupy Pracuj — wiodącej grupy HR-tech w Europie Środkowej (Pracuj.pl, Rabota.ua), którą kieruje od ponad dwóch dekad.",
-      body2:
-        "Żeglarska pasja z dzieciństwa, odkryta na nowo w dorosłym życiu i doprowadzona na sam szczyt. Stanął za sterem Aspire i w ciągu roku poprowadził zespół po brązowy medal mistrzostw świata, a rok później po srebro.",
-      quote:
-        "Nigdy nie przypuszczałem, że zostanę sportowcem, a tym bardziej że stanę na podium i usłyszę hymn Polski.",
-      quoteNote: "",
-      alt: "Przemysław Gacek — portret na pokładzie jachtu",
-    },
-    kusz: {
-      eyebrow: "Taktyk i współzałożyciel",
-      name: "Mateusz Kusznierewicz",
-      role: "Taktyk i współzałożyciel projektu Aspire · mistrz olimpijski",
-      body1:
-        "Jeden z najwybitniejszych żeglarzy w historii Polski. Złoto olimpijskie w klasie Finn w Atlancie 1996 — pierwsze olimpijskie złoto w dziejach polskiego żeglarstwa.",
-      body2:
-        "W Aspire pływa jako taktyk i współzałożyciel projektu, a na lądzie prowadzi programy mentoringowe i przywódcze zespołu.",
-      honours: [
-        { title: "Złoto olimpijskie", note: "Finn · Atlanta 1996" },
-        { title: "Brąz olimpijski", note: "Finn · Ateny 2004" },
-        { title: "Żeglarz Roku ISAF", note: "1999" },
-        { title: "Mistrz świata Finn Gold Cup", note: "Klasa Finn" },
-        { title: "Mistrz świata klasy Star", note: "z Dominikiem Życkim — pierwsza polska załoga" },
-        { title: "Zwycięzca Bacardi Cup", note: "Klasa Star" },
-        { title: "Olimpijczyk", note: "Londyn 2012" },
-      ],
-      alt: "Mateusz Kusznierewicz — portret",
-    },
     partners: {
       eyebrow: "Partnerzy",
       title: "Partnerzy",
@@ -274,7 +254,6 @@ export const translations = {
       navLabel: "Nawigacja",
       contactLabel: "Kontakt",
       email: "kontakt@aspireteam.pl",
-      social: "Media społecznościowe",
       rights: "Wszelkie prawa zastrzeżone.",
     },
   },
@@ -387,19 +366,31 @@ export const translations = {
       intro:
         "The Aspire line-up changes with the programme and the regatta. These are the current crews of both boats.",
       photoPending: "Team photograph coming soon",
+      foundersTitle: "Behind the project",
+      founders: [
+        {
+          name: "Przemysław Gacek",
+          line: "Helmsman · CEO of Grupa Pracuj",
+          alt: "Przemysław Gacek — portrait aboard the yacht",
+        },
+        {
+          name: "Mateusz Kusznierewicz",
+          line: "Olympic champion · Atlanta 1996",
+          alt: "Mateusz Kusznierewicz — portrait",
+        },
+      ],
       cape: {
         kicker: "Cape 31",
         title: "Cape 31 crew",
         note: "A seven-strong racing line-up.",
-        // Surnames for Juan, James and Tymek are pending confirmation from the client.
         members: [
           { name: "Przemek Gacek", role: "" },
           { name: "Mateusz Kusznierewicz", role: "" },
           { name: "Igor Tarasiuk", role: "" },
           { name: "Paweł Gardasiewicz", role: "" },
-          { name: "Juan", role: "" },
-          { name: "James", role: "" },
-          { name: "Tymek", role: "" },
+          { name: "Juan Lallemand", role: "" },
+          { name: "James Williamson", role: "" },
+          { name: "Tymek Bendyk", role: "" },
         ],
       },
       five: {
@@ -455,38 +446,6 @@ export const translations = {
       },
     },
 
-    gacek: {
-      eyebrow: "Helmsman",
-      name: "Przemysław Gacek",
-      role: "Helmsman of Aspire · co-founder and CEO of Grupa Pracuj",
-      body1:
-        "Co-founder and CEO of Grupa Pracuj, the leading HR-tech group in Central Europe (Pracuj.pl, Rabota.ua), which he has led for over two decades.",
-      body2:
-        "A childhood sailing passion rediscovered later in life and pursued to the very top. He took the helm of Aspire and within a year led the team to a World Championship bronze, then silver the following year.",
-      quote:
-        "I never imagined I would become an athlete — let alone stand on a podium and hear the Polish anthem played.",
-      quoteNote: "Nigdy nie przypuszczałem, że zostanę sportowcem, a tym bardziej że stanę na podium i usłyszę hymn Polski.",
-      alt: "Przemysław Gacek — portrait aboard the yacht",
-    },
-    kusz: {
-      eyebrow: "Tactician and co-founder",
-      name: "Mateusz Kusznierewicz",
-      role: "Tactician and co-founder of Aspire · Olympic champion",
-      body1:
-        "One of the greatest sailors Poland has produced. Olympic Gold in the Finn class at Atlanta 1996 — the first Olympic gold in the history of Polish sailing.",
-      body2:
-        "On Aspire he sails as tactician and co-founder of the project, and ashore he leads the team's mentoring and leadership work.",
-      honours: [
-        { title: "Olympic Gold", note: "Finn · Atlanta 1996" },
-        { title: "Olympic Bronze", note: "Finn · Athens 2004" },
-        { title: "ISAF World Sailor of the Year", note: "1999" },
-        { title: "Finn Gold Cup World Champion", note: "Finn class" },
-        { title: "Star World Champion", note: "with Dominik Życki — the first Polish crew to win it" },
-        { title: "Bacardi Cup winner", note: "Star class" },
-        { title: "Olympian", note: "London 2012" },
-      ],
-      alt: "Mateusz Kusznierewicz — portrait",
-    },
     partners: {
       eyebrow: "Partners",
       title: "Partners",
@@ -549,7 +508,6 @@ export const translations = {
       navLabel: "Navigation",
       contactLabel: "Contact",
       email: "kontakt@aspireteam.pl",
-      social: "Social media",
       rights: "All rights reserved.",
     },
   },
