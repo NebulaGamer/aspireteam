@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { results } from "@/data/results";
 import { resultPhoto } from "@/data/eventPhotos";
@@ -89,8 +89,8 @@ export function ResultsSection() {
                 const photo = resultPhoto(row.id);
                 const open = expanded === row.id;
                 return (
-                  <>
-                    <tr key={row.id} className="border-b border-border">
+                  <Fragment key={row.id}>
+                    <tr className="border-b border-border">
                       <td className="py-6 pr-6 font-display text-2xl text-parchment">{row.year}</td>
                       <td className="py-6 pr-6 text-parchment">
                         {row.event[lang]}
@@ -114,7 +114,7 @@ export function ResultsSection() {
                       </td>
                     </tr>
                     {photo && open ? (
-                      <tr key={`${row.id}-photo`} className="border-b border-border">
+                      <tr className="border-b border-border">
                         <td colSpan={5} className="pb-8" id={`result-photo-${row.id}`}>
                           <figure className="max-w-2xl">
                             <div className="relative aspect-[3/2] overflow-hidden border border-gold/30 bg-abyss">
@@ -131,7 +131,7 @@ export function ResultsSection() {
                         </td>
                       </tr>
                     ) : null}
-                  </>
+                  </Fragment>
                 );
               })}
             </tbody>
