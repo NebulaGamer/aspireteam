@@ -22,10 +22,10 @@ export function BoatsSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="boats" className="relative scroll-mt-24 section-dark pt-16 pb-24 md:pt-24 md:pb-36">
+    <section id="boats" className="relative scroll-mt-24 section-dark py-24 md:py-36">
       <SectionRule />
       <div className="shell">
-        <Reveal>
+        <Reveal className="mb-16 md:mb-24">
           <p className="eyebrow">{t.boats.eyebrow}</p>
           <h2 className="mt-6 max-w-2xl font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold leading-[1.02] text-parchment">
             {t.boats.title}
