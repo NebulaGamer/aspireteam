@@ -11,6 +11,7 @@ import {
 } from "@/lib/partnership";
 import { submitPartnershipEnquiry } from "@/lib/partnership.functions";
 import { Reveal } from "../Reveal";
+import { SectionRule } from "../SectionRule";
 
 type Errors = Partial<Record<keyof PartnershipEnquiry, string>>;
 
@@ -106,7 +107,8 @@ export function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="scroll-mt-24 section-dark section-abyss py-24 md:py-36">
+    <section id="contact" className="relative scroll-mt-24 section-dark section-abyss py-24 md:py-36">
+      <SectionRule />
       <div className="shell grid gap-16 lg:grid-cols-2 lg:gap-24">
         <Reveal>
           <p className="eyebrow">{t.contact.eyebrow}</p>

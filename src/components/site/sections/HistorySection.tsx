@@ -47,7 +47,7 @@ export function HistorySection() {
             const right = i % 2 === 1;
             const photo = timelinePhoto(entry.id);
             return (
-              <li key={entry.id} className="relative pb-14 pl-10 md:pl-0">
+              <li key={entry.id} className="relative pb-10 pl-10 md:pl-0">
                 <span
                   aria-hidden="true"
                   className={`absolute left-0 top-1.5 h-[15px] w-[15px] rotate-45 border md:left-1/2 md:-translate-x-1/2 ${
@@ -88,10 +88,10 @@ export function HistorySection() {
                         <PhotoFrame
                           src={photo.src}
                           alt={t.eventPhotos[photo.key].alt}
-                          maxHeight="max-h-[60vh]"
+                          maxHeight="max-h-[400px]"
                           caption={t.eventPhotos[photo.key].caption}
                           captionClassName="mt-3 text-sm leading-relaxed text-muted-foreground"
-                          className="mt-6 max-w-md md:inline-block md:text-left"
+                          className="mt-6 max-w-sm md:inline-block md:text-left"
                         />
                       ) : null}
 
