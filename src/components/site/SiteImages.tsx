@@ -62,6 +62,31 @@ export const IMAGE_EVENT_SOPOT_2025: string | null = eventSopotAsset.url;
 export const IMAGE_PORTRAIT_GACEK = gacekAsset.url;
 export const IMAGE_PORTRAIT_KUSZNIEREWICZ = kusznierewiczAsset.url;
 
+/**
+ * Intrinsic pixel dimensions of every supplied photograph. Used to set the
+ * `width`/`height` attributes (no layout shift) and to let PhotoFrame render
+ * people photography at its natural aspect ratio instead of cropping it.
+ */
+const INTRINSIC: Record<string, { width: number; height: number }> = {
+  [IMAGE_BOAT_55_METRE]: { width: 960, height: 640 },
+  [IMAGE_BOAT_CAPE_31]: { width: 1200, height: 800 },
+  [IMAGE_HISTORY_HELM]: { width: 800, height: 534 },
+  [IMAGE_HERO_BOAT]: { width: 1600, height: 1067 },
+  [crewCape31Asset.url]: { width: 1600, height: 1153 },
+  [crew55AAsset.url]: { width: 1178, height: 866 },
+  [crew55BAsset.url]: { width: 1135, height: 757 },
+  [eventPortoCervoAsset.url]: { width: 840, height: 1024 },
+  [eventBenodetAsset.url]: { width: 1600, height: 1199 },
+  [eventSopotAsset.url]: { width: 1200, height: 1599 },
+  [IMAGE_PORTRAIT_GACEK]: { width: 1200, height: 857 },
+  [IMAGE_PORTRAIT_KUSZNIEREWICZ]: { width: 1920, height: 1280 },
+};
+
+export function imageSize(src: string): { width: number; height: number } {
+  return INTRINSIC[src] ?? { width: 1600, height: 1067 };
+}
+
+
 type SiteImageProps = {
   src: string;
   alt: string;
