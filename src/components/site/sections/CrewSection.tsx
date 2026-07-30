@@ -140,9 +140,10 @@ function CrewBlock({
               key={member.name}
               className="flex items-baseline justify-between gap-4 border-b border-gold/10 px-2 py-4 transition-colors duration-300 hover:bg-parchment/5"
             >
-              <span className="min-w-0 font-light tracking-wide text-parchment md:text-lg">
+              <span className="min-w-0 font-sans text-lg font-medium tracking-wide text-parchment md:text-xl">
                 {member.name}
               </span>
+
               {member.role ? (
                 <span className="shrink-0 font-display text-sm italic tracking-wide text-gold">
                   {member.role}
