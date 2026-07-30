@@ -50,7 +50,12 @@ export function CrewSection() {
           <div className="mx-auto mt-10 grid max-w-4xl gap-10 sm:grid-cols-2 sm:gap-12">
             {c.founders.map((person, i) => (
               <Reveal key={person.name} delay={i * 100}>
-                <PhotoFrame src={portraits[i]} alt={person.alt} maxHeight="max-h-[360px]" />
+                {/* Fixed-height plate so the two names sit on a shared baseline
+                    even though the portraits differ in aspect ratio. */}
+                <div className="flex h-[300px] items-end justify-center sm:h-[340px]">
+                  <PhotoFrame src={portraits[i]} alt={person.alt} maxHeight="max-h-[340px]" />
+                </div>
+
                 <p className="mt-5 text-center text-lg font-medium tracking-wide text-parchment">
                   {person.name}
                 </p>
