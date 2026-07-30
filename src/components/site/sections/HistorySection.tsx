@@ -29,7 +29,7 @@ export function HistorySection() {
           <PhotoFrame
             src={IMAGE_HISTORY_HELM}
             alt={t.history.photoAlt}
-            maxHeight="max-h-[70vh]"
+            maxHeight="max-h-[480px]"
             caption={t.history.photoCaption}
             captionClassName="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground"
           />

@@ -17,7 +17,7 @@ export function GacekSection() {
           <PhotoFrame
             src={IMAGE_PORTRAIT_GACEK}
             alt={t.gacek.alt}
-            maxHeight="max-h-[80vh]"
+            maxHeight="max-h-[520px]"
             className="w-full"
           />
         </div>
