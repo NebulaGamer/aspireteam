@@ -65,8 +65,16 @@ export const Route = createFileRoute("/")({
           url: SITE_URL,
           logo: `${SITE_URL}/icon-512.png`,
           member: [
-            { "@type": "Person", name: "Przemysław Gacek", jobTitle: "Helmsman" },
-            { "@type": "Person", name: "Mateusz Kusznierewicz", jobTitle: "Tactician" },
+            {
+              "@type": "Person",
+              name: "Przemysław Gacek",
+              jobTitle: "Helmsman (International 5.5 Metre)",
+            },
+            {
+              "@type": "Person",
+              name: "Mateusz Kusznierewicz",
+              jobTitle: "Tactician and co-founder",
+            },
           ],
         }),
       },
@@ -88,6 +96,8 @@ function Index() {
         
         <GacekSection />
         <KusznierewiczSection />
+        <CrewSection />
+
         
         <PartnersSection />
         <ContactSection />
