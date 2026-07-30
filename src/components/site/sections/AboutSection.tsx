@@ -1,6 +1,5 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { Reveal } from "../Reveal";
-import { IMAGE_ABOUT_ACTION, SiteImage } from "../SiteImages";
 
 export function AboutSection() {
   const { t } = useLanguage();
@@ -8,30 +7,33 @@ export function AboutSection() {
   return (
     <section id="about" className="scroll-mt-24 bg-background py-24 md:py-36">
       <div className="shell">
-        <div className="grid items-start gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
-          <div className="max-w-3xl">
-            <Reveal>
-              <p className="eyebrow">{t.about.eyebrow}</p>
-              <h2 className="mt-6 max-w-xl font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold leading-[1.02] text-foreground">
-                {t.about.title}
-              </h2>
-              <div className="hairline mt-10 max-w-24" />
-            </Reveal>
-
-            <Reveal delay={120} className="mt-10 max-w-xl space-y-6">
-              <p className="text-lg leading-relaxed text-foreground/85 md:text-xl">{t.about.lead}</p>
-              <p className="leading-relaxed text-muted-foreground">{t.about.body1}</p>
-              <p className="leading-relaxed text-muted-foreground">{t.about.body2}</p>
-            </Reveal>
-          </div>
-
-          <Reveal delay={180} className="relative aspect-[4/3] overflow-hidden lg:aspect-[3/4]">
-            <SiteImage
-              src={IMAGE_ABOUT_ACTION}
-              alt={t.about.imageAlt}
-              className="absolute inset-0"
-            />
+        <div className="max-w-3xl">
+          <Reveal>
+            <p className="eyebrow">{t.about.eyebrow}</p>
+            <h2 className="mt-6 font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold leading-[1.02] text-foreground">
+              {t.about.title}
+            </h2>
+            <div className="hairline mt-10 max-w-24" />
           </Reveal>
+
+          {/* The name as a philosophy — the thesis of the whole page, given room. */}
+          <Reveal delay={120} className="mt-10">
+            <p className="font-display text-xl leading-relaxed text-foreground/90 md:text-2xl">
+              {t.about.lead}
+            </p>
+          </Reveal>
+        </div>
+
+        <div className="mt-16 grid gap-12 md:mt-20 md:grid-cols-2 md:gap-16">
+          {t.about.movements.map((movement, i) => (
+            <Reveal key={movement.title} delay={i * 120} className="max-w-xl">
+              <h3 className="font-display text-2xl font-semibold text-foreground">
+                {movement.title}
+              </h3>
+              <div className="hairline mt-6 max-w-16" />
+              <p className="mt-6 leading-relaxed text-muted-foreground">{movement.body}</p>
+            </Reveal>
+          ))}
         </div>
       </div>
 

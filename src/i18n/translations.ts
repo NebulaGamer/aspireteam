@@ -378,13 +378,27 @@ export const translations = {
         kicker: "Cape 31",
         title: "Cape 31 crew",
         note: "A seven-strong racing line-up.",
+        // Surnames for Juan, James and Tymek are pending confirmation from the client.
+        members: [
+          { name: "Przemek Gacek", role: "" },
+          { name: "Mateusz Kusznierewicz", role: "" },
+          { name: "Igor Tarasiuk", role: "" },
+          { name: "Paweł Gardasiewicz", role: "" },
+          { name: "Juan", role: "" },
+          { name: "James", role: "" },
+          { name: "Tymek", role: "" },
+        ],
       },
       five: {
         kicker: "International 5.5 Metre",
         title: "5.5 Metre crew",
         note: "A crew of three.",
+        members: [
+          { name: "Przemek Gacek", role: "helmsman" },
+          { name: "Mateusz Kusznierewicz", role: "" },
+          { name: "Kilian Weise", role: "" },
+        ],
       },
-      roles: { helm: "helmsman" },
     },
 
     results: {
