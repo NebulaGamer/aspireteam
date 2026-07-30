@@ -1,11 +1,8 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { Reveal } from "../Reveal";
-import {
-  IMAGE_CREW_CAPE31,
-  IMAGE_CREW_55_A,
-  IMAGE_CREW_55_B,
-  SiteImage,
-} from "../SiteImages";
+import { PhotoFrame } from "../PhotoFrame";
+import { IMAGE_CREW_CAPE31, IMAGE_CREW_55_A, IMAGE_CREW_55_B } from "../SiteImages";
+
 
 type Member = { name: string; role: string };
 
