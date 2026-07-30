@@ -503,21 +503,8 @@ export const translations = {
     partners: {
       eyebrow: "Partners",
       title: "Partners",
-      intro: "What a partnership with Aspire offers:",
-      benefits: [
-        {
-          title: "Brand promotion",
-          body: "in the world of international, professional sailing.",
-        },
-        {
-          title: "Hospitality Days on the water",
-          body: "for employees, clients and business partners.",
-        },
-        {
-          title: "Sessions with Mateusz Kusznierewicz",
-          body: "Olympic champion and co-founder of Aspire.",
-        },
-      ],
+      intro: "Aspire races alongside partners who share our standards.",
+
       note: "Sailing brings together technology, precision, teamwork and decision-making under pressure.",
       tierMain: "Main sponsor",
       tierPartner: "Sponsor",
