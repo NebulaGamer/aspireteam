@@ -2,7 +2,13 @@ import { useLanguage } from "@/i18n/LanguageProvider";
 import { Reveal } from "../Reveal";
 import { SectionRule } from "../SectionRule";
 import { PhotoFrame } from "../PhotoFrame";
-import { IMAGE_CREW_CAPE31, IMAGE_CREW_55_A, IMAGE_CREW_55_B } from "../SiteImages";
+import {
+  IMAGE_CREW_CAPE31,
+  IMAGE_CREW_55_A,
+  IMAGE_CREW_55_B,
+  IMAGE_PORTRAIT_GACEK,
+  IMAGE_PORTRAIT_KUSZNIEREWICZ,
+} from "../SiteImages";
 
 type Member = { name: string; role: string };
 
@@ -11,12 +17,16 @@ type Member = { name: string; role: string };
  * read as a typeset register (name left, role right in italic display type)
  * beside the photography, with the two blocks mirrored.
  *
+ * Crew names are set in the sans (Inter), not the display serif: the client
+ * asked for a clear, modern, legible list. Fraunces is reserved for headings.
+ *
  * Photography still renders at its natural aspect ratio (PhotoFrame): the crew
  * line-up must never be cropped.
  */
 export function CrewSection() {
   const { t } = useLanguage();
   const c = t.crewSection;
+  const portraits = [IMAGE_PORTRAIT_GACEK, IMAGE_PORTRAIT_KUSZNIEREWICZ];
 
   return (
     <section id="crew" className="relative section-dark scroll-mt-24 py-24 md:py-36">
@@ -30,6 +40,27 @@ export function CrewSection() {
           <p className="mt-6 leading-relaxed text-steel">{c.intro}</p>
           <span aria-hidden="true" className="mx-auto mt-10 block h-px w-24 bg-gold/60" />
         </Reveal>
+
+        {/* The two people behind the project — portraits only, no biography.
+            Kusznierewicz's Olympic credential is kept as one compact line. */}
+        <div className="mt-16 md:mt-20">
+          <p className="text-center text-[0.65rem] uppercase tracking-[0.24em] text-gold/80">
+            {c.foundersTitle}
+          </p>
+          <div className="mx-auto mt-10 grid max-w-4xl gap-10 sm:grid-cols-2 sm:gap-12">
+            {c.founders.map((person, i) => (
+              <Reveal key={person.name} delay={i * 100}>
+                <PhotoFrame src={portraits[i]} alt={person.alt} maxHeight="max-h-[360px]" />
+                <p className="mt-5 text-center text-lg font-medium tracking-wide text-parchment">
+                  {person.name}
+                </p>
+                <p className="mt-1 text-center text-xs uppercase tracking-[0.16em] text-steel">
+                  {person.line}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
 
         <CrewBlock
           index="01"
@@ -55,6 +86,7 @@ export function CrewSection() {
     </section>
   );
 }
+
 
 function CrewBlock({
   index,
