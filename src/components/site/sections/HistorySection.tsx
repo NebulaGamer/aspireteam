@@ -79,21 +79,20 @@ export function HistorySection() {
                           {entry.crew.join(" · ")}
                         </p>
                       ) : null}
-                      {/* Event photography renders only when a file has been assigned. */}
+                      {/* Event photography renders only when a file has been
+                          assigned. Mixed orientation — each keeps its natural
+                          aspect ratio, centred in the column. */}
                       {photo ? (
-                        <figure className="mt-6 max-w-md md:inline-block md:text-left">
-                          <div className="relative aspect-[3/2] overflow-hidden border border-gold/30 bg-abyss">
-                            <SiteImage
-                              src={photo.src}
-                              alt={t.eventPhotos[photo.key].alt}
-                              className="absolute inset-0"
-                            />
-                          </div>
-                          <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                            {t.eventPhotos[photo.key].caption}
-                          </figcaption>
-                        </figure>
+                        <PhotoFrame
+                          src={photo.src}
+                          alt={t.eventPhotos[photo.key].alt}
+                          maxHeight="max-h-[60vh]"
+                          caption={t.eventPhotos[photo.key].caption}
+                          captionClassName="mt-3 text-sm leading-relaxed text-muted-foreground"
+                          className="mt-6 max-w-md md:inline-block md:text-left"
+                        />
                       ) : null}
+
                     </Reveal>
                   </div>
                 </div>
