@@ -10,7 +10,10 @@ export function PartnersSection() {
   const { t, lang } = useLanguage();
 
   return (
-    <section id="partners" className="scroll-mt-24 bg-parchment py-28 text-foreground md:py-44">
+    <section
+      id="partners"
+      className="scroll-mt-24 border-t border-border bg-parchment py-28 text-foreground md:py-44"
+    >
       <div className="shell">
         <Reveal className="max-w-3xl">
           <p className="eyebrow text-gold-ink">{t.partners.eyebrow}</p>
@@ -18,23 +21,11 @@ export function PartnersSection() {
             {t.partners.title}
           </h2>
           <p className="mt-8 max-w-2xl leading-relaxed text-muted-foreground">{t.partners.intro}</p>
-        </Reveal>
-
-        <Reveal delay={80} className="mt-10">
-          <ul className="grid gap-6 md:grid-cols-3">
-            {t.partners.benefits.map((benefit) => (
-              <li key={benefit.title} className="border-t border-border pt-5">
-                <p className="font-display text-lg font-semibold text-foreground">
-                  {benefit.title}
-                </p>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{benefit.body}</p>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-10 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
             {t.partners.note}
           </p>
         </Reveal>
+
 
         {/* Two sponsors today; a third entry in src/data/partners.ts slots straight in. */}
         <ul className="mt-16 grid gap-8 md:grid-cols-2">
