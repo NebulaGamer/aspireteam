@@ -1,15 +1,8 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { NAV_ITEMS, navHref } from "./Header";
 import { AspireLockup } from "@/components/site/AspireLogo";
 
-const SOCIALS = [
-  { id: "instagram", href: "https://instagram.com", Icon: Instagram, label: "Instagram" },
-  { id: "facebook", href: "https://facebook.com", Icon: Facebook, label: "Facebook" },
-  { id: "linkedin", href: "https://linkedin.com", Icon: Linkedin, label: "LinkedIn" },
-  { id: "youtube", href: "https://youtube.com", Icon: Youtube, label: "YouTube" },
-];
 
 export function Footer() {
   const { t } = useLanguage();
@@ -52,22 +45,6 @@ export function Footer() {
           >
             {t.footer.email}
           </a>
-          <h2 className="eyebrow mt-8">{t.footer.social}</h2>
-          <ul className="mt-4 flex gap-4">
-            {SOCIALS.map(({ id, href, Icon, label }) => (
-              <li key={id}>
-                <a
-                  href={href}
-                  aria-label={label}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="inline-flex h-10 w-10 items-center justify-center border border-parchment/20 text-silver transition-colors hover:border-gold hover:text-gold"
-                >
-                  <Icon size={16} aria-hidden="true" />
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
 
