@@ -1,6 +1,7 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { Reveal } from "../Reveal";
-import { IMAGE_PORTRAIT_GACEK, SiteImage } from "../SiteImages";
+import { PhotoFrame } from "../PhotoFrame";
+import { IMAGE_PORTRAIT_GACEK } from "../SiteImages";
 
 export function GacekSection() {
   const { t } = useLanguage();
@@ -8,9 +9,17 @@ export function GacekSection() {
   return (
     <section className="bg-background">
       <div className="grid lg:grid-cols-2">
-        <div className="relative min-h-[60vh] overflow-hidden bg-abyss lg:min-h-screen">
-          <SiteImage src={IMAGE_PORTRAIT_GACEK} alt={t.gacek.alt} />
+        {/* The portrait keeps its own aspect ratio — a fixed tall frame would
+            crop the subject. Replacing the file later cannot reintroduce that. */}
+        <div className="flex items-center justify-center bg-abyss px-6 py-12 md:px-12 lg:py-20">
+          <PhotoFrame
+            src={IMAGE_PORTRAIT_GACEK}
+            alt={t.gacek.alt}
+            maxHeight="max-h-[80vh]"
+            className="w-full"
+          />
         </div>
+
 
         <div className="flex items-center px-6 py-20 md:px-16 lg:px-20 xl:px-28">
           <Reveal className="max-w-xl">
