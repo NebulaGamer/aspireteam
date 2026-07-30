@@ -33,9 +33,16 @@ export function KusznierewiczSection() {
           </Reveal>
         </div>
 
-        <div className="relative min-h-[60vh] overflow-hidden bg-abyss lg:min-h-screen">
-          <SiteImage src={IMAGE_PORTRAIT_KUSZNIEREWICZ} alt={t.kusz.alt} />
+        {/* Landscape source: rendered at natural aspect, never cropped. */}
+        <div className="flex items-center justify-center bg-abyss px-6 py-12 md:px-12 lg:py-20">
+          <PhotoFrame
+            src={IMAGE_PORTRAIT_KUSZNIEREWICZ}
+            alt={t.kusz.alt}
+            maxHeight="max-h-[80vh]"
+            className="w-full"
+          />
         </div>
+
       </div>
     </section>
   );
