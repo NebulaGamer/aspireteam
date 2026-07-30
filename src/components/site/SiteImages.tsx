@@ -37,6 +37,20 @@ export const IMAGE_CREW_55_B: string | null = null;
 /** Hero background photograph — the POL 17 boat under sail. */
 export const IMAGE_HERO_BOAT = heroBoatAsset.url;
 
+/**
+ * Event photography from individual regattas — supplied by the client, rights held
+ * by the team. Null until the files are uploaded; History and Results render
+ * nothing at all while a slot is null (no placeholder, no gap).
+ */
+/** TODO: the crew with the trophy at Yacht Club Costa Smeralda, Italian ribbons — world title, gold. */
+export const IMAGE_EVENT_PORTO_CERVO_2023: string | null = null;
+/** TODO: the crew with the trophy at sunset over the marina in Bénodet. */
+export const IMAGE_EVENT_BENODET_2024: string | null = null;
+/** TODO: the crew in the venue with the "2nd place" plaque, Sopot. */
+export const IMAGE_EVENT_SOPOT_2025: string | null = null;
+
+
+
 
 /** Portraits — real, licensed photographs supplied by the team. */
 export const IMAGE_PORTRAIT_GACEK = gacekAsset.url;
