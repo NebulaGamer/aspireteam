@@ -22,6 +22,14 @@ import { enquiryCopy } from "@/lib/enquiries-copy";
 import { countNewEnquiries } from "@/lib/enquiries.functions";
 import type { Session } from "@supabase/supabase-js";
 
+/*
+ * Regatta calendar back office.
+ *
+ * NOTE: the public-facing calendar section and the /calendar route were removed at
+ * the client's request. This admin screen, the `regattas` table and all seeded data
+ * are deliberately kept intact — the client may later want a public version showing
+ * only Aspire's own entries, and it should not be rebuilt from scratch.
+ */
 export const Route = createFileRoute("/admin/")({
   // The session lives in localStorage, so this back office is client-rendered only.
   ssr: false,

@@ -9,19 +9,19 @@ import { AboutSection } from "@/components/site/sections/AboutSection";
 import { BoatsSection } from "@/components/site/sections/BoatsSection";
 import { HistorySection } from "@/components/site/sections/HistorySection";
 import { ResultsSection } from "@/components/site/sections/ResultsSection";
-import { CalendarTeaser } from "@/components/site/sections/CalendarTeaser";
+
 import { GacekSection } from "@/components/site/sections/GacekSection";
 import { KusznierewiczSection } from "@/components/site/sections/KusznierewiczSection";
 
 import { PartnersSection } from "@/components/site/sections/PartnersSection";
 import { ContactSection } from "@/components/site/sections/ContactSection";
 
-const TITLE_PL = "Aspire Team — Mistrzowie świata w klasie 5.5 Metre | POL 17";
+const TITLE_PL = "Aspire Team — żeglarstwo na najwyższym poziomie | Cape 31 i 5.5 Metre";
 const DESCRIPTION_PL =
-  "Aspire (POL 17) — polski zespół żeglarski startujący w klasie International 5.5 Metre i Cape 31. Pierwsza polska załoga z tytułem mistrza świata 5.5 Metre.";
-const TITLE_EN = "Aspire Team — 5.5 Metre World Champions | POL 17";
+  "Aspire — polski zespół żeglarski rywalizujący na międzynarodowym poziomie w klasach Cape 31 oraz International 5.5 Metre.";
+const TITLE_EN = "Aspire Team — sailing at the highest level | Cape 31 & 5.5 Metre";
 const DESCRIPTION_EN =
-  "Aspire (POL 17) — a Polish sailing team racing the International 5.5 Metre and the Cape 31. The first Polish crew to win the 5.5 Metre World Championship.";
+  "Aspire — a Polish sailing team competing internationally in the Cape 31 and the International 5.5 Metre classes.";
 
 export const Route = createFileRoute("/")({
 
@@ -84,7 +84,7 @@ function Index() {
         <BoatsSection />
         <HistorySection />
         <ResultsSection />
-        <CalendarTeaser />
+        
         <GacekSection />
         <KusznierewiczSection />
         
