@@ -1,6 +1,8 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { Reveal } from "../Reveal";
-import { IMAGE_PORTRAIT_KUSZNIEREWICZ, SiteImage } from "../SiteImages";
+import { PhotoFrame } from "../PhotoFrame";
+import { IMAGE_PORTRAIT_KUSZNIEREWICZ } from "../SiteImages";
+
 
 export function KusznierewiczSection() {
   const { t } = useLanguage();
