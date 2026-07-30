@@ -21,21 +21,18 @@ export function HistorySection() {
           <p className="mt-6 leading-relaxed text-muted-foreground">{t.history.intro}</p>
         </Reveal>
 
-        {/* Historic photography, tied to the era it belongs to. */}
+        {/* Historic photography, tied to the era it belongs to. Shown whole —
+            it contains people, so it is never cropped to a frame. */}
         <Reveal delay={120} className="mt-14 md:mt-20">
-          <figure>
-            <div className="relative aspect-[16/9] overflow-hidden bg-abyss md:aspect-[21/9]">
-              <SiteImage
-                src={IMAGE_HISTORY_HELM}
-                alt={t.history.photoAlt}
-                className="absolute inset-0"
-              />
-            </div>
-            <figcaption className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              {t.history.photoCaption}
-            </figcaption>
-          </figure>
+          <PhotoFrame
+            src={IMAGE_HISTORY_HELM}
+            alt={t.history.photoAlt}
+            maxHeight="max-h-[70vh]"
+            caption={t.history.photoCaption}
+            captionClassName="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground"
+          />
         </Reveal>
+
 
 
         <ol className="relative mt-20 md:mt-28">
