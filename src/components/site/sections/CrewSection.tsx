@@ -68,19 +68,19 @@ function CrewBlock({
   photos: readonly (string | null)[];
   pendingLabel: string;
 }) {
+  // A lone photograph runs wide; a pair runs taller so both blocks read at the same scale.
+  const frame = photos.length > 1 ? "aspect-[4/3]" : "aspect-[21/9]";
   return (
     <div className="mt-16 md:mt-20">
       <Reveal>
-        <div
-          className={`grid gap-6 ${photos.length > 1 ? "sm:grid-cols-2" : ""}`}
-        >
+        <div className={`grid gap-6 ${photos.length > 1 ? "sm:grid-cols-2" : ""}`}>
           {photos.map((photo, i) =>
             photo ? (
-              <div key={i} className="relative aspect-[16/9] overflow-hidden bg-abyss">
+              <div key={i} className={`relative ${frame} overflow-hidden bg-abyss`}>
                 <SiteImage src={photo} alt={title} className="absolute inset-0" />
               </div>
             ) : (
-              <PhotoPlaceholder key={i} label={pendingLabel} kicker={kicker} />
+              <PhotoPlaceholder key={i} label={pendingLabel} kicker={kicker} frame={frame} />
             ),
           )}
         </div>
