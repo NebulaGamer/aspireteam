@@ -35,13 +35,19 @@ export const translations = {
     },
     about: {
       eyebrow: "O nas",
-      title: "Żeglarstwo na najwyższym poziomie",
-      lead: "Aspire to polski zespół żeglarski rywalizujący na najwyższym międzynarodowym poziomie w klasach Cape 31 oraz International 5.5 Metre.",
-      body1:
-        "Łącząc doświadczenie mistrza olimpijskiego z determinacją przedsiębiorcy, zespół startuje w regatach w całej Europie — od Zatoki Gdańskiej po Morze Śródziemne.",
-      body2:
-        "W 2023 roku Aspire jako pierwsza polska załoga w historii zdobyła mistrzostwo świata w klasie 5.5 Metre. Trzy kolejne podia mistrzostw świata: złoto (Porto Cervo 2023), brąz (Bénodet 2024) i srebro (Sopot 2025).",
-      imageAlt: "Załoga Aspire w akcji na wodzie",
+      title: "Aspirować — nazwa, która jest planem",
+      lead: "Aspire to nie tylko nazwa zespołu. To idea, na której opiera się cały projekt: aspirowanie, ciągły rozwój, ciekawość życia, zmian i nauki oraz stawianie sobie kolejnych, coraz bardziej ambitnych celów.",
+      movements: [
+        {
+          title: "Spotkanie dwóch doświadczeń",
+          body: "Projekt łączy dwa światy. Świat Mateusza Kusznierewicza — sportu żeglarskiego na poziomie olimpijskim, uprawianego według najwyższych standardów — oraz świat Przemysława Gacka, przedsiębiorcy, który zbudował jedną z największych europejskich firm technologicznych w branży HR. To zderzenie sportu i biznesu jest sednem Aspire, a nie przypisem do historii zespołu.",
+        },
+        {
+          title: "Otwarta, zmieniająca się załoga",
+          body: "Do wspólnego pływania zapraszamy innych żeglarzy — przede wszystkim polskich, choć nie tylko. Skład celowo się zmienia, bo nauka od różnych ludzi jest dla nas najszybszą drogą rozwoju. To świadomy wybór, a nie brak konsekwencji.",
+        },
+      ],
+
       stats: [
         { value: "1×", label: "Mistrzostwo świata", note: "2023" },
         { value: "1×", label: "Mistrzostwo Europy", note: "2020" },
@@ -94,7 +100,45 @@ export const translations = {
       intro:
         "Od pierwszych startów do trzech kolejnych podiów mistrzostw świata: złoto (Porto Cervo 2023), brąz (Bénodet 2024) i srebro (Sopot 2025).",
       crewLabel: "Załoga",
+      // Historic photograph — belongs to the era before Przemysław Gacek took the helm.
+      photoAlt:
+        "Załoga Aspire w klasie 5.5 Metre podczas regat, Mateusz Kusznierewicz za sterem",
+      photoCaption:
+        "Lata 2019–2022: Mateusz Kusznierewicz za sterem POL 17. Od 2023 roku ster w klasie 5.5 Metre przejął Przemysław Gacek.",
     },
+    crewSection: {
+      eyebrow: "Załoga",
+      title: "Dwie łodzie, dwie załogi",
+      intro:
+        "Skład Aspire zmienia się w zależności od programu i regat. Poniżej aktualne załogi obu jachtów.",
+      photoPending: "Zdjęcie zespołu w przygotowaniu",
+      cape: {
+        kicker: "Cape 31",
+        title: "Załoga Cape 31",
+        note: "Siedmioosobowy skład startowy.",
+        // Nazwiska Juana, Jamesa i Tymka czekają na potwierdzenie od klienta.
+        members: [
+          { name: "Przemek Gacek", role: "" },
+          { name: "Mateusz Kusznierewicz", role: "" },
+          { name: "Igor Tarasiuk", role: "" },
+          { name: "Paweł Gardasiewicz", role: "" },
+          { name: "Juan", role: "" },
+          { name: "James", role: "" },
+          { name: "Tymek", role: "" },
+        ],
+      },
+      five: {
+        kicker: "International 5.5 Metre",
+        title: "Załoga 5.5 Metre",
+        note: "Trzyosobowa załoga.",
+        members: [
+          { name: "Przemek Gacek", role: "sternik" },
+          { name: "Mateusz Kusznierewicz", role: "" },
+          { name: "Kilian Weise", role: "" },
+        ],
+      },
+    },
+
     results: {
       eyebrow: "Wyniki",
       title: "Regaty i miejsca",
@@ -124,13 +168,13 @@ export const translations = {
       alt: "Przemysław Gacek — portret na pokładzie jachtu",
     },
     kusz: {
-      eyebrow: "Taktyk i mentor",
+      eyebrow: "Taktyk i współzałożyciel",
       name: "Mateusz Kusznierewicz",
-      role: "Taktyk Aspire · mistrz olimpijski",
+      role: "Taktyk i współzałożyciel projektu Aspire · mistrz olimpijski",
       body1:
         "Jeden z najwybitniejszych żeglarzy w historii Polski. Złoto olimpijskie w klasie Finn w Atlancie 1996 — pierwsze olimpijskie złoto w dziejach polskiego żeglarstwa.",
       body2:
-        "W Aspire pływa jako taktyk i mentor, a na lądzie prowadzi programy mentoringowe i przywódcze zespołu.",
+        "W Aspire pływa jako taktyk i współzałożyciel projektu, a na lądzie prowadzi programy mentoringowe i przywódcze zespołu.",
       honours: [
         { title: "Złoto olimpijskie", note: "Finn · Atlanta 1996" },
         { title: "Brąz olimpijski", note: "Finn · Ateny 2004" },
@@ -253,13 +297,19 @@ export const translations = {
     },
     about: {
       eyebrow: "About us",
-      title: "Sailing at the highest level",
-      lead: "Aspire is a Polish sailing team competing at the highest international level in the Cape 31 and the International 5.5 Metre classes.",
-      body1:
-        "Combining an Olympic champion's experience with an entrepreneur's drive, the team races across Europe — from the Bay of Gdańsk to the Mediterranean.",
-      body2:
-        "In 2023 Aspire became the first Polish crew ever to win the 5.5 Metre World Championship. Three consecutive Worlds podiums followed: gold (Porto Cervo 2023), bronze (Bénodet 2024) and silver (Sopot 2025).",
-      imageAlt: "The Aspire crew in action on the water",
+      title: "To aspire — the name is the plan",
+      lead: "Aspire is more than a team name. It is the idea the whole project runs on: aspiring, constant progress, curiosity about life, change and learning, and setting ourselves ever more ambitious goals.",
+      movements: [
+        {
+          title: "Where two experiences meet",
+          body: "The project brings two worlds together. Mateusz Kusznierewicz's world — Olympic-level sport sailing held to the highest standard — and Przemysław Gacek's, an entrepreneur who built one of Europe's largest HR technology companies. That collision of sport and business is the point of Aspire, not a footnote to it.",
+        },
+        {
+          title: "An open, changing crew",
+          body: "We invite other sailors to race with us — mainly Polish, though not exclusively. The line-up deliberately rotates, because learning from different people is the fastest way we develop. It is a conscious choice, not an inconsistency.",
+        },
+      ],
+
       stats: [
         { value: "1×", label: "World Champion", note: "2023" },
         { value: "1×", label: "European Champion", note: "2020" },
@@ -313,7 +363,44 @@ export const translations = {
       intro:
         "From the first races to three consecutive Worlds podiums: gold (Porto Cervo 2023), bronze (Bénodet 2024) and silver (Sopot 2025).",
       crewLabel: "Crew",
+      // Historic photograph — belongs to the era before Przemysław Gacek took the helm.
+      photoAlt: "The Aspire 5.5 Metre crew racing, Mateusz Kusznierewicz on the helm",
+      photoCaption:
+        "2019–2022: Mateusz Kusznierewicz on the helm of POL 17. From 2023 Przemysław Gacek has steered the 5.5 Metre.",
     },
+    crewSection: {
+      eyebrow: "Crew",
+      title: "Two boats, two crews",
+      intro:
+        "The Aspire line-up changes with the programme and the regatta. These are the current crews of both boats.",
+      photoPending: "Team photograph coming soon",
+      cape: {
+        kicker: "Cape 31",
+        title: "Cape 31 crew",
+        note: "A seven-strong racing line-up.",
+        // Surnames for Juan, James and Tymek are pending confirmation from the client.
+        members: [
+          { name: "Przemek Gacek", role: "" },
+          { name: "Mateusz Kusznierewicz", role: "" },
+          { name: "Igor Tarasiuk", role: "" },
+          { name: "Paweł Gardasiewicz", role: "" },
+          { name: "Juan", role: "" },
+          { name: "James", role: "" },
+          { name: "Tymek", role: "" },
+        ],
+      },
+      five: {
+        kicker: "International 5.5 Metre",
+        title: "5.5 Metre crew",
+        note: "A crew of three.",
+        members: [
+          { name: "Przemek Gacek", role: "helmsman" },
+          { name: "Mateusz Kusznierewicz", role: "" },
+          { name: "Kilian Weise", role: "" },
+        ],
+      },
+    },
+
     results: {
       eyebrow: "Results",
       title: "Regattas and placings",
@@ -343,13 +430,13 @@ export const translations = {
       alt: "Przemysław Gacek — portrait aboard the yacht",
     },
     kusz: {
-      eyebrow: "Tactician and mentor",
+      eyebrow: "Tactician and co-founder",
       name: "Mateusz Kusznierewicz",
-      role: "Tactician of Aspire · Olympic champion",
+      role: "Tactician and co-founder of Aspire · Olympic champion",
       body1:
         "One of the greatest sailors Poland has produced. Olympic Gold in the Finn class at Atlanta 1996 — the first Olympic gold in the history of Polish sailing.",
       body2:
-        "On Aspire he sails as tactician and mentor, and ashore he leads the team's mentoring and leadership work.",
+        "On Aspire he sails as tactician and co-founder of the project, and ashore he leads the team's mentoring and leadership work.",
       honours: [
         { title: "Olympic Gold", note: "Finn · Atlanta 1996" },
         { title: "Olympic Bronze", note: "Finn · Athens 2004" },

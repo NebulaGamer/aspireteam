@@ -1,6 +1,7 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { timeline } from "@/data/timeline";
 import { Reveal } from "../Reveal";
+import { IMAGE_HISTORY_HELM, SiteImage } from "../SiteImages";
 
 export function HistorySection() {
   const { t, lang } = useLanguage();
@@ -15,6 +16,23 @@ export function HistorySection() {
           </h2>
           <p className="mt-6 leading-relaxed text-muted-foreground">{t.history.intro}</p>
         </Reveal>
+
+        {/* Historic photography, tied to the era it belongs to. */}
+        <Reveal delay={120} className="mt-14 md:mt-20">
+          <figure>
+            <div className="relative aspect-[16/9] overflow-hidden bg-abyss md:aspect-[21/9]">
+              <SiteImage
+                src={IMAGE_HISTORY_HELM}
+                alt={t.history.photoAlt}
+                className="absolute inset-0"
+              />
+            </div>
+            <figcaption className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              {t.history.photoCaption}
+            </figcaption>
+          </figure>
+        </Reveal>
+
 
         <ol className="relative mt-20 md:mt-28">
           <span
