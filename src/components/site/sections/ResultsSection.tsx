@@ -3,6 +3,7 @@ import { useLanguage } from "@/i18n/LanguageProvider";
 import { results } from "@/data/results";
 import { resultPhoto } from "@/data/eventPhotos";
 import { Reveal } from "../Reveal";
+import { SectionRule } from "../SectionRule";
 import { PhotoFrame } from "../PhotoFrame";
 
 
@@ -35,7 +36,8 @@ export function ResultsSection() {
     t.results.places[place as 1 | 2 | 3] ?? `${place}.`;
 
   return (
-    <section id="results" className="scroll-mt-24 section-dark section-abyss py-24 md:py-36">
+    <section id="results" className="relative scroll-mt-24 section-dark section-abyss py-24 md:py-36">
+      <SectionRule />
       <div className="shell">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">{t.results.eyebrow}</p>

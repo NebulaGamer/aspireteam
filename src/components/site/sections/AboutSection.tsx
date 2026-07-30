@@ -1,11 +1,13 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { Reveal } from "../Reveal";
+import { SectionRule } from "../SectionRule";
 
 export function AboutSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="scroll-mt-24 bg-background py-24 md:py-36">
+    <section id="about" className="relative scroll-mt-24 bg-background py-24 md:py-36">
+      <SectionRule />
       <div className="shell">
         <div className="max-w-3xl">
           <Reveal>
