@@ -213,7 +213,68 @@ export const translations = {
       tierMain: "Sponsor główny",
       tierPartner: "Sponsor",
       visit: "Odwiedź stronę",
+
+      programsEyebrow: "Współpraca z biznesem",
+      programsTitle: "To nie jest projekt sponsorski",
+      programsLead:
+        "Dla naszych partnerów Aspire nie jest wyłącznie platformą ekspozycji marki. Największą wartością tego projektu jest możliwość przeniesienia doświadczeń z profesjonalnego żeglarstwa do pracy z zespołami biznesowymi — w formie programów i doświadczeń projektowanych wspólnie z partnerem.",
+      programsItems: [
+        {
+          title: "Komunikacja w zespole",
+          body: "Krótkie, jednoznaczne komunikaty w warunkach, w których nie ma miejsca na domysły.",
+        },
+        {
+          title: "Współpraca",
+          body: "Siedem osób na pokładzie wykonujących jeden manewr — każda rola ma znaczenie dla wyniku.",
+        },
+        {
+          title: "Wzajemne wsparcie",
+          body: "Kultura, w której błąd zostaje natychmiast pokryty przez zespół, a nie rozliczony po fakcie.",
+        },
+        {
+          title: "Decyzje pod presją",
+          body: "Wybór trafiony w kilka sekund, przy niepełnych danych i zmieniających się warunkach.",
+        },
+        {
+          title: "Przygotowanie na sytuacje, zanim się wydarzą",
+          body: "Scenariusze omówione na brzegu, żeby na wodzie wykonać je bez zastanowienia.",
+        },
+        {
+          title: "Wspólna odpowiedzialność za wynik",
+          body: "Rezultat należy do całej załogi — tak samo w regatach, jak i w organizacji.",
+        },
+      ],
+      caseEyebrow: "Jak pracujemy",
+      caseTitle: "Sposób pracy z partnerem",
+      caseSteps: [
+        {
+          step: "01",
+          title: "Diagnoza",
+          body: "Rozmawiamy z liderami zespołu i ustalamy, który obszar — komunikacja, decyzyjność czy odpowiedzialność — wymaga pracy.",
+        },
+        {
+          step: "02",
+          title: "Program na wodzie",
+          body: "Zespół pracuje z załogą Aspire na pokładzie: podział ról, manewry, presja czasu i realny wynik regatowy.",
+        },
+        {
+          step: "03",
+          title: "Przełożenie na organizację",
+          body: "Podsumowanie z Mateuszem Kusznierewiczem i Przemysławem Gackiem: co z tego doświadczenia zabieramy do codziennej pracy zespołu.",
+        },
+      ],
+      hospitalityEyebrow: "Hospitality Days",
+      hospitalityTitle: "Hospitality Days na wodzie",
+      hospitalityLead:
+        "Organizujemy dni na wodzie dla pracowników, klientów i partnerów biznesowych. To nie jest wyłącznie wejście na pokład czy udział w wydarzeniu — to doświadczenie pracy zespołowej i komunikacji, prowadzone przez zespół Aspire oraz Mateusza Kusznierewicza, mistrza olimpijskiego z Atlanty 1996.",
+      hospitalityItems: [
+        "Dni regatowe dla pracowników, klientów i partnerów",
+        "Żeglowanie na pokładzie Cape 31 i 5.5 Metre z załogą Aspire",
+        "Sesja z mistrzem olimpijskim o pracy zespołowej i decyzjach pod presją",
+        "Program dopasowany do wielkości grupy i celów firmy",
+      ],
     },
+
 
     contact: {
       eyebrow: "Zostań partnerem",
