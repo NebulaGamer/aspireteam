@@ -416,7 +416,19 @@ export const translations = {
         ],
       },
     },
-
+    values: {
+      eyebrow: "Values",
+      title: "Aspire Team Values",
+      items: [
+        "Teamwork",
+        "Open Communication",
+        "Supporting Each Other",
+        "Growth Mindset",
+        "Positive Vibe",
+        "Curiosity to Explore",
+        "Respect — for each other, the rules and our competitors",
+      ],
+    },
     results: {
       eyebrow: "Results",
       title: "Regattas and placings",
