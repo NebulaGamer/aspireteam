@@ -383,12 +383,12 @@ export const translations = {
         {
           name: "Przemysław Gacek",
           line: "Helmsman · CEO of Grupa Pracuj",
-          alt: "Przemysław Gacek — portrait aboard the yacht",
+          alt: "Przemysław Gacek in a navy Henri-Lloyd sailing jacket with the Aspire logo",
         },
         {
           name: "Mateusz Kusznierewicz",
           line: "Olympic champion · Atlanta 1996",
-          alt: "Mateusz Kusznierewicz — portrait",
+          alt: "Mateusz Kusznierewicz in a blue sailing jacket",
         },
       ],
       cape: {
