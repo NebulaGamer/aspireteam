@@ -9,9 +9,8 @@ import { AboutSection } from "@/components/site/sections/AboutSection";
 import { BoatsSection } from "@/components/site/sections/BoatsSection";
 import { HistorySection } from "@/components/site/sections/HistorySection";
 import { ResultsSection } from "@/components/site/sections/ResultsSection";
-
 import { CrewSection } from "@/components/site/sections/CrewSection";
-
+import { ValuesSection } from "@/components/site/sections/ValuesSection";
 import { PartnersSection } from "@/components/site/sections/PartnersSection";
 import { ContactSection } from "@/components/site/sections/ContactSection";
 
@@ -94,8 +93,7 @@ function Index() {
         <HistorySection />
         <ResultsSection />
         <CrewSection />
-
-        
+        <ValuesSection />
         <PartnersSection />
         <ContactSection />
       </main>

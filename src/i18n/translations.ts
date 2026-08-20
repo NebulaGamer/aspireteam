@@ -15,8 +15,8 @@ export const translations = {
       boats: "Jachty",
       history: "Historia",
       results: "Wyniki",
-      
       crew: "Załoga",
+      values: "Wartości",
       partners: "Partnerzy",
       contact: "Zostań partnerem",
       menu: "Menu",
@@ -150,7 +150,19 @@ export const translations = {
         ],
       },
     },
-
+    values: {
+      eyebrow: "Wartości",
+      title: "Aspire Team Values",
+      items: [
+        "Współpraca zespołowa",
+        "Otwarta komunikacja",
+        "Wzajemne wspieranie się",
+        "Nastawienie na rozwój",
+        "Pozytywna energia",
+        "Ciekawość odkrywania",
+        "Szacunek — dla siebie nawzajem, zasad i rywali",
+      ],
+    },
     results: {
       eyebrow: "Wyniki",
       title: "Regaty i miejsca",
@@ -269,8 +281,8 @@ export const translations = {
       boats: "The Boats",
       history: "History",
       results: "Results",
-      
       crew: "Crew",
+      values: "Values",
       partners: "Partners",
       contact: "Partner with us",
       menu: "Menu",
@@ -404,7 +416,19 @@ export const translations = {
         ],
       },
     },
-
+    values: {
+      eyebrow: "Values",
+      title: "Aspire Team Values",
+      items: [
+        "Teamwork",
+        "Open Communication",
+        "Supporting Each Other",
+        "Growth Mindset",
+        "Positive Vibe",
+        "Curiosity to Explore",
+        "Respect — for each other, the rules and our competitors",
+      ],
+    },
     results: {
       eyebrow: "Results",
       title: "Regattas and placings",
