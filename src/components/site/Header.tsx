@@ -12,7 +12,7 @@ export const NAV_ITEMS = [
   { id: "history", href: "#history" },
   { id: "results", href: "#results" },
   { id: "crew", href: "#crew" },
-
+  { id: "values", href: "#values" },
   { id: "partners", href: "#partners" },
 ] as const;
 
