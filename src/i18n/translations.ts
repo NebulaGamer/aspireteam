@@ -15,8 +15,8 @@ export const translations = {
       boats: "Jachty",
       history: "Historia",
       results: "Wyniki",
-      
       crew: "Załoga",
+      values: "Wartości",
       partners: "Partnerzy",
       contact: "Zostań partnerem",
       menu: "Menu",
@@ -269,8 +269,8 @@ export const translations = {
       boats: "The Boats",
       history: "History",
       results: "Results",
-      
       crew: "Crew",
+      values: "Values",
       partners: "Partners",
       contact: "Partner with us",
       menu: "Menu",
