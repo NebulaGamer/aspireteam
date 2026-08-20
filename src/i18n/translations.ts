@@ -150,7 +150,19 @@ export const translations = {
         ],
       },
     },
-
+    values: {
+      eyebrow: "Wartości",
+      title: "Aspire Team Values",
+      items: [
+        "Współpraca zespołowa",
+        "Otwarta komunikacja",
+        "Wzajemne wspieranie się",
+        "Nastawienie na rozwój",
+        "Pozytywna energia",
+        "Ciekawość odkrywania",
+        "Szacunek — dla siebie nawzajem, zasad i rywali",
+      ],
+    },
     results: {
       eyebrow: "Wyniki",
       title: "Regaty i miejsca",
