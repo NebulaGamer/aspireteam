@@ -117,12 +117,12 @@ export const translations = {
         {
           name: "Przemysław Gacek",
           line: "Sternik Aspire · CEO Grupy Pracuj",
-          alt: "Przemysław Gacek — portret na pokładzie jachtu",
+          alt: "Przemysław Gacek w granatowej kurtce żeglarskiej Henri-Lloyd z logo Aspire",
         },
         {
           name: "Mateusz Kusznierewicz",
           line: "Mistrz olimpijski · Atlanta 1996",
-          alt: "Mateusz Kusznierewicz — portret",
+          alt: "Mateusz Kusznierewicz w niebieskiej kurtce żeglarskiej",
         },
       ],
       cape: {
@@ -383,12 +383,12 @@ export const translations = {
         {
           name: "Przemysław Gacek",
           line: "Helmsman · CEO of Grupa Pracuj",
-          alt: "Przemysław Gacek — portrait aboard the yacht",
+          alt: "Przemysław Gacek in a navy Henri-Lloyd sailing jacket with the Aspire logo",
         },
         {
           name: "Mateusz Kusznierewicz",
           line: "Olympic champion · Atlanta 1996",
-          alt: "Mateusz Kusznierewicz — portrait",
+          alt: "Mateusz Kusznierewicz in a blue sailing jacket",
         },
       ],
       cape: {
