@@ -152,7 +152,7 @@ export const translations = {
     },
     values: {
       eyebrow: "Wartości",
-      title: "Aspire Team Values",
+      title: "Wartości zespołu Aspire",
       items: [
         "Współpraca zespołowa",
         "Otwarta komunikacja",
