@@ -88,8 +88,8 @@ const INTRINSIC: Record<string, { width: number; height: number }> = {
   [eventPortoCervoAsset.url]: { width: 840, height: 1024 },
   [eventBenodetAsset.url]: { width: 1600, height: 1199 },
   [eventSopotAsset.url]: { width: 1200, height: 1599 },
-  [IMAGE_PORTRAIT_GACEK]: { width: 1200, height: 857 },
-  [IMAGE_PORTRAIT_KUSZNIEREWICZ]: { width: 1920, height: 1280 },
+  [IMAGE_PORTRAIT_GACEK]: { width: 1440, height: 1920 },
+  [IMAGE_PORTRAIT_KUSZNIEREWICZ]: { width: 364, height: 546 },
 };
 
 export function imageSize(src: string): { width: number; height: number } {
