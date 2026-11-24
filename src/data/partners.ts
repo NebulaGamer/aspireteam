@@ -1,17 +1,14 @@
-import grupaPracujLogo from "@/assets/partners/grupa-pracuj.webp.asset.json";
-import comarchLogo from "@/assets/partners/comarch.png.asset.json";
 
 /**
  * Sponsor wall — exactly two sponsors today.
  *
  * To add a third sponsor, append an entry below with its own logo asset:
  *
- *   import acmeLogo from "@/assets/partners/acme.png.asset.json";
- *   {
+ *    *   {
  *     id: "acme",
  *     name: "Acme",
  *     tier: "partner",
- *     logo: acmeLogo.url,
+ *     logo: "/images/partners/acme.png",
  *     logoClassName: "max-h-12 md:max-h-14",
  *     url: "https://acme.com",
  *     description: { pl: "…", en: "…" },
@@ -42,7 +39,7 @@ export const partners: Partner[] = [
     id: "grupa-pracuj",
     name: "Grupa Pracuj",
     tier: "main",
-    logo: grupaPracujLogo.url,
+    logo: "/images/partners/grupa-pracuj.webp",
     logoClassName: "max-h-12 md:max-h-14",
     url: "https://grupapracuj.pl",
     description: {
@@ -58,7 +55,7 @@ export const partners: Partner[] = [
     id: "comarch",
     name: "Comarch",
     tier: "partner",
-    logo: comarchLogo.url,
+    logo: "/images/partners/comarch.png",
     // Comarch's file has ~75% vertical padding baked in, hence the larger cap.
     logoClassName: "max-h-24 md:max-h-28",
     url: "https://www.comarch.pl",
